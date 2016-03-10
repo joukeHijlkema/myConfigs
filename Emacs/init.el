@@ -7,8 +7,6 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
-
-
 ;; Beautifiers
 (add-to-list 'load-path "~/.emacs.d/emacs-uncrustify-mode/")
 (require 'uncrustify-mode)
