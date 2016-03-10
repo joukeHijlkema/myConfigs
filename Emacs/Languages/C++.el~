@@ -1,0 +1,57 @@
+(defvar myHead)
+(setq myHead "#ifndef test
+#define test
+
+using namespace std;
+
+/*! -------------------------------------------------------------
+ * brief   _name_ class
+ * \\details
+ * \\author  Jouke Hijlkema (jouke.hijlkema@onera.fr)
+ * \\date   _date_
+ * \\version 1.0
+ * -------------------------------------------------------------*/
+
+class _name_ {
+  public:
+    _name_();
+    ~_name_();
+  protected:
+  private:
+};
+#endif
+")
+
+(defvar myClass)
+(setq myClass " #include _name_.hpp
+
+ /* ==============================================================
+  * Description : _name_ class
+  * initial version : 1.0
+  * Author : hylkema (jouke.hijlkema@onera.fr)
+  * date   : _date_
+  * ============================================================== */
+
+ _name_::_name() {
+ }
+
+ _name_::_name_() {
+ }")
+
+(defun c++_new (name)
+   "create a new file named name"
+   (interactive "BFile name :")     ; ask for a buffer name
+   (c++_template name ".hpp" myHead)
+   (c++_template name ".cpp" myClass))
+
+(defun c++_template (name ext tmp)
+   (switch-to-buffer-other-window (concat name ext))
+   (erase-buffer)
+   (setq txt (replace-regexp-in-string "_name_" name tmp))
+   (setq txt (replace-regexp-in-string "_date_" (current-time-string) txt))
+   (insert txt))
+
+(defun c++_sep1 ()
+  (insert "/*! -------------------------------------------------------------\n")
+  (insert " * -------------------------------------------------------------*/\n")
+  (forward-line -1))

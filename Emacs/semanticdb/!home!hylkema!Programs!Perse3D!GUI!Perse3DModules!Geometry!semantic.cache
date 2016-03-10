@@ -1,0 +1,316 @@
+;; Object Geometry/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Geometry/"
+  :tables
+  (list
+    (semanticdb-table "Model2.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("Model2.hpp" include nil nil [1 22])
+            ("Tools.hpp" include nil nil [23 43])
+            ("Booleans.hpp" include nil nil [44 67])
+            ("IGESControl_Writer.hxx" include (:system-flag t) nil [69 102])
+            ("IGESControl_Controller.hxx" include (:system-flag t) nil [103 140])
+            ("TopExp_Explorer.hxx" include (:system-flag t) nil [142 172])
+            ("TopTools_ListOfShape.hxx" include (:system-flag t) nil [173 208])
+            ("TopoDS_Builder.hxx" include (:system-flag t) nil [209 238])
+            ("TopoDS_Compound.hxx" include (:system-flag t) nil [239 269])
+            ("Message_ProgressIndicator.hxx" include (:system-flag t) nil [271 311])
+            ("Standard_PrimitiveTypes.hxx" include (:system-flag t) nil [312 350])
+            ("BRepOffset_MakeOffset.hxx" include (:system-flag t) nil [352 388])
+            ("BRepOffsetAPI_MakeOffsetShape.hxx" include (:system-flag t) nil [389 433])
+            ("BRepOffsetAPI_MakeOffset.hxx" include (:system-flag t) nil [434 473])
+            ("ShapeFix_ShapeTolerance.hxx" include (:system-flag t) nil [474 512])
+            ("BRepBuilderAPI_MakeSolid.hxx" include (:system-flag t) nil [513 552])
+            ("BRepBuilderAPI_MakeFace.hxx" include (:system-flag t) nil [553 591])
+            ("BRepOffsetAPI_MakeThickSolid.hxx" include (:system-flag t) nil [592 635])
+            ("BRepAlgoAPI_Cut.hxx" include (:system-flag t) nil [636 666])
+            ("BRepAlgoAPI_Fuse.hxx" include (:system-flag t) nil [667 698])
+            ("BRepAlgo_Fuse.hxx" include (:system-flag t) nil [699 727])
+            ("BRepAlgoAPI_Section.hxx" include (:system-flag t) nil [728 762])
+            ("BRepBuilderAPI_Transform.hxx" include (:system-flag t) nil [763 802])
+            ("BRepTools_Quilt.hxx" include (:system-flag t) nil [803 833])
+            ("BRep_Builder.hxx" include (:system-flag t) nil [834 861])
+            ("BRepPrimAPI_MakeBox.hxx" include (:system-flag t) nil [862 896])
+            ("BRepFeat.hxx" include (:system-flag t) nil [897 920])
+            ("Standard.hxx" include (:system-flag t) nil [922 945])
+            ("Standard_DefineHandle.hxx" include (:system-flag t) nil [946 982])
+            ("Standard_DefineException.hxx" include (:system-flag t) nil [983 1022])
+            ("Standard_SStream.hxx" include (:system-flag t) nil [1023 1054])
+            ("Standard_DomainError.hxx" include (:system-flag t) nil [1055 1090])
+            ("Standard_ConstructionError.hxx" include (:system-flag t) nil [1091 1132])
+            ("StdFail_NotDone.hxx" include (:system-flag t) nil [1133 1163])
+            ("string" include (:system-flag t) nil [1164 1181])
+            ("gp_Ax1.hxx" include (:system-flag t) nil [1183 1204])
+            ("gp_Pnt.hxx" include (:system-flag t) nil [1205 1226])
+            ("gp_Dir.hxx" include (:system-flag t) nil [1227 1248])
+            ("gp_Trsf.hxx" include (:system-flag t) nil [1249 1271])
+            ("gp_Pln.hxx" include (:system-flag t) nil [1272 1293])
+            ("BRepGProp.hxx" include (:system-flag t) nil [1295 1319])
+            ("GProp_GProps.hxx" include (:system-flag t) nil [1320 1347])
+            ("ShapeAnalysis_ShapeContents.hxx" include (:system-flag t) nil [1349 1391])
+            ("ShapeFix_Shape.hxx" include (:system-flag t) nil [1392 1421])
+            ("TopTools_ListIteratorOfListOfShape.hxx" include (:system-flag t) nil [1423 1472])
+            ("BRepExtrema_DistShapeShape.hxx" include (:system-flag t) nil [1474 1515])
+            ("BRepBuilderAPI_Copy.hxx" include (:system-flag t) nil [1516 1550])
+            ("BRepBuilderAPI_MakeWire.hxx" include (:system-flag t) nil [1551 1589])
+            ("TNaming_Builder.hxx" include (:system-flag t) nil [1591 1621])
+            ("TNaming_NamedShape.hxx" include (:system-flag t) nil [1622 1655])
+            ("AIS_Shape.hxx" include (:system-flag t) nil [1657 1681])
+            ("Bnd_Box.hxx" include (:system-flag t) nil [1682 1704])
+            ("BRepPrimAPI_MakeBox.hxx" include (:system-flag t) nil [1705 1739])
+            ("BRepTools.hxx" include (:system-flag t) nil [1740 1764])
+            ("BRepBuilderAPI_MakeVertex.hxx" include (:system-flag t) nil [1766 1806])
+            ("TopoDS.hxx" include (:system-flag t) nil [1807 1828])
+            ("Model2" function
+               (:constructor-flag t
+                :parent "Model2"
+                :type ("Model2" type (:type "class") nil nil))
+                nil [2074 2094])
+            ("Model2" function
+               (:destructor-flag t
+                :parent "Model2"
+                :type "void")
+                nil [2096 2182])
+            ("Init" function
+               (:parent "Model2"
+                :type "void")
+                nil [2183 2220])
+            ("clearAll" function
+               (:parent "Model2"
+                :type "void")
+                nil [2466 2573])
+            ("readData" function
+               (:parent "Model2"
+                :type "void")
+                nil [2839 3882])
+            ("readBlock" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("label" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4230 4243]))                  
+                :type ("map" type
+                     (:template-specifier 
+                        ( ("string" type nil nil nil)
+                          ("TopoDS_Shape" type nil nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [4187 6576])
+            ("regress" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("delta" variable (:type "double") (reparse-symbol arg-sub-list) [6830 6843]))                  
+                :type "void")
+                nil [6809 10879])
+            ("makeTeeth" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("Cutter" variable
+                       (:reference 1
+                        :type ("list" type
+                             (:template-specifier 
+                                ( ("TopoDS_Shape" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [11141 11168])
+                    ("delta" variable (:type "double") (reparse-symbol arg-sub-list) [11169 11182])
+                    ("alpha" variable (:type "double") (reparse-symbol arg-sub-list) [11183 11196])
+                    ("order" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11197 11210]))                  
+                :type "void")
+                nil [11118 11680])
+            ("Cool" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("delta" variable (:type "double") (reparse-symbol arg-sub-list) [11971 11984])
+                    ("range" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [11984 11997]))                  
+                :type "bool")
+                nil [11953 12124])
+            ("Order" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("item" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12428 12440])
+                    ("order" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12441 12454]))                  
+                :type "bool")
+                nil [12409 12707])
+            ("adjustDelta" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("delta" variable (:type "double") (reparse-symbol arg-sub-list) [12996 13009])
+                    ("range" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13009 13022]))                  
+                :type "double")
+                nil [12969 13059])
+            ("limitHigh" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("range" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13328 13341]))                  
+                :type "double")
+                nil [13303 13674])
+            ("limitLow" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("range" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13942 13955]))                  
+                :type "double")
+                nil [13918 14368])
+            ("Rot" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("alpha" variable (:type "double") (reparse-symbol arg-sub-list) [14648 14661])
+                    ("S" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14661 14676]))                  
+                :type ("TopoDS_Shape" type (:type "class") nil nil))
+                nil [14623 15154])
+            ("testInersection" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("S1" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15480 15496])
+                    ("S2" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [15496 15512]))                  
+                :type "bool")
+                nil [15451 15613])
+            ("tagBocos" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("Base" variable
+                       (:reference 1
+                        :type ("TopoDS_Shape" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [15991 16010])
+                    ("Neighbour" variable
+                       (:reference 1
+                        :type ("TopoDS_Shape" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [16011 16035])
+                    ("bocoName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16036 16052]))                  
+                :type "void")
+                nil [15969 17168])
+            ("offset" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("dist" variable (:type "double") (reparse-symbol arg-sub-list) [17437 17449])
+                    ("original" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17449 17471]))                  
+                :type ("TopoDS_Shape" type (:type "class") nil nil))
+                nil [17409 17985])
+            ("WriteIges" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("FileName" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18253 18269])
+                    ("Shape" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18269 18288]))                  
+                :type "void")
+                nil [18230 18480])
+            ("isSolid" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("S" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18760 18775]))                  
+                :type "bool")
+                nil [18739 18876])
+            ("bocoSurface" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("boco" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19151 19163]))                  
+                :type "double")
+                nil [19124 19361])
+            ("totalBlockVolume" function
+               (:parent "Model2"
+                :type "double")
+                nil [19362 19662])
+            ("bocoSurfaceSave" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("boco" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19941 19953])
+                    ("id" variable (:type "double") (reparse-symbol arg-sub-list) [19953 19963]))                  
+                :type "void")
+                nil [19912 20019])
+            ("getBocoSurface" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("boco" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20268 20280]))                  
+                :type ("TopoDS_Shape" type (:type "class") nil nil))
+                nil [20232 20470])
+            ("surface" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("F" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [20739 20754]))                  
+                :type "double")
+                nil [20716 20848])
+            ("volume" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("S" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21116 21131]))                  
+                :type "double")
+                nil [21094 21266])
+            ("Tag" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("S" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21519 21534])
+                    ("label" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [21534 21547]))                  
+                :type "void")
+                nil [21502 21743])
+            ("BB" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("S" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22035 22050]))                  
+                :type ("TopoDS_Shape" type (:type "class") nil nil))
+                nil [22011 22291])
+            ("maxDim" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("S" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [22575 22590]))                  
+                :type "double")
+                nil [22553 22860])
+            ("getSection" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("delta" variable (:type "double") (reparse-symbol arg-sub-list) [23205 23218])
+                    ("Target" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23218 23238]))                  
+                :type ("TopoDS_Shape" type (:type "class") nil nil))
+                nil [23173 23844])
+            ("get2DAxi" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("Target" variable (:type ("TopoDS_Shape" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [24191 24211]))                  
+                :type ("TopoDS_Shape" type (:type "class") nil nil))
+                nil [24161 25097])
+            ("Ap" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("delta" variable (:type "double") (reparse-symbol arg-sub-list) [25370 25383])
+                    ("pos" variable (:type "double") (reparse-symbol arg-sub-list) [25383 25394]))                  
+                :type "double")
+                nil [25352 25513])
+            ("FindBoco" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("x1" variable (:type "double") (reparse-symbol arg-sub-list) [25804 25814])
+                    ("y1" variable (:type "double") (reparse-symbol arg-sub-list) [25814 25824])
+                    ("z1" variable (:type "double") (reparse-symbol arg-sub-list) [25824 25834])
+                    ("x2" variable (:type "double") (reparse-symbol arg-sub-list) [25834 25844])
+                    ("y2" variable (:type "double") (reparse-symbol arg-sub-list) [25844 25854])
+                    ("z2" variable (:type "double") (reparse-symbol arg-sub-list) [25854 25864])
+                    ("x3" variable (:type "double") (reparse-symbol arg-sub-list) [25864 25874])
+                    ("y3" variable (:type "double") (reparse-symbol arg-sub-list) [25874 25884])
+                    ("z3" variable (:type "double") (reparse-symbol arg-sub-list) [25884 25894]))                  
+                :type ("string" type (:type "class") nil nil))
+                nil [25780 27105])
+            ("saveAllBocos" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("Path" variable (:type ("string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [27378 27390]))                  
+                :type "void")
+                nil [27352 27584])
+            ("setTol" function
+               (:parent "Model2"
+                :arguments 
+                  ( ("tol" variable (:type "double") (reparse-symbol arg-sub-list) [27847 27858]))                  
+                :type "void")
+                nil [27827 27883]))          
+      :file "Model2.cpp"
+      :pointmax 27884
+      :fsize 27883
+      :lastmodtime '(21998 63312 688045 553000)
+      :unmatched-syntax nil)
+    (semanticdb-table "Model2.hpp"
+      :file "Model2.hpp"
+      :fsize 3297
+      :lastmodtime '(21998 63247 40958 961000))
+    (semanticdb-table "Booleans.hpp"
+      :file "Booleans.hpp"
+      :fsize 1728
+      :lastmodtime '(21998 61956 370855 846000)))
+  :file "!home!hylkema!Programs!Perse3D!GUI!Perse3DModules!Geometry!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
