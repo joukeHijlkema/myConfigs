@@ -7,12 +7,6 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
-;; Beautifiers
-;; (add-to-list 'load-path "~/.emacs.d/emacs-uncrustify-mode/")
-;; (require 'uncrustify-mode)
-;;   (add-hook 'c-mode-common-hook 
-;;    '(lambda ()
-;;       (uncrustify-mode 1)))
 
 ;; My keybindings
 (load "~/.emacs.d/keys.el")
@@ -31,8 +25,7 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
- '(show-paren-mode t)
- '(tabbar-mode t nil (tabbar)))
+ '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,6 +33,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 
-;; Multiple cursors
-;;(add-to-list 'load-path "~/.emacs.d/elpa/multiple-cursors-20160304.659")
-;;(require 'multiple-cursors)
+;; this is needed to load tabbar after automatic packaging is done
+(add-hook 'after-init-hook 'my-after-init-hook)
+(defun my-after-init-hook ()
+  '(tabbar-mode t nil (tabbar)))
