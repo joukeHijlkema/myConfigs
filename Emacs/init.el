@@ -8,11 +8,11 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 ;; Beautifiers
-(add-to-list 'load-path "~/.emacs.d/emacs-uncrustify-mode/")
-(require 'uncrustify-mode)
-  (add-hook 'c-mode-common-hook 
-   '(lambda ()
-      (uncrustify-mode 1)))
+;; (add-to-list 'load-path "~/.emacs.d/emacs-uncrustify-mode/")
+;; (require 'uncrustify-mode)
+;;   (add-hook 'c-mode-common-hook 
+;;    '(lambda ()
+;;       (uncrustify-mode 1)))
 
 ;; My keybindings
 (load "~/.emacs.d/keys.el")
