@@ -1,4 +1,4 @@
-(when (string= system-name "CFM-WDMAE007H")
+(when (or (string= system-name "CFM-WDMAE007H") (string= system-name "batave-f"))
   (setq url-proxy-services
 	'(("no_proxy" . "^\\(localhost\\|10.*\\)")
 	  ("http" . "minos.onecert.fr:80")
@@ -7,14 +7,6 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
-
-
-;; Beautifiers
-(add-to-list 'load-path "~/.emacs.d/emacs-uncrustify-mode/")
-(require 'uncrustify-mode)
-  (add-hook 'c-mode-common-hook 
-   '(lambda ()
-      (uncrustify-mode 1)))
 
 ;; My keybindings
 (load "~/.emacs.d/keys.el")
@@ -42,6 +34,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 
-;; Multiple cursors
-;;(add-to-list 'load-path "~/.emacs.d/elpa/multiple-cursors-20160304.659")
-;;(require 'multiple-cursors)
+;; this is needed to load tabbar after automatic packaging is done
+(add-hook 'after-init-hook 'my-after-init-hook)
+(defun my-after-init-hook ()
+  '(tabbar-mode))
