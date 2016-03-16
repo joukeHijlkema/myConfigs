@@ -8,11 +8,9 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
-;; My keybindings
-(load "~/.emacs.d/keys.el")
+(package-initialize)
 
-(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
-(add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
+(load "~/.emacs.d/myInit.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -33,9 +31,3 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 
-;; this is needed to load tabbar after automatic packaging is done
-(add-hook 'after-init-hook 'my-after-init-hook)
-(defun my-after-init-hook ()
-  '(tabbar-mode)
-  '(load  "~/.emacs.d/Languages/Python.el")
-  '(load  "~/.emacs.d/Languages/C++.el"))

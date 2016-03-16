@@ -10,5 +10,6 @@
 
 (setq mc/cmds-to-run-once
       '(
+	eval-buffer
 	save-some-buffers
 	))

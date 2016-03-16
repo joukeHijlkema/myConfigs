@@ -6,26 +6,33 @@
 
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "C->") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "s->") 'mc/mark-next-like-this)
+(global-set-key (kbd "s-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-s-<") 'mc/mark-all-like-this)
+;; Deletion etc
+(global-set-key (kbd "s-k") 'kill-whole-line)
 
-;; Deletion,formating etc
-(global-set-key (kbd "C-k") 'kill-whole-line)
-
-(defun duplicate-line()
-  "duplicate line"
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
+(defun duplicate-line-or-region(p0 ps pe)
+  "duplicate line or region"
+  (interactive
+   (if (use-region-p)
+       (list (point) (region-beginning) (region-end))
+     (list (point) (line-beginning-position) (line-end-position))))
+  (goto-char pe)
+  (if (eq pe (line-end-position))
+      (setq add "\n")
+    (setq add ""))
+  (kill-region pe ps)
   (yank)
-  (open-line 1)
-  (next-line 1)
-  (yank))
-(global-set-key (kbd "C-d") 'duplicate-line)
+  (goto-char pe)
+  (insert add)
+  (yank)
+  (goto-char p0)
+  )
 
-(global-set-key (kbd "C-r") 'rectangle-mark-mode)
-(global-set-key (kbd "C-a") 'align-current)
+(global-set-key (kbd "s-d") 'duplicate-line-or-region)
+(global-set-key (kbd "s-r") 'rectangle-mark-mode)
+(global-set-key (kbd "s-a") 'align-current)
 
 ;; commenting
 (defun toggle-comment-on-line (beg end)
@@ -34,9 +41,9 @@
 		   (list (region-beginning) (region-end))
 		 (list (line-beginning-position) (line-end-position))))
   (comment-or-uncomment-region beg end))
-(global-set-key (kbd "C-e") 'toggle-comment-on-line)
+(global-set-key (kbd "s-e") 'toggle-comment-on-line)
 
 ;; speedbar
-(global-set-key (kbd "C-c C-o") 'sr-speedbar-toggle)
-(global-set-key (kbd "C-c C-b") (lambda() (interactive) (speedbar-change-initial-expansion-list "quick buffers")))
-(global-set-key (kbd "C-c C-f") (lambda() (interactive) (speedbar-change-initial-expansion-list "files")))
+(global-set-key (kbd "s-o") 'sr-speedbar-toggle)
+(global-set-key (kbd "s-b") (lambda() (interactive) (speedbar-change-initial-expansion-list "quick buffers")))
+(global-set-key (kbd "s-f") (lambda() (interactive) (speedbar-change-initial-expansion-list "files")))
