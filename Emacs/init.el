@@ -36,4 +36,6 @@
 ;; this is needed to load tabbar after automatic packaging is done
 (add-hook 'after-init-hook 'my-after-init-hook)
 (defun my-after-init-hook ()
-  '(tabbar-mode t nil (tabbar)))
+  '(tabbar-mode)
+  '(load  "~/.emacs.d/Languages/Python.el")
+  '(load  "~/.emacs.d/Languages/C++.el"))

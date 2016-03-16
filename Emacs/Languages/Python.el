@@ -1,7 +1,7 @@
 (defun python_new (name)
   "create a new file named name"
   (interactive "BFile name :")     ; ask for a buffer name
-  (switch-to-buffer-other-window name)
+  (switch-to-buffer-other-window (concat name ".py"))
   (erase-buffer)
   (insert "#!/usr/bin/env python\n")
   (insert "# -*- coding: utf-8 -*-\n")

@@ -3,12 +3,14 @@
 (setq cua-auto-tabify-rectangles nil) ;; Don't tabify after rectangle commands
 (transient-mark-mode 1) 	      ;; No region when it is not highlighted
 (setq cua-keep-region-after-copy t)   ;; Standard Windows
+
 ;; Multiple cursors
 (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (global-set-key (kbd "C->") 'mc/mark-next-like-this)
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-;; Deletion etc
+
+;; Deletion,formating etc
 (global-set-key (kbd "C-k") 'kill-whole-line)
 
 (defun duplicate-line()
@@ -22,7 +24,8 @@
   (yank))
 (global-set-key (kbd "C-d") 'duplicate-line)
 
-(global-set-key (kbd "C-a") 'rectangle-mark-mode)
+(global-set-key (kbd "C-r") 'rectangle-mark-mode)
+(global-set-key (kbd "C-a") 'align-current)
 
 ;; commenting
 (defun toggle-comment-on-line (beg end)
