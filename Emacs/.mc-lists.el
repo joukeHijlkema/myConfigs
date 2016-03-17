@@ -4,8 +4,10 @@
 (setq mc/cmds-to-run-for-all
       '(
 	cua--prefix-override-handler
+	cua-paste
 	keyboard-escape-quit
 	mouse-set-region
+	write-file
 	))
 
 (setq mc/cmds-to-run-once

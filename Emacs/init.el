@@ -8,9 +8,6 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
-;; My keybindings
-(load "~/.emacs.d/keys.el")
-
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 
@@ -19,11 +16,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
+ '(ansi-color-faces-vector [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
+ '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(show-paren-mode t))
 (custom-set-faces
@@ -36,4 +33,8 @@
 ;; this is needed to load tabbar after automatic packaging is done
 (add-hook 'after-init-hook 'my-after-init-hook)
 (defun my-after-init-hook ()
-  '(tabbar-mode t nil (tabbar)))
+  '(tabbar-mode t nil (tabbar))
+  ;; My keybindings
+  (load "~/.emacs.d/keys.el"))
+
+
