@@ -17,11 +17,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector
-   [default default default italic underline success warning error])
+ '(ansi-color-faces-vector [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
  '(global-linum-mode t)
+ '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(show-paren-mode t))
 (custom-set-faces
@@ -30,4 +30,3 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
-
