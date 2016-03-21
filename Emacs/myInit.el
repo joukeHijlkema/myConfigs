@@ -3,5 +3,6 @@
 
 (tabbar-mode t)
 (setq tramp-default-method "ssh")
+(setq speedbar-initial-expansion-list-name "buffers")
 
 (load "~/.emacs.d/keys.el")
