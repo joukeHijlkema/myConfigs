@@ -8,6 +8,7 @@
 	keyboard-escape-quit
 	mouse-save-then-kill
 	mouse-set-region
+	write-file
 	))
 
 (setq mc/cmds-to-run-once
