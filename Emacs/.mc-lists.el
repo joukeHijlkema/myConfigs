@@ -4,7 +4,9 @@
 (setq mc/cmds-to-run-for-all
       '(
 	cua--prefix-override-handler
+	cua-paste
 	keyboard-escape-quit
+	mouse-save-then-kill
 	mouse-set-region
 	))
 

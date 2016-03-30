@@ -5,3 +5,5 @@
 (setq tramp-default-method "ssh")
 
 (load "~/.emacs.d/keys.el")
+(load"~/.emacs.d/Languages/Python.el")
+(load"~/.emacs.d/Languages/C++.el")

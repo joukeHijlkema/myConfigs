@@ -1,4 +1,4 @@
-(defvar myHead)
+(defvar my_c++_head)
 (setq myHead "#ifndef test
 #define test
 
@@ -22,7 +22,7 @@ class _name_ {
 #endif
 ")
 
-(defvar myClass)
+(defvar my_c++_class)
 (setq myClass " #include _name_.hpp
 
  /* ==============================================================
@@ -38,13 +38,13 @@ class _name_ {
  _name_::_name_() {
  }")
 
-(defun c++_new (name)
+(defun my_c++_new (name)
    "create a new file named name"
    (interactive "BFile name :")     ; ask for a buffer name
-   (c++_template name ".hpp" myHead)
-   (c++_template name ".cpp" myClass))
+   (c++_template name ".hpp"  my_c++_head)
+   (c++_template name ".cpp" myC my_c++_class))
 
-(defun c++_template (name ext tmp)
+(defun my_c++_template (name ext tmp)
    (switch-to-buffer-other-window (concat name ext))
    (erase-buffer)
    (setq txt (replace-regexp-in-string "_name_" name tmp))
