@@ -2,6 +2,7 @@
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 
 (tabbar-mode t)
+(yas-global-mode t)
 (setq tramp-default-method "ssh")
 (setq speedbar-initial-expansion-list-name "buffers")
 
