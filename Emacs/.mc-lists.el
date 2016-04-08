@@ -5,6 +5,7 @@
       '(
 	cua--prefix-override-handler
 	cua-paste
+	electric-newline-and-maybe-indent
 	keyboard-escape-quit
 	mouse-save-then-kill
 	mouse-set-region
