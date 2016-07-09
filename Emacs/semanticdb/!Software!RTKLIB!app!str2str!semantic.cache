@@ -1,0 +1,184 @@
+;; Object str2str/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "str2str/"
+  :tables
+  (list
+    (semanticdb-table "str2str.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("signal.h" include (:system-flag t) nil [1106 1125])
+            ("unistd.h" include (:system-flag t) nil [1126 1145])
+            ("rtklib.h" include nil nil [1146 1165])
+            ("rcsid" variable
+               (:dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "\"$Id:$\""
+                :type "char")
+                nil [1167 1201])
+            ("PRGNAME" variable (:constant-flag t) nil [1211 1218])
+            ("MAXSTR" variable (:constant-flag t) nil [1269 1275])
+            ("MAXRCVCMD" variable (:constant-flag t) nil [1336 1345])
+            ("TRFILE" variable (:constant-flag t) nil [1412 1418])
+            ("strsvr" variable
+               (:typemodifiers ("static")
+                :type ("strsvr_t" type (:type "class") nil nil))
+                nil [1542 1565])
+            ("intrflg" variable
+               (:typemodifiers ("static" "volatile")
+                :default-value "0"
+                :type "int")
+                nil [1601 1631])
+            ("help" variable
+               (:pointer 1
+                :dereference 1
+                :typemodifiers ("static")
+                :constant-flag t
+                :default-value "{
+\"\",
+\" usage: str2str [-in stream] [-out stream [-out stream...]] [options]\",
+\"\",
+\" Input data from a stream and divide and output them to multiple streams\",
+\" The input stream can be serial, tcp client, tcp server, ntrip client, or\",
+\" file. The output stream can be serial, tcp client, tcp server, ntrip server,\",
+\" or file. str2str is a resident type application. To stop it, type ctr-c in\",
+\" console if run foreground or send signal SIGINT for background process.\",
+\" if run foreground or send signal SIGINT for background process.\",
+\" if both of the input stream and the output stream follow #format, the\",
+\" format of input messages are converted to output. To specify the output\",
+\" messages, use -msg option. If the option -in or -out omitted, stdin for\",
+\" input or stdout for output is used.\",
+\" Command options are as follows.\",
+\"\",
+\" -in  stream[#format] input  stream path and format\",
+\" -out stream[#format] output stream path and format\",
+\"\",
+\"  stream path\",
+\"    serial       : serial://port[:brate[:bsize[:parity[:stopb[:fctr]]]]]\",
+\"    tcp server   : tcpsvr://:port\",
+\"    tcp client   : tcpcli://addr[:port]\",
+\"    ntrip client : ntrip://[user[:passwd]@]addr[:port][/mntpnt]\",
+\"    ntrip server : ntrips://[:passwd@]addr[:port][/mntpnt[:str]] (only out)\",
+\"    file         : [file://]path[::T][::+start][::xseppd][::S=swap]\",
+\"\",
+\"  format\",
+\"    rtcm2        : RTCM 2 (only in)\",
+\"    rtcm3        : RTCM 3\",
+\"    nov          : NovAtel OEMV/4/6,OEMStar (only in)\",
+\"    oem3         : NovAtel OEM3 (only in)\",
+\"    ubx          : ublox LEA-4T/5T/6T (only in)\",
+\"    ss2          : NovAtel Superstar II (only in)\",
+\"    hemis        : Hemisphere Eclipse/Crescent (only in)\",
+\"    stq          : SkyTraq S1315F (only in)\",
+\"    gw10         : Furuno GW10 (only in)\",
+\"    javad        : Javad (only in)\",
+\"    nvs          : NVS BINR (only in)\",
+\"    binex        : BINEX (only in)\",
+\"    rt17         : Trimble RT17 (only in)\",
+\"\",
+\" -msg \\\"type[(tint)][,type[(tint)]...]\\\"\",
+\"                   rtcm message types and output intervals (s)\",
+\" -sta sta          station id\",
+\" -opt opt          receiver dependent options\",
+\" -s  msec          timeout time (ms) [10000]\",
+\" -r  msec          reconnect interval (ms) [10000]\",
+\" -n  msec          nmea request cycle (m) [0]\",
+\" -f  sec           file swap margin (s) [30]\",
+\" -c  file          receiver commands file [no]\",
+\" -p  lat lon hgt   station position (latitude/longitude/height) (deg,m)\",
+\" -a  antinfo       antenna info (separated by ,)\",
+\" -i  rcvinfo       receiver info (separated by ,)\",
+\" -o  e n u         antenna offst (e,n,u) (m)\",
+\" -l  local_dir     ftp/http local directory []\",
+\" -x  proxy_addr    http/ntrip proxy address [no]\",
+\" -t  level         trace level [0]\",
+\" -h                print help\",
+}"
+                :type "char")
+                nil [1743 4570])
+            ("printhelp" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4674 4679]))                  
+                :type "void")
+                nil [4652 4786])
+            ("sigfunc" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("sig" variable (:type "int") (reparse-symbol arg-sub-list) [4888 4896]))                  
+                :type "void")
+                nil [4868 4915])
+            ("decodefmt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5019 5030])
+                    ("fmt" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [5031 5040]))                  
+                :type "void")
+                nil [4997 5885])
+            ("decodepath" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("path" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [5989 6006])
+                    ("type" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6007 6017])
+                    ("strpath" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6018 6032])
+                    ("fmt" variable
+                       (:pointer 1
+                        :type "int")
+                        (reparse-symbol arg-sub-list) [6033 6042]))                  
+                :type "int")
+                nil [5967 6772])
+            ("readcmd" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("file" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6874 6891])
+                    ("cmd" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [6892 6902])
+                    ("type" variable (:type "int") (reparse-symbol arg-sub-list) [6903 6912]))                  
+                :type "void")
+                nil [6854 7240])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [7331 7340])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [7341 7353]))                  
+                :type "int")
+                nil [7322 12184]))          
+      :file "str2str.c"
+      :pointmax 12185
+      :fsize 12184
+      :lastmodtime '(22368 330 709040 883000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAXSTR" . ((number "5" 1281 . 1282)))
+          ("MAXRCVCMD" . ((number "4096" 1348 . 1352)))
+          ("PRGNAME" . ((string "\"str2str\"" 1223 . 1232)))
+          ("TRFILE" . ((string "\"str2str.trace\"" 1424 . 1439)))
+          )
+))
+  :file "!Software!RTKLIB!app!str2str!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

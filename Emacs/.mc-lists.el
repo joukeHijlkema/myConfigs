@@ -15,5 +15,6 @@
 (setq mc/cmds-to-run-once
       '(
 	eval-buffer
+	ignore
 	save-some-buffers
 	))

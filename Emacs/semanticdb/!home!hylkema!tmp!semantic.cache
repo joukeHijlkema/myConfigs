@@ -1,0 +1,16 @@
+;; Object tmp/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "tmp/"
+  :tables
+  (list
+    (semanticdb-table "fig2tikz.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "fig2tikz.py"
+      :pointmax 87320
+      :fsize 87319
+      :lastmodtime '(22371 64217 80628 634000)
+      :unmatched-syntax nil))
+  :file "!home!hylkema!tmp!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
