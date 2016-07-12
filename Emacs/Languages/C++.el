@@ -1,6 +1,6 @@
-(defvar my_c++_head)
-(setq myHead "#ifndef test
-#define test
+(defvar my_c++_head
+(setq myHead "#ifndef jouke_name_
+#define jouke_name_
 
 using namespace std;
 
@@ -13,17 +13,17 @@ using namespace std;
  * -------------------------------------------------------------*/
 
 class _name_ {
-  public:
-    _name_();
-    ~_name_();
-  protected:
-  private:
+public:
+  _name_();
+ ~_name_();
+protected:
+private:
 };
 #endif
-")
+"))
 
-(defvar my_c++_class)
-(setq myClass " #include _name_.hpp
+(defvar my_c++_class
+(setq myClass " #include \"_name_.hpp\"
 
  /* ==============================================================
   * Description : _name_ class
@@ -32,17 +32,17 @@ class _name_ {
   * date   : _date_
   * ============================================================== */
 
- _name_::_name() {
+ _name_::_name_() {
  }
 
- _name_::_name_() {
- }")
+ _name_::~_name_() {
+ }"))
 
 (defun my_c++_new (name)
    "create a new file named name"
    (interactive "BFile name :")     ; ask for a buffer name
-   (c++_template name ".hpp"  my_c++_head)
-   (c++_template name ".cpp" myC my_c++_class))
+   (my_c++_template name ".hpp"  my_c++_head)
+   (my_c++_template name ".cpp" my_c++_class))
 
 (defun my_c++_template (name ext tmp)
    (switch-to-buffer-other-window (concat name ext))
