@@ -47,3 +47,6 @@
 (global-set-key (kbd "s-o") 'sr-speedbar-toggle)
 (global-set-key (kbd "s-b") (lambda() (interactive) (speedbar-change-initial-expansion-list "quick buffers")))
 (global-set-key (kbd "s-f") (lambda() (interactive) (speedbar-change-initial-expansion-list "files")))
+
+;; uncrustify
+(global-set-key (kbd "s-u") 'uncrustify-buffer)

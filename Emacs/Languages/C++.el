@@ -1,5 +1,5 @@
 (defvar my_c++_head
-(setq myHead "#ifndef jouke_name_
+(setq myHead "#ifndef jouke__name_
 #define jouke_name_
 
 using namespace std;
@@ -51,8 +51,16 @@ _name_::~_name_() {
    (setq txt (replace-regexp-in-string "_date_" (current-time-string) txt))
    (insert txt))
 
-(defun c++_sep1 ()
+(defun my_c++_sep1 ()
   (insert "/*! -------------------------------------------------------------\n")
   (insert " * -------------------------------------------------------------*/\n")
   (forward-line -1))
 
+(defun my_c++_classname ()
+  (interactive)
+  (save-excursion
+    (call-interactively 'move-end-of-line)
+    (search-backward-regexp "\\(^\\w+\\)\\(\\W+\\)\\(\\w+\\)\\(::\\)\\(\\w+\\)")
+    (let ((ret (match-string 3)))
+      (message ret)
+      ret)))  

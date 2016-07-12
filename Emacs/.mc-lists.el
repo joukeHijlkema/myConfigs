@@ -3,6 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	c-electric-lt-gt
+	c-electric-paren
+	c-electric-semi&comma
 	cua--prefix-override-handler
 	cua-paste
 	electric-newline-and-maybe-indent
