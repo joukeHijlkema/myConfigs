@@ -25,18 +25,18 @@ private:
 (defvar my_c++_class
 (setq myClass " #include \"_name_.hpp\"
 
- /* ==============================================================
-  * Description : _name_ class
-  * initial version : 1.0
-  * Author : hylkema (jouke.hijlkema@onera.fr)
-  * date   : _date_
-  * ============================================================== */
+/* ==============================================================
+ * Description : _name_ class
+ * initial version : 1.0
+ * Author : hylkema (jouke.hijlkema@onera.fr)
+ * date   : _date_
+ * ============================================================== */
 
- _name_::_name_() {
- }
+_name_::_name_() {
+}
 
- _name_::~_name_() {
- }"))
+_name_::~_name_() {
+}"))
 
 (defun my_c++_new (name)
    "create a new file named name"
