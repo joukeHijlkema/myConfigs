@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: c++ function
+# key: fun
+# --
+void function()
