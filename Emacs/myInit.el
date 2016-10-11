@@ -5,6 +5,8 @@
 (setq tramp-default-method "ssh")
 (setq speedbar-initial-expansion-list-name "buffers")
 
+(yas-global-mode t)
+
 (load "~/.emacs.d/keys.el")
 (load"~/.emacs.d/Languages/Python.el")
 (load"~/.emacs.d/Languages/C++.el")
