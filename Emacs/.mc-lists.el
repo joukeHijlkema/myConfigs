@@ -18,7 +18,11 @@
 
 (setq mc/cmds-to-run-once
       '(
+	c-electric-colon
+	c-electric-star
 	eval-buffer
 	ignore
 	save-some-buffers
+	tabbar-select-tab-callback
+	toggle-comment-on-line
 	))

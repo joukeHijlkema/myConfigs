@@ -25,6 +25,12 @@
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(org-file-apps
+   (quote
+    ((auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default)
+     ("\\.pdf\\'" . "/usr/bin/qpdfview"))))
  '(show-paren-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
