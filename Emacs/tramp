@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ;; -*- emacs-lisp -*- <16/05/17 00:05:49 /home/hylkema/.emacs.d/tramp>
+=======
+;; -*- emacs-lisp -*- <16/04/06 10:07:58 /home/hylkema/.emacs.d/tramp>
+>>>>>>> 4bfc221b975da4cad5a1ac3631b03e494d523dd0
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
@@ -41,6 +45,7 @@
   ("id" "/usr/bin/id")
   ("gid-integer" 1000)
   ("gid-string" "hylkema"))
+<<<<<<< HEAD
  (["ssh" nil "192.168.1.102" nil nil]
   ("locale" "LC_ALL=en_US.utf8")
   ("uname" "Linux 4.2.0-36-generic")
@@ -64,3 +69,7 @@
   ("tmpdir" "/ssh:192.168.1.102:/tmp")
   ("touch-t" t)
   ("touch" "\\touch")))
+=======
+ (["ssh" nil "134.212.104.152" nil nil]
+  nil))
+>>>>>>> 4bfc221b975da4cad5a1ac3631b03e494d523dd0

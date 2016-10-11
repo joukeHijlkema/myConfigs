@@ -3,8 +3,13 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	c-electric-lt-gt
+	c-electric-paren
+	c-electric-semi&comma
 	cua--prefix-override-handler
 	cua-paste
+	electric-newline-and-maybe-indent
+	find-file
 	keyboard-escape-quit
 	mouse-save-then-kill
 	mouse-set-region
@@ -14,5 +19,6 @@
 (setq mc/cmds-to-run-once
       '(
 	eval-buffer
+	ignore
 	save-some-buffers
 	))
