@@ -10,5 +10,5 @@
 ## Author : jouke hylkema
 ## date   : `(shell-command-to-string "echo -n $(date +%d-%M-%Y' '%H:%M:%S)")`
 ## --------------------------------------------------------------
-def ${3:name} (${4:args}):
+def ${3:name} (self,${4:args}):
    
