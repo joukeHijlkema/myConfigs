@@ -13,6 +13,7 @@
 	keyboard-escape-quit
 	mouse-save-then-kill
 	mouse-set-region
+	scroll-bar-toolkit-scroll
 	write-file
 	))
 

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: movie
+# key: movie
+# --
+<video preload="auto" loop="loop" controls>
+  <source src="Videos/$2"></source>
+</video>
