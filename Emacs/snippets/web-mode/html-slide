@@ -3,6 +3,6 @@
 # key: slide
 # --
 <!-- $1 -->
-<div id="$2" class="step slide" data-x="$3" data-y="$4" data-scale=$5>
+<slide title="$2">
   $6
-</div>
+</slide>
