@@ -33,6 +33,7 @@
 (global-set-key (kbd "s-d") 'duplicate-line-or-region)
 (global-set-key (kbd "s-r") 'rectangle-mark-mode)
 (global-set-key (kbd "s-a") 'align-current)
+(global-set-key (kbd "s-z") 'ff-find-other-file)
 
 ;; commenting
 (defun toggle-comment-on-line (beg end)

@@ -21,6 +21,7 @@
       '(
 	c-electric-colon
 	c-electric-star
+	duplicate-line-or-region
 	eval-buffer
 	ignore
 	save-some-buffers

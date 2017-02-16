@@ -3,8 +3,8 @@
 # key: fun
 # --
 // --------------------------------------------------------------
-// Description :$1
-// NOTE :$2
+// Description : $1
+// NOTE : $2
 // -
 // Author : jouke hylkema
 // date   : `(shell-command-to-string "echo -n $(date +%d-%M-%Y' '%H:%M:%S)")`

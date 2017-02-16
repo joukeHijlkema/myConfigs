@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: head
+# key: head
+# --
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  =================================================
+# Trigger
+#   - Author jouke hijlkema <jouke.hijlkema@onera.fr>
+#   - `(format-time-string "%a %b %H:%M %Y")`$0
+#   - Initial Version 1.0
+#  =================================================

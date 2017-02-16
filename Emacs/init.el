@@ -21,7 +21,9 @@
    [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
- '(ede-project-directories (quote ("/home/hylkema/Programs/Test")))
+ '(ede-project-directories
+   (quote
+    ("/home/hylkema/Programs/Sphinx/Readers" "/home/hylkema/Programs/Test")))
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
@@ -38,3 +40,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
+(put 'upcase-region 'disabled nil)
