@@ -45,9 +45,12 @@
 (global-set-key (kbd "s-e") 'toggle-comment-on-line)
 
 ;; speedbar
+;; open a new speedbar frame if there isn't one already
+(require 'sr-speedbar)
 (global-set-key (kbd "s-o") 'sr-speedbar-toggle)
 (global-set-key (kbd "s-b") (lambda() (interactive) (speedbar-change-initial-expansion-list "quick buffers")))
 (global-set-key (kbd "s-f") (lambda() (interactive) (speedbar-change-initial-expansion-list "files")))
 
 ;; uncrustify
+(require 'uncrustify-mode)
 (global-set-key (kbd "s-u") 'uncrustify-buffer)

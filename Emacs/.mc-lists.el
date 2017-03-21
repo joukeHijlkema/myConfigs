@@ -27,4 +27,5 @@
 	save-some-buffers
 	tabbar-select-tab-callback
 	toggle-comment-on-line
+	yas-expand
 	))

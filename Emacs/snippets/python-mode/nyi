@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: not yet implemented
+# key: nyi
+# --
+print("This is not yet implemented !!!")
