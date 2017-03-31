@@ -21,6 +21,10 @@
    [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
+ '(ecb-auto-activate t)
+ '(ecb-layout-name "left3")
+ '(ecb-layout-window-sizes nil)
+ '(ecb-options-version "2.50")
  '(ede-project-directories
    (quote
     ("/home/hylkema/Programs/Sphinx/Readers" "/home/hylkema/Programs/Test")))
@@ -33,7 +37,12 @@
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . "/usr/bin/qpdfview"))))
- '(show-paren-mode t))
+ '(show-paren-mode t)
+ '(speedbar-sort-tags nil)
+ '(speedbar-tag-hierarchy-method
+   (quote
+    (speedbar-prefix-group-tag-hierarchy speedbar-trim-words-tag-hierarchy speedbar-sort-tag-hierarchy)))
+ '(virtualenv-root "~hylkema/"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -41,3 +50,6 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 (put 'upcase-region 'disabled nil)
+
+;; (ecb-activate)
+(minimap-mode)

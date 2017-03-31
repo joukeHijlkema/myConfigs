@@ -1,0 +1,58 @@
+;; Object bin/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bin/"
+  :tables
+  (list
+    (semanticdb-table "sampleResults.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("sys" include nil nil [44 54])
+            ("fileinput" include nil nil [55 71])
+            ("re" include nil nil [72 81])
+            ("try" code nil nil [83 372])
+            ("try" code nil nil [372 491])
+            ("try" code nil nil [491 663])
+            ("try" code nil nil [663 813])
+            ("try" code nil nil [813 984])
+            ("fid" variable nil nil [990 1017])
+            ("fidOut" variable nil nil [1018 1081])
+            ("sep" variable nil nil [1083 1092])
+            ("comments" variable nil nil [1093 1106])
+            ("for" code nil nil [1107 1205])
+            ("head" variable nil nil [1227 1270])
+            ("head" variable nil nil [1303 1340])
+            ("head" variable nil nil [1371 1406])
+            ("head" variable nil nil [1436 1465])
+            ("head" variable nil nil [1498 1541])
+            ("if" code nil nil [1542 1581])
+            ("if" code nil nil [1581 1621])
+            ("headList" variable nil nil [1622 1648])
+            ("print" code nil nil [1649 1702])
+            ("fidOut" code nil nil [1703 1730])
+            ("fidOut" code nil nil [1731 1805])
+            ("for" code nil nil [1806 1873])
+            ("fidOut" code nil nil [1874 1903])
+            ("i" variable nil nil [1905 1910])
+            ("rows" variable nil nil [1911 1920])
+            ("newSep" variable nil nil [1922 1935])
+            ("for" code nil nil [1936 2345])
+            ("nbCols" variable nil nil [2368 2389])
+            ("nbRows" variable nil nil [2390 2408])
+            ("window" variable nil nil [2409 2446])
+            ("print" code nil nil [2447 2471])
+            ("meanStart" variable nil nil [2473 2487])
+            ("meanEnd" variable nil nil [2488 2500])
+            ("for" code nil nil [2502 2572])
+            ("if" code nil nil [2573 3002])
+            ("for" code nil nil [3003 3243])
+            ("for" code nil nil [3244 3633])
+            ("fid" code nil nil [3634 3643])
+            ("fidOut" code nil nil [3644 3656]))          
+      :file "sampleResults.py"
+      :pointmax 3657
+      :fsize 3657
+      :lastmodtime '(22746 24169 884654 745000)
+      :unmatched-syntax nil))
+  :file "!home!hylkema!bin!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
