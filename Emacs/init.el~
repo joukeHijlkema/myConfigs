@@ -8,11 +8,9 @@
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")))
 
-;; My keybindings
-(load "~/.emacs.d/keys.el")
+(package-initialize)
 
-(add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
-(add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
+(load "~/.emacs.d/myInit.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -23,18 +21,39 @@
    [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
+ '(ecb-auto-activate t)
+ '(ecb-layout-name "left3")
+ '(ecb-layout-window-sizes nil)
+ '(ecb-options-version "2.50")
+ '(ede-project-directories
+   (quote
+    ("/home/hylkema/Programs/Sphinx/Readers" "/home/hylkema/Programs/Test")))
  '(global-linum-mode t)
+ '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(minimap-mode t)
+ '(minimap-window-location (quote right))
+ '(org-file-apps
+   (quote
+    ((auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default)
+     ("\\.pdf\\'" . "/usr/bin/qpdfview"))))
  '(show-paren-mode t)
- '(tabbar-mode t nil (tabbar)))
+ '(speedbar-sort-tags nil)
+ '(speedbar-tag-hierarchy-method
+   (quote
+    (speedbar-prefix-group-tag-hierarchy speedbar-trim-words-tag-hierarchy speedbar-sort-tag-hierarchy)))
+ '(virtualenv-root "~hylkema/"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
+(put 'upcase-region 'disabled nil)
 
-;; this is needed to load tabbar after automatic packaging is done
-(add-hook 'after-init-hook 'my-after-init-hook)
-(defun my-after-init-hook ()
-  '(tabbar-mode))
+(ecb-activate)
+(setq ecb-tip-of-the-day nil)
+
+(minimap-mode)

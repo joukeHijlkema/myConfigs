@@ -23,7 +23,12 @@
  '(custom-enabled-themes (quote (tango-dark)))
  '(ecb-auto-activate t)
  '(ecb-layout-name "left3")
- '(ecb-layout-window-sizes nil)
+ '(ecb-layout-window-sizes
+   (quote
+    (("left3"
+      (ecb-directories-buffer-name 0.11895910780669144 . 0.29850746268656714)
+      (ecb-sources-buffer-name 0.11895910780669144 . 0.34328358208955223)
+      (ecb-methods-buffer-name 0.11895910780669144 . 0.3582089552238806)))))
  '(ecb-options-version "2.50")
  '(ede-project-directories
    (quote
@@ -31,6 +36,8 @@
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(minimap-mode t)
+ '(minimap-window-location (quote right))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)
@@ -51,5 +58,7 @@
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 (put 'upcase-region 'disabled nil)
 
-;; (ecb-activate)
+(ecb-activate)
+(setq ecb-tip-of-the-day nil)
+
 (minimap-mode)
