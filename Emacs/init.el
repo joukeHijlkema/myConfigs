@@ -30,6 +30,7 @@
       (ecb-sources-buffer-name 0.11895910780669144 . 0.34328358208955223)
       (ecb-methods-buffer-name 0.11895910780669144 . 0.3582089552238806)))))
  '(ecb-options-version "2.50")
+ '(ecb-source-path (quote (("/" "/") "/home/hylkema/Programs/Hop/Python/V2")))
  '(ede-project-directories
    (quote
     ("/home/hylkema/Programs/Sphinx/Readers" "/home/hylkema/Programs/Test")))
