@@ -21,23 +21,11 @@
    [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
- '(ecb-auto-activate t)
- '(ecb-layout-name "left3")
- '(ecb-layout-window-sizes
-   (quote
-    (("left3"
-      (ecb-directories-buffer-name 0.11895910780669144 . 0.29850746268656714)
-      (ecb-sources-buffer-name 0.11895910780669144 . 0.34328358208955223)
-      (ecb-methods-buffer-name 0.11895910780669144 . 0.3582089552238806)))))
- '(ecb-options-version "2.50")
- '(ede-project-directories
-   (quote
-    ("/home/hylkema/Programs/Sphinx/Readers" "/home/hylkema/Programs/Test")))
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(minimap-mode t)
- '(minimap-window-location (quote right))
+ '(minimap-window-location (quote left))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)
@@ -45,7 +33,7 @@
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . "/usr/bin/qpdfview"))))
  '(show-paren-mode t)
- '(speedbar-sort-tags nil)
+ '(speedbar-sort-tags t)
  '(speedbar-tag-hierarchy-method
    (quote
     (speedbar-prefix-group-tag-hierarchy speedbar-trim-words-tag-hierarchy speedbar-sort-tag-hierarchy)))
@@ -58,7 +46,7 @@
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 (put 'upcase-region 'disabled nil)
 
-(ecb-activate)
-(setq ecb-tip-of-the-day nil)
+;; (setq ecb-tip-of-the-day nil)
+;; (ecb-activate)
 
 (minimap-mode)
