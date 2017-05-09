@@ -59,3 +59,6 @@
                ("\\subsubsection{%s}" . "\\subsubsection{%s}")
                ("\\paragraph{%s}" . "\\paragraph{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph{%s}")))
+
+
+(add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))
