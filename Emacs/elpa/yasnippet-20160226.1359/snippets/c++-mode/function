@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: function
-# key: f
-# --
-${1:type} ${2:`(my_c++_classname)`}::${3:name}(${4:args})  {
-	$0
-}

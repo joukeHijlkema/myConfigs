@@ -670,7 +670,11 @@
 	     ((:url . "https://github.com/michael-heerdegen/on-screen.el")
 	      (:keywords "convenience"))])
  (org .
+<<<<<<< HEAD
       [(20170515)
+=======
+      [(20170502)
+>>>>>>> 1149871b74ce568ad681cb2c4a6c2b2a7f2a6318
        nil "Outline-based notes management and organizer" tar nil])
  (osc .
       [(0 1)

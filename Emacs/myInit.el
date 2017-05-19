@@ -68,6 +68,7 @@
 ;; (add-hook 'reftex-load-hook 'imenu-add-menubar-index)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
+<<<<<<< HEAD
 (setq LaTeX-eqnarray-label "eq"
 LaTeX-equation-label "eq"
 LaTeX-figure-label "fig"
@@ -87,3 +88,22 @@ LaTeX-section-title
 LaTeX-section-toc
 LaTeX-section-section
 LaTeX-section-label))
+=======
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes nil))
+
+(add-to-list 'org-latex-classes
+             '("my-style"
+               "\\documentclass{./my-style}
+                 [DEFAULT-PACKAGES]
+                 [PACKAGES]
+                 [EXTRA]"
+               ("\\section{%s}" . "\\section{%s}")
+               ("\\subsection{%s}" . "\\subsection{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection{%s}")
+               ("\\paragraph{%s}" . "\\paragraph{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph{%s}")))
+
+
+(add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))
+>>>>>>> 1149871b74ce568ad681cb2c4a6c2b2a7f2a6318
