@@ -60,5 +60,7 @@
                ("\\paragraph{%s}" . "\\paragraph{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph{%s}")))
 
+;; auto-coplete
+(require 'auto-complete)
+(global-auto-complete-mode t)
 
-(add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))

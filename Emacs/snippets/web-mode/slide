@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: slide
+# key: slide
+# --
+<slide title          = "${1:Title}"
+       inPlan         = "${2:Title in plan}"
+       x              = "$3"
+       y              = "$4"
+       scale          = "${5:1.0}"
+       class          = "$6"
+       rememberCoords = "$7"
+       rotation       = "${8:0.01}">
+       $9
