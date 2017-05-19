@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: image
-# key: image
-# --
-<figure style="width:$1%;">
-  <img src="Images/$2" width=100%></img>
-  <figcaption>$3</figcaption>
-</figure>
