@@ -1,1 +1,5 @@
-Good signature from 474F05837FBDEF9B GNU ELPA Signing Agent <elpasign@elpa.gnu.org> (trust undefined) created at 2017-04-02T11:05:03+0200 using DSA
+<<<<<<< HEAD
+Good signature from 474F05837FBDEF9B GNU ELPA Signing Agent <elpasign@elpa.gnu.org> (trust undefined) created at 2017-05-19T11:10:02+0200 using DSA
+=======
+Good signature from 474F05837FBDEF9B GNU ELPA Signing Agent <elpasign@elpa.gnu.org> (trust undefined) created at 2017-05-09T11:10:10+0200 using DSA
+>>>>>>> 1149871b74ce568ad681cb2c4a6c2b2a7f2a6318
