@@ -73,56 +73,56 @@
                             ("pilotIp" variable nil (reparse-symbol function_parameters) [4132 4139])
                             ("portIn" variable nil (reparse-symbol function_parameters) [4140 4146])
                             ("portOut" variable nil (reparse-symbol function_parameters) [4147 4154]))                          )
-                        (reparse-symbol indented_block_body) [4113 4883])
+                        (reparse-symbol indented_block_body) [4113 5056])
                     ("recLeg" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5172 5176]))                          )
-                        (reparse-symbol indented_block_body) [5160 6169])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5345 5349]))                          )
+                        (reparse-symbol indented_block_body) [5333 6342])
                     ("audioLeg" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [6447 6451]))                          )
-                        (reparse-symbol indented_block_body) [6433 7454])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6620 6624]))                          )
+                        (reparse-symbol indented_block_body) [6606 7627])
                     ("closeFile" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7738 7742])
-                            ("pad" variable nil (reparse-symbol function_parameters) [7743 7746])
-                            ("info" variable nil (reparse-symbol function_parameters) [7747 7751])
-                            ("ud" variable nil (reparse-symbol function_parameters) [7752 7754]))                          )
-                        (reparse-symbol indented_block_body) [7723 8417])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7911 7915])
+                            ("pad" variable nil (reparse-symbol function_parameters) [7916 7919])
+                            ("info" variable nil (reparse-symbol function_parameters) [7920 7924])
+                            ("ud" variable nil (reparse-symbol function_parameters) [7925 7927]))                          )
+                        (reparse-symbol indented_block_body) [7896 8590])
                     ("startRecording" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8706 8710]))                          )
-                        (reparse-symbol indented_block_body) [8686 9372])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8879 8883]))                          )
+                        (reparse-symbol indented_block_body) [8859 9545])
                     ("stopRecording" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9668 9672]))                          )
-                        (reparse-symbol indented_block_body) [9649 10151])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9841 9845]))                          )
+                        (reparse-symbol indented_block_body) [9822 10324])
                     ("fileName" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10452 10456]))                          )
-                        (reparse-symbol indented_block_body) [10438 10554])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10625 10629]))                          )
+                        (reparse-symbol indented_block_body) [10611 10727])
                     ("startStreaming" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10844 10848]))                          )
-                        (reparse-symbol indented_block_body) [10824 11337])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11017 11021]))                          )
+                        (reparse-symbol indented_block_body) [10997 11510])
                     ("stopStreaming" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11625 11629]))                          )
-                        (reparse-symbol indented_block_body) [11606 11681]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11798 11802]))                          )
+                        (reparse-symbol indented_block_body) [11779 11854]))                  
                 :type "class")
-                nil [433 11681]))          
+                nil [433 11854]))          
       :file "serverPipe.py"
-      :pointmax 11691
-      :fsize 11690
-      :lastmodtime '(22744 58228 372808 275000)
+      :pointmax 11864
+      :fsize 11863
+      :lastmodtime '(22748 51496 881744 410000)
       :unmatched-syntax nil)
     (semanticdb-table "Server.py"
       :major-mode 'python-mode
@@ -149,12 +149,28 @@
       :file "Server.py"
       :pointmax 4999
       :fsize 4998
-      :lastmodtime '(22745 1098 772794 972000)
+      :lastmodtime '(22748 53019 169706 482000)
       :unmatched-syntax nil)
     (semanticdb-table "serverClass.py"
       :file "serverClass.py"
       :fsize 10732
-      :lastmodtime '(22745 1098 772794 972000)))
+      :lastmodtime '(22745 1098 772794 972000))
+    (semanticdb-table "dataBase.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("MySQLdb" include nil nil [277 291])
+            ("db" variable nil nil [293 485])
+            ("cursor" variable nil nil [487 507])
+            ("add" function (:arguments 
+              ( ("resp" variable nil (reparse-symbol function_parameters) [749 753])
+                ("title" variable nil (reparse-symbol function_parameters) [754 759])
+                ("tags" variable nil (reparse-symbol function_parameters) [760 764])
+                ("path" variable nil (reparse-symbol function_parameters) [765 769]))              ) nil [740 967]))          
+      :file "dataBase.py"
+      :pointmax 967
+      :fsize 966
+      :lastmodtime '(22691 1935 726045 681000)
+      :unmatched-syntax nil))
   :file "!home!hylkema!Programs!rpiCameras!Server!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

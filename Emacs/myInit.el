@@ -1,6 +1,8 @@
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 
+(add-to-list 'auto-mode-alist '("\\.FCMacro\\'" . python-mode))
+
 (tabbar-mode t)
 (yas-global-mode t)
 (setq tramp-default-method "ssh")
@@ -68,7 +70,6 @@
 ;; (add-hook 'reftex-load-hook 'imenu-add-menubar-index)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
-<<<<<<< HEAD
 (setq LaTeX-eqnarray-label "eq"
 LaTeX-equation-label "eq"
 LaTeX-figure-label "fig"
@@ -88,7 +89,7 @@ LaTeX-section-title
 LaTeX-section-toc
 LaTeX-section-section
 LaTeX-section-label))
-=======
+
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
 
@@ -104,7 +105,17 @@ LaTeX-section-label))
                ("\\paragraph{%s}" . "\\paragraph{%s}")
                ("\\subparagraph{%s}" . "\\subparagraph{%s}")))
 
-;; auto-coplete
-(require 'auto-complete)
-(global-auto-complete-mode t)
-(add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))
+
+;; auto-complete
+;; (require 'auto-complete)
+;; (global-auto-complete-mode t)
+;; (add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))
+
+(add-hook 'ibuffer-hook
+    (lambda ()
+      (ibuffer-vc-set-filter-groups-by-vc-root)
+      (unless (eq ibuffer-sorting-mode 'alphabetic)
+        (ibuffer-do-sort-by-alphabetic))))
+
+;; Journal
+(require 'org-journal)

@@ -9,6 +9,7 @@
 (global-set-key (kbd "s->") 'mc/mark-next-like-this)
 (global-set-key (kbd "s-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-s-<") 'mc/mark-all-like-this)
+
 ;; Deletion etc
 (global-set-key (kbd "s-k") 'kill-whole-line)
 
@@ -57,3 +58,6 @@
 ;; uncrustify
 (require 'uncrustify-mode)
 (global-set-key (kbd "s-u") 'uncrustify-buffer)
+
+;; Buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)

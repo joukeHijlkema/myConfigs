@@ -1,6 +1,8 @@
 session.*
 Emacs/auto-save-list/**
 Emacs/semanticdb/**
+Emacs/elpa/**
+*.cache
 **/*~
 **/*#
 **/.#*
