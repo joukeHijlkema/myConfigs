@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: new deff
-# key: def
-# expand-env: ((yas/indent-line 'auto) (yas/wrap-around-region 't))
-# --
-def ${1:name} (${2:args}):
-   

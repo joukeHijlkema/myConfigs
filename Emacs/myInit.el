@@ -10,10 +10,9 @@
 
 (yas-global-mode t)
 (autoload 'cflow-mode "cflow-mode")
-     (setq auto-mode-alist (append auto-mode-alist
-                                   '(("\\.cflow$" . cflow-mode))))
+(setq auto-mode-alist (append auto-mode-alist '(("\\.cflow$" . cflow-mode))))
 
-(require 'xcscope)
+;;(require 'xcscope)
 
 (load "~/.emacs.d/keys.el")
 (load"~/.emacs.d/Languages/Python.el")
@@ -31,17 +30,6 @@
 (add-to-list 'auto-mode-alist '("\\.css?\\'"		.	web-mode))
 (add-to-list 'auto-mode-alist '("\\.xml?\\'"		.	web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'"		.	web-mode))
-
-;; Set up plantuml.
-;;
-;;
-
-(org-babel-do-load-languages
- 'org-babel-load-languages
- '((plantuml . t)))
-
-(setq org-plantuml-jar-path
-      (setq plantuml-jar-path (expand-file-name "./plantuml.jar")))
 
 ;;Auctex
 (setq TeX-auto-save t)
@@ -67,7 +55,6 @@
 (autoload 'reftex-citation "reftex-cite" "Make citation" nil)
 (autoload 'reftex-index-phrase-mode "reftex-index" "Phrase Mode" t)
 (add-hook 'latex-mode-hook 'turn-on-reftex) ; with Emacs latex mode
-;; (add-hook 'reftex-load-hook 'imenu-add-menubar-index)
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 
 (setq LaTeX-eqnarray-label "eq"
@@ -79,11 +66,12 @@ TeX-auto-save t
 TeX-newline-function 'reindent-then-newline-and-indent
 TeX-parse-self t
 TeX-style-path
-'("style/" "auto/"
-"/usr/share/emacs21/site-lisp/auctex/style/"
-"/var/lib/auctex/emacs21/"
-"/usr/local/share/emacs/site-lisp/auctex/style/")
+ '("style/" "auto/"
+ "/usr/share/emacs21/site-lisp/auctex/style/"
+ "/var/lib/auctex/emacs21/"
+ "/usr/local/share/emacs/site-lisp/auctex/style/")
 LaTeX-section-hook
+<<<<<<< HEAD
 '(LaTeX-section-heading
 LaTeX-section-title
 LaTeX-section-toc
@@ -92,19 +80,20 @@ LaTeX-section-label))
 
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
+=======
+ '(LaTeX-section-heading
+ LaTeX-section-title
+ LaTeX-section-toc
+ LaTeX-section-section
+ LaTeX-section-label))
+>>>>>>> e6f68f19d2da6101b3f68cfc04197a1ac2d20157
 
-(add-to-list 'org-latex-classes
-             '("my-style"
-               "\\documentclass{./my-style}
-                 [DEFAULT-PACKAGES]
-                 [PACKAGES]
-                 [EXTRA]"
-               ("\\section{%s}" . "\\section{%s}")
-               ("\\subsection{%s}" . "\\subsection{%s}")
-               ("\\subsubsection{%s}" . "\\subsubsection{%s}")
-               ("\\paragraph{%s}" . "\\paragraph{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph{%s}")))
+;; ;; Close all the buffers
+;; (defun close-all-buffers ()
+;;   (interactive)
+;;   (mapc 'kill-buffer (buffer-list)))
 
+<<<<<<< HEAD
 
 ;; auto-complete
 ;; (require 'auto-complete)
@@ -119,3 +108,5 @@ LaTeX-section-label))
 
 ;; Journal
 (require 'org-journal)
+=======
+>>>>>>> e6f68f19d2da6101b3f68cfc04197a1ac2d20157

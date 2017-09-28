@@ -1,14 +1,0 @@
-;; Emacs-W3 HTTP cookies file
-;; Automatically generated file!!! DO NOT EDIT!!!
-
-(setq url-cookie-storage
- '(("www.websequencediagrams.com"
-  [url-cookie "PHPSESSID" "h0-vvodZGNzPp9GX7tm8j4vWTsDqc9k4" "Wed, 03 May 2017 09:48:59 GMT" "/" "www.websequencediagrams.com" nil]))
-)
-(setq url-cookie-secure-storage
- 'nil)
-
-;; Local Variables:
-;; version-control: never
-;; no-byte-compile: t
-;; End:

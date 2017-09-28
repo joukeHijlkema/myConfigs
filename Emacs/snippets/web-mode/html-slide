@@ -2,3 +2,7 @@
 # name: slide
 # key: slide
 # --
+<!-- $1 -->
+<slide title="$2">
+  $6
+</slide>
