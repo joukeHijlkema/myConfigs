@@ -12,8 +12,6 @@
 (autoload 'cflow-mode "cflow-mode")
 (setq auto-mode-alist (append auto-mode-alist '(("\\.cflow$" . cflow-mode))))
 
-;;(require 'xcscope)
-
 (load "~/.emacs.d/keys.el")
 (load"~/.emacs.d/Languages/Python.el")
 (load"~/.emacs.d/Languages/C++.el")
@@ -71,7 +69,6 @@ TeX-style-path
  "/var/lib/auctex/emacs21/"
  "/usr/local/share/emacs/site-lisp/auctex/style/")
 LaTeX-section-hook
-<<<<<<< HEAD
 '(LaTeX-section-heading
 LaTeX-section-title
 LaTeX-section-toc
@@ -80,25 +77,6 @@ LaTeX-section-label))
 
 (unless (boundp 'org-latex-classes)
   (setq org-latex-classes nil))
-=======
- '(LaTeX-section-heading
- LaTeX-section-title
- LaTeX-section-toc
- LaTeX-section-section
- LaTeX-section-label))
->>>>>>> e6f68f19d2da6101b3f68cfc04197a1ac2d20157
-
-;; ;; Close all the buffers
-;; (defun close-all-buffers ()
-;;   (interactive)
-;;   (mapc 'kill-buffer (buffer-list)))
-
-<<<<<<< HEAD
-
-;; auto-complete
-;; (require 'auto-complete)
-;; (global-auto-complete-mode t)
-;; (add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))
 
 (add-hook 'ibuffer-hook
     (lambda ()
@@ -108,5 +86,3 @@ LaTeX-section-label))
 
 ;; Journal
 (require 'org-journal)
-=======
->>>>>>> e6f68f19d2da6101b3f68cfc04197a1ac2d20157
