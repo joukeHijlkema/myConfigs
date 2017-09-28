@@ -89,3 +89,4 @@ LaTeX-section-label))
 
 ;; Workgroups2
 (require 'workgroups2)
+(workgroups-mode 1)
