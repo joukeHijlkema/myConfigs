@@ -1,3 +1,6 @@
+;; remove toolbar
+(tool-bar-mode -1)
+
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 
