@@ -86,3 +86,6 @@ LaTeX-section-label))
 
 ;; Journal
 (require 'org-journal)
+
+;; Workgroups2
+(require 'workgroups2)
