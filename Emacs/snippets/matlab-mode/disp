@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: disp
+# key: disp
+# --
+disp("$1"),disp($1)

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: fig
+# key: fig
+# --
+<figure src="${1:path}"
+	cap="${2:caption}"
+	class="top left"
+	style="width:50%"/>

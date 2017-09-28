@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: beamerhead
+# key: beamerhead
+# --
+\documentclass{beamer}
+\input{/home/hylkema/Documents/TexPreambles/OneraBeamer.tex}
+
+\begin{document}
+
+\firstSlide
+\secondSlide{${1:title}}{${2:subtitle}}{Jouke Hijlkema}{\today}
+\frame{\frametitle{Table of contents}\tableofcontents} 
+
+\end{document}

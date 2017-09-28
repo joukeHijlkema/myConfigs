@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: pHead
+# key: pHead
+# --
+<presentation>
+<parameters
+root="/home/hylkema/Documents/${1:root}" 
+slideWidth="1000"
+slideHeight="700"
+margin="500"
+css="CSS/${2:css}.css"
+logos="{'oneraLogo':'/home/hylkema/Documents/presentationTools/myPresentationsTool/CSS/Logos/onera.svg'}"
+bg1="/home/hylkema/Documents/presentationTools/myPresentationsTool/CSS/CSS/Backgrounds/s1.png"
+bg2="/home/hylkema/Documents/presentationTools/myPresentationsTool/CSS/CSS/Backgrounds/s2.png"
+footerTitle="${3:footer}"
+footerDate="${4:date}"
+convertImages="True"
+makePdf="False"
+/>
+
+<slide type="firstSlide"/>
+
+<slide type="titleSlide"
+moveX="right"
+presTitle="${5:title}"
+author="Jouke Hijlkema"/>
+
+</presentation>
