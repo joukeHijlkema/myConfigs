@@ -61,3 +61,7 @@
 
 ;; Buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;;workgroups
+(setq wg-prefix-key (kbd "C-c w"))
+

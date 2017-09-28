@@ -88,5 +88,5 @@ LaTeX-section-label))
 (require 'org-journal)
 
 ;; Workgroups2
-(require 'workgroups2)
+(require 'workgroups)
 (workgroups-mode 1)
