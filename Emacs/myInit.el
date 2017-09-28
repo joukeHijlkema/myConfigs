@@ -1,6 +1,8 @@
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 
+(add-to-list 'auto-mode-alist '("\\.FCMacro\\'" . python-mode))
+
 (tabbar-mode t)
 (yas-global-mode t)
 (setq tramp-default-method "ssh")
@@ -69,14 +71,42 @@ TeX-style-path
  "/var/lib/auctex/emacs21/"
  "/usr/local/share/emacs/site-lisp/auctex/style/")
 LaTeX-section-hook
+<<<<<<< HEAD
+'(LaTeX-section-heading
+LaTeX-section-title
+LaTeX-section-toc
+LaTeX-section-section
+LaTeX-section-label))
+
+(unless (boundp 'org-latex-classes)
+  (setq org-latex-classes nil))
+=======
  '(LaTeX-section-heading
  LaTeX-section-title
  LaTeX-section-toc
  LaTeX-section-section
  LaTeX-section-label))
+>>>>>>> e6f68f19d2da6101b3f68cfc04197a1ac2d20157
 
 ;; ;; Close all the buffers
 ;; (defun close-all-buffers ()
 ;;   (interactive)
 ;;   (mapc 'kill-buffer (buffer-list)))
 
+<<<<<<< HEAD
+
+;; auto-complete
+;; (require 'auto-complete)
+;; (global-auto-complete-mode t)
+;; (add-to-list 'auto-mode-alist '("\\.py\\'"		.	auto-coplete-mode))
+
+(add-hook 'ibuffer-hook
+    (lambda ()
+      (ibuffer-vc-set-filter-groups-by-vc-root)
+      (unless (eq ibuffer-sorting-mode 'alphabetic)
+        (ibuffer-do-sort-by-alphabetic))))
+
+;; Journal
+(require 'org-journal)
+=======
+>>>>>>> e6f68f19d2da6101b3f68cfc04197a1ac2d20157

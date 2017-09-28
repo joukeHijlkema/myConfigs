@@ -1,0 +1,1 @@
+("~/myConfigs/" "~/Programs/Hop/" "~/Programs/Tools/" "~/Programs/Plus/")
