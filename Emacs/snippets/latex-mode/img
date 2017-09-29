@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: img
+# key: img
+# --
+\begin{figure}
+\includegraphics[width=${1:width}/linewidth]{${2:path}}
+\caption{${3:caption}}
+\end{figure}

@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: meeting
+# key: meeting
+# --
+* $1
+  :PROPERTIES:
+  :~UNNUMBERED~: 1
+  :END: 
+Date : `(format-time-string "%d-%m-%Y")`
+** Attendees
+  :PROPERTIES:
+  :~UNNUMBERED~: 1
+  :END: 
+$2
+- Jouke Hijlkema [ONERA)
+
+** Input
+  :PROPERTIES:
+  :~UNNUMBERED~: 1
+  :END: 
+$3
+
+** Agenda
+$4
+
+** Minutes
+$5
+
+** Conclusions

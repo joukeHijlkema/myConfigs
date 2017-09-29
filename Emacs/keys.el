@@ -9,6 +9,7 @@
 (global-set-key (kbd "s->") 'mc/mark-next-like-this)
 (global-set-key (kbd "s-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-s-<") 'mc/mark-all-like-this)
+
 ;; Deletion etc
 (global-set-key (kbd "s-k") 'kill-whole-line)
 
@@ -57,3 +58,23 @@
 ;; uncrustify
 (require 'uncrustify-mode)
 (global-set-key (kbd "s-u") 'uncrustify-buffer)
+
+;; Buffers
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;;workgroups
+(setq wg-prefix-key (kbd "C-c w"))
+(global-set-key (kbd "s-<kp-5>") 'wg-revert-workgroup)
+(global-set-key (kbd "s-<kp-0>") 'delete-other-windows)
+
+;; window navigation
+(global-set-key (kbd "s-<right>") 'windmove-right)
+(global-set-key (kbd "s-<left>") 'windmove-left)
+(global-set-key (kbd "s-<up>") 'windmove-up)
+(global-set-key (kbd "s-<down>") 'windmove-down)
+
+;; ORG mode
+(add-hook 'org-mode-hook 
+          (lambda ()
+            (local-set-key (kbd "s-a") 'org-mactions-new-numbered-action)
+           ))
