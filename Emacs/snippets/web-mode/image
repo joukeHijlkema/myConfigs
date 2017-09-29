@@ -2,7 +2,6 @@
 # name: image
 # key: img
 # --
-<figure style="width:$1%;">
-  <img src="Images/$2" width=100%></img>
-  <figcaption>$3</figcaption>
-</figure>
+<figure src="${1:path}"
+	class="hcenter"
+	style="width:100%"/>
