@@ -23,6 +23,7 @@
 	c-electric-star
 	duplicate-line-or-region
 	eval-buffer
+	eval-print-last-sexp
 	ignore
 	save-some-buffers
 	tabbar-select-tab-callback

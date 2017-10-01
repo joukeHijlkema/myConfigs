@@ -2,28 +2,35 @@
 # name: meeting
 # key: meeting
 # --
-* $1
-  :PROPERTIES:
-  :~UNNUMBERED~: 1
-  :END: 
-Date : `(format-time-string "%d-%m-%Y")`
+* ${1:Title}
+#+LATEX_HEADER: \def \crNumber {${2:CR number (something like 1-2017}}
+#+LATEX_HEADER: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
+#+LATEX_HEADER: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
 ** Attendees
-  :PROPERTIES:
-  :~UNNUMBERED~: 1
-  :END: 
-$2
+:PROPERTIES:
+:UNNUMBERED: 1
+:END:
+${3:Participants. start with - to make a list}
 - Jouke Hijlkema [ONERA)
 
 ** Input
-  :PROPERTIES:
-  :~UNNUMBERED~: 1
-  :END: 
-$3
+:PROPERTIES:
+:UNNUMBERED: 1
+:END: 
+${4:Input documents. start with - to make a list}
 
 ** Agenda
-$4
+${5:Agenda. start with - to make a list	}
 
 ** Minutes
-$5
+${6:minutes start here. Sections start with ***, action<TAB> to add an action }
 
 ** Conclusions
+
+** Actions
+# ActionTable
+#+ATTR_LATEX: :environment longtable :align cp{0.50\textwidth}ccc
+| Action | Description                                        | responsible | due date | state |
+|--------+----------------------------------------------------+-------------+----------+-------|
+|        | <50>                                               |             |          |       |
+`(jouke-move-actions)`
