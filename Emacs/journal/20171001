@@ -3,3 +3,4 @@
 ** 22:50 
 - MOM mode is working
 - worgroups : create a wg, organise screens save workgroup. I added a Journal group under C-<keypad-2>
+- journal directory moved to ~/myConfig/Emacs -> link to ~/Documents/journal

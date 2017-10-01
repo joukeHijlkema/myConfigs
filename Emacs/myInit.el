@@ -98,6 +98,7 @@ LaTeX-section-label))
 ;; =======================================
 ;; Orgmode
 ;; =======================================
+(add-to-list 'warning-suppress-types '(yasnippet backquote-change))
 (defun jouke-count-actions ()
   "count the ACTION items in a document "
   (interactive)
@@ -114,10 +115,11 @@ LaTeX-section-label))
   (interactive)
   (setq case-fold-search nil)
   (save-excursion
-    ;; find the action table insertion point
-    (while (search-forward "# ActionTable" (point-max) t))
-    (while (re-search-forward "^|" (point-max) t))
-    (forward-line 1)
+    ;; find the first action table insertion point and delete existing lines
+    (search-forward "# ActionTable" (point-max) t)
+    (forward-line 5)
+    (while (re-search-forward "^|" (+ (point) 1) t)
+      (kill-whole-line))
     (dolist (elt (reverse (jouke-matches-in-buffer "\\*\\*\\* \\(ACTION\\|CLOSED\\).*")))
       (jouke-print-action elt))))
   
