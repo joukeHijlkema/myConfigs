@@ -57,8 +57,5 @@ pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-l
  '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal)))))
 (put 'upcase-region 'disabled nil)
 
-;; (setq ecb-tip-of-the-day nil)
-;; (ecb-activate)
-
-;; (minimap-mode)
-(put 'downcase-region 'disabled nil)
+;; load calendar at start
+(calendar)

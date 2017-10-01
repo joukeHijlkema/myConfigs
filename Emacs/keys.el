@@ -70,7 +70,6 @@
 (global-set-key (kbd "s-<kp-2>") 'wg-switch-to-index-1)
 (global-set-key (kbd "s-<kp-3>") 'wg-switch-to-index-2)
 (global-set-key (kbd "s-<kp-4>") 'wg-switch-to-index-3)
-(global-set-key (kbd "s-<kp-5>") 'wg-switch-to-index-4)
 
 ;; window navigation
 (global-set-key (kbd "s-<right>") 'windmove-right)

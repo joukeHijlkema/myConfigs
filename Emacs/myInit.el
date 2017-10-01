@@ -95,10 +95,10 @@ LaTeX-section-label))
 (workgroups-mode 1)
 (wg-load "~/myConfigs/Emacs/workGroups")
 
+
 ;; =======================================
 ;; Orgmode
 ;; =======================================
-(add-to-list 'warning-suppress-types '(yasnippet backquote-change))
 (defun jouke-count-actions ()
   "count the ACTION items in a document "
   (interactive)
@@ -165,3 +165,4 @@ LaTeX-section-label))
 (setq org-todo-keywords
            '((sequence "TODO" "|" "DONE")
              (sequence "ACTION" "|" "CLOSED")))
+
