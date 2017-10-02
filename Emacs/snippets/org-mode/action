@@ -2,4 +2,4 @@
 # name: action
 # key: action
 # --
-*** ACTION `(jouke-count-actions)` # ${1:description} # resp ${2:responsable} # ${3:duedate} # :noexport:
+*** ACTION `(jouke-count-actions)` # ${1:description} # resp ${2:responsable} # ${3:duedate} # `(jouke-get-action-source)` # :noexport:
