@@ -78,6 +78,7 @@
 (global-set-key (kbd "s-<down>") 'windmove-down)
 
 ;; ORG mode
+(global-set-key (kbd "<s-f12>") 'jouke-make-pdf)
 (add-hook 'org-mode-hook 
           (lambda ()
             (local-set-key (kbd "s-a") 'org-mactions-new-numbered-action)

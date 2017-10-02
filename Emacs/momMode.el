@@ -27,10 +27,10 @@
     (forward-line 5)
     (while (re-search-forward "^|" (+ (point) 1) t)
       (kill-whole-line))
-    (dolist (elt (reverse (jouke-matches-in-buffer jouke-re-action-complete)))
+    (dolist (elt (reverse (jouke-matches-in-buffer jouke-re-action-complete (point))))
       (jouke-print-action elt))))
   
-(defun jouke-matches-in-buffer (regexp &optional buffer)
+(defun jouke-matches-in-buffer (regexp end &optional buffer)
   "return a list of matches of REGEXP in BUFFER or the current buffer if not given."
   (setq case-fold-search nil)
   (let ((matches))
@@ -40,7 +40,7 @@
 	  (save-restriction
 	    (widen)
 	    (goto-char 1)
-	    (while (search-forward-regexp regexp nil t 1)
+	    (while (search-forward-regexp regexp end t 1)
 	      (push (match-string 0) matches)))))
       matches)))
 
@@ -65,7 +65,9 @@
   "get the closing note from a line if it is there"
   (save-match-data
     (string-match jouke-re-action-complete l)
-    (string-trim (match-string 6 l))))
+    (if (match-string 6 l)
+	(string-trim (format "%s" (match-string 6 l)))
+      "-")))
 
 
 (defun jouke-get-action-source ()
