@@ -13,6 +13,7 @@
 	keyboard-escape-quit
 	mouse-save-then-kill
 	mouse-set-region
+	org-self-insert-command
 	scroll-bar-toolkit-scroll
 	write-file
 	))

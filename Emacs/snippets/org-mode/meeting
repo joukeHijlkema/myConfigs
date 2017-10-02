@@ -3,15 +3,64 @@
 # key: meeting
 # --
 * ${1:Title}
-#+LATEX_HEADER: \def \crNumber {${2:CR number (something like 1-2017}}
-#+LATEX_HEADER: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
-#+LATEX_HEADER: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
+#+LATEX: \def \crNumber {${2:CR number (something like 1-2017)} }
+#+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
+#+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
+*Object of meeting: $1*
+#+ATTR_LATEX: :environment tabu :align XX :width \textwidth
+|*Date of meeting: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
+
 ** Attendees
 :PROPERTIES:
 :UNNUMBERED: 1
 :END:
-${3:Participants. start with - to make a list}
-- Jouke Hijlkema [ONERA)
+
+#+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
+|------------------------+-------------------+---|
+| Jouke Hijlkema (ONERA) | ${6:Participants} |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+** Distribution:  attendees +
+#+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
+|-----------------------+-------------------------+-----------------------|
+| Pierre Millan (ONERA) | Jérôme Anthoine (ONERA) | Muriel Brunet (ONERA) |
+|-----------------------+-------------------------+-----------------------|
+|                       |                         |                       |
+|-----------------------+-------------------------+-----------------------|
+|                       |                         |                       |
+|-----------------------+-------------------------+-----------------------|
+** Main conclusion
+
+#+ATTR_LATEX: :environment tabu :align |X| :width \textwidth
+|-----|
+|<100>|
+|     |
+|-----|
+** Approval
+#+ATTR_LATEX: :environment tabu :align |X|X|X|X|X| :width \textwidth
+|--------------+----------------------------------------------+-----+---+---|
+| Organization | ONERA                                        |     |   |   |
+|--------------+----------------------------------------------+-----+---+---|
+| Position     | Report secretary                             |     |   |   |
+|--------------+----------------------------------------------+-----+---+---|
+| Name         | Jouke Hijlkema                               |     |   |   |
+|--------------+----------------------------------------------+-----+---+---|
+| Signature    | [[~/Documents/Images/Signatures/Signature.pdf]]||||
+|--------------+----------------------------------------------+-----+---+---|
+#+LATEX: \pagebreak
+#+LATEX: \titleformat{\section}
+#+LATEX:   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 
 ** Input
 :PROPERTIES:
@@ -23,14 +72,13 @@ ${4:Input documents. start with - to make a list}
 ${5:Agenda. start with - to make a list	}
 
 ** Minutes
-${6:minutes start here. Sections start with ***, action<TAB> to add an action }
 
 ** Conclusions
 
 ** Actions
 # ActionTable
-#+ATTR_LATEX: :environment longtable :align cp{0.50\textwidth}ccc
-| Action | Description                                        | responsible | due date | state |
-|--------+----------------------------------------------------+-------------+----------+-------|
-|        | <50>                                               |             |          |       |
+#+ATTR_LATEX: :environment tabu :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
+| Reference       | # | Description                                        | responsible | due date | state | Note    |
+|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
+|                 |   | <50>                                               |             |          |       | <20>    |
 `(jouke-move-actions)`
