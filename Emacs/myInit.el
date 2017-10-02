@@ -98,7 +98,10 @@ LaTeX-section-label))
 ;; =======================================
 ;; Orgmode
 ;; =======================================
-(add-to-list 'warning-suppress-types '(yasnippet backquote-change))
+(if (boundp 'warning-suppress-types)
+    (add-to-list 'warning-suppress-types' (yasnippet backquote-change))
+  (setq warning-suppress-types '((yasnippet backquote-change))))
+
 (defun jouke-count-actions ()
   "count the ACTION items in a document "
   (interactive)
