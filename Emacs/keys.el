@@ -64,12 +64,16 @@
 
 ;;workgroups
 (setq wg-prefix-key (kbd "C-c w"))
-(global-set-key (kbd "s-<kp-5>") 'wg-revert-workgroup)
 (global-set-key (kbd "s-<kp-0>") 'delete-other-windows)
 (global-set-key (kbd "s-<kp-1>") 'wg-switch-to-index-0)
 (global-set-key (kbd "s-<kp-2>") 'wg-switch-to-index-1)
 (global-set-key (kbd "s-<kp-3>") 'wg-switch-to-index-2)
 (global-set-key (kbd "s-<kp-4>") 'wg-switch-to-index-3)
+(global-set-key (kbd "s-<kp-5>") 'wg-switch-to-index-4)
+(global-set-key (kbd "s-<kp-6>") 'wg-switch-to-index-5)
+(global-set-key (kbd "s-<kp-7>") 'wg-switch-to-index-6)
+(global-set-key (kbd "s-<kp-8>") 'wg-switch-to-index-7)
+(global-set-key (kbd "s-<kp-9>") 'wg-switch-to-index-8)
 
 ;; window navigation
 (global-set-key (kbd "s-<right>") 'windmove-right)
