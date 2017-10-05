@@ -1,16 +1,16 @@
 # -*- mode: snippet -*-
-# name: meeting
-# key: meeting
+# name: reunion
+# key: reunion
 # --
 * ${1:Title}
 #+LATEX: \def \crNumber {${2:CR number (something like 1-2017)} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
-*Object of meeting: $1*
+*Objet de la réunion: $1*
 #+ATTR_LATEX: :environment tabu :align XX :width \textwidth
-|*Date of meeting: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
+|*Date de la réunion: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
 
-** Attendees
+** Participants
 :PROPERTIES:
 :UNNUMBERED: 1
 :END:
@@ -31,7 +31,7 @@
 |------------------------+-------------------+---|
 |                        |                   |   |
 |------------------------+-------------------+---|
-** Distribution:  attendees +
+** Diffusion:  participants +
 #+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
 |-----------------------+-------------------------+-----------------------|
 | Pierre Millan (ONERA) | Jérôme Anthoine (ONERA) | Muriel Brunet (ONERA) |
@@ -40,14 +40,14 @@
 |-----------------------+-------------------------+-----------------------|
 |                       |                         |                       |
 |-----------------------+-------------------------+-----------------------|
-** Main conclusion
+** Conclusions principales
 
 #+ATTR_LATEX: :environment tabu :align |X| :width \textwidth
 |-----|
 |<100>|
 |     |
 |-----|
-** Approval
+** Approbation
 #+ATTR_LATEX: :environment tabu :align |X|X|X|X|X| :width \textwidth
 |--------------+----------------------------------------------+-----+---+---|
 | Organization | ONERA                                        |     |   |   |
@@ -62,17 +62,16 @@
 #+LATEX: \titleformat{\section}
 #+LATEX:   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 
-** Input
+** Entrées
 :PROPERTIES:
 :UNNUMBERED: 1
 :END: 
 ${4:Input documents. start with - to make a list}
 
-** Agenda
+** Ordre du jour
 ${5:Agenda. start with - to make a list	}
 
-** Minutes
-{$7}
+** Compte-rendu
 
 ** Conclusions
 

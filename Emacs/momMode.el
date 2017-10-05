@@ -1,4 +1,6 @@
 (require 'subr-x)
+(with-eval-after-load 'org (setq org-startup-indented t))
+
 (if (boundp 'warning-suppress-types)
     (add-to-list 'warning-suppress-types' (yasnippet backquote-change))
   (setq warning-suppress-types '((yasnippet backquote-change))))
@@ -100,3 +102,4 @@
 (setq org-todo-keywords
            '((sequence "TODO" "|" "DONE")
              (sequence "ACTION" "|" "CLOSED")))
+
