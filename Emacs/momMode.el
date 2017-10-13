@@ -1,5 +1,8 @@
 (require 'subr-x)
-(with-eval-after-load 'org (setq org-startup-indented t))
+(with-eval-after-load 'org
+  (setq org-startup-indented t)
+  (flyspell-mode)
+  (visual-line-mode t))
 
 (if (boundp 'warning-suppress-types)
     (add-to-list 'warning-suppress-types' (yasnippet backquote-change))
@@ -84,7 +87,7 @@
   (interactive)
   (save-excursion
     (jouke-move-actions)
-    (re-search-backward "Object of meeting:" nil t)
+    (re-search-backward "\crNumber" nil t)
     (org-latex-export-to-pdf nil 's )))
 
 (add-to-list 'org-latex-classes
