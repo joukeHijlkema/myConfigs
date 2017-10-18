@@ -28,12 +28,20 @@
   (setq case-fold-search nil)
   (save-excursion
     ;; find the first action table insertion point and delete existing lines
-    (search-forward "# ActionTable" (point-max) t)
-    (forward-line 5)
-    (while (re-search-forward "^|" (+ (point) 1) t)
-      (kill-whole-line))
-    (dolist (elt (reverse (jouke-matches-in-buffer jouke-re-action-complete (point))))
-      (jouke-print-action elt))))
+    (when (search-forward "# ActionTable" (point-max) t)
+      (forward-line 5)
+      (setq start (point))
+      (when (re-search-forward "|-+\+" (point-max) t)
+      	(beginning-of-line)
+	(setq end (point))
+	(kill-region start end)
+	(dolist (elt (reverse (jouke-matches-in-buffer jouke-re-action-complete (point))))
+	  (jouke-print-action elt))
+	)
+      )
+    )
+  )
+    
   
 (defun jouke-matches-in-buffer (regexp end &optional buffer)
   "return a list of matches of REGEXP in BUFFER or the current buffer if not given."
