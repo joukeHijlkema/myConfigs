@@ -15,7 +15,6 @@
 (autoload 'cflow-mode "cflow-mode")
 (setq auto-mode-alist (append auto-mode-alist '(("\\.cflow$" . cflow-mode))))
 
-(load "~/.emacs.d/keys.el")
 (load"~/.emacs.d/Languages/Python.el")
 (load"~/.emacs.d/Languages/C++.el")
 
@@ -89,13 +88,19 @@ LaTeX-section-label))
 
 ;; Journal
 (require 'org-journal)
+(setq org-agenda-files '("~/Documents/Org"))
+
 
 ;; Workgroups2
-(require 'workgroups)
+(require 'workgroups2)
 (workgroups-mode 1)
-(wg-load "~/myConfigs/Emacs/workGroups")
+(setq wg-emacs-exit-save-behavior           'save)      ; Options: 'save 'ask nil
+(setq wg-workgroups-mode-exit-save-behavior 'save)      ; Options: 'save 'ask nil
 
 ;; =======================================
 ;; Orgmode
 ;; =======================================
 (load "~/.emacs.d/momMode.el")
+
+
+(load "~/.emacs.d/keys.el")
