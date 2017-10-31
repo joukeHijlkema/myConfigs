@@ -25,8 +25,8 @@
  '(initial-frame-alist (quote ((fullscreen . maximized))))
  '(minimap-mode nil)
  '(minimap-window-location (quote left))
- '(org-agenda-file-regexp "\\`[^.].*\\.org\\|[0-9]+$'")
- '(org-agenda-files (quote ("~/Documents/journal")))
+ '(org-agenda-file-regexp ".*\\.org$")
+ '(org-agenda-files (quote ("~/Documents/Org")))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)
