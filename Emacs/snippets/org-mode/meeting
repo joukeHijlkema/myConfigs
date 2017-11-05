@@ -3,7 +3,7 @@
 # key: meeting
 # --
 * ${1:Title}
-#+LATEX: \def \crNumber {${2:CR number (something like 1-2017)} }
+#+LATEX: \def \crNumber {${2:CR number (something like 1/2017)} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
 *Object of meeting: $1*
@@ -72,11 +72,12 @@ ${4:Input documents. start with - to make a list}
 ${5:Agenda. start with - to make a list	}
 
 ** Minutes
-{$7}
+$7
 
 ** Conclusions
 
 ** Actions
+
 # ActionTable
 #+ATTR_LATEX: :environment tabu :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
 | Reference       | # | Description                                        | responsible | due date | state | Note    |
