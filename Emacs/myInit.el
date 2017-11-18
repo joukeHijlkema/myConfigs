@@ -102,6 +102,4 @@ LaTeX-section-label))
 ;; Orgmode
 ;; =======================================
 (load "~/.emacs.d/momMode.el")
-
-
 (load "~/.emacs.d/keys.el")

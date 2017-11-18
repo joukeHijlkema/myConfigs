@@ -54,10 +54,10 @@
 
 ;;<<<<<<< HEAD
 ;; load calendar at start
-;;(calendar)
+;; (calendar)
 ;;=======
-;;(put 'downcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
-;;(load "~/.emacs.d/myInit.el")
+(load "~/.emacs.d/myInit.el")
 
 ;;>>>>>>> 5e4b582b9f5409fdd2dc135622e5dc48e0a3628c
