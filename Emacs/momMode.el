@@ -97,12 +97,20 @@
   (interactive)
   (save-excursion
     (jouke-move-actions)
-    (re-search-backward "\crNumber" nil t)
-    (org-latex-export-to-pdf nil 's )))
+    (re-search-backward "# StartSection" nil t)
+    (org-open-file (org-latex-export-to-pdf nil 's ))))
+
+(defun jouke-make-latex ()
+  "make the pdf of this meeting"
+  (interactive)
+  (save-excursion
+    (jouke-move-actions)
+    (re-search-backward "# StartSection" nil t)
+    (org-latex-export-to-latex nil 's )))
 
 (add-to-list 'org-latex-classes
-          '("MOM"
-             "\\documentclass{MOM}
+          '("myOrg"
+             "\\documentclass{myOrg}
              [NO-DEFAULT-PACKAGES]
              [PACKAGES]
              [EXTRA]"

@@ -3,6 +3,6 @@
 # key: img
 # --
 #+CAPTION: $1
-#+NAME:   img:chargement
-#+ATTR_LATEX: :placement [h!]
+#+NAME:   img:$2
+#+ATTR_LATEX: :placement [!p]
 [[`(read-file-name "find the file" "/home/hylkema/Documents/Images")`]]

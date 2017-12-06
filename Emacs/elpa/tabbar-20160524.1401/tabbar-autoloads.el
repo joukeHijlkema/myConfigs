@@ -1,10 +1,11 @@
 ;;; tabbar-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "tabbar" "tabbar.el" (22801 46665 791301 184000))
-;;; Generated autoloads from tabbar.el
+;;;### (autoloads nil "tabbar" "../../../../.emacs.d/elpa/tabbar-20160524.1401/tabbar.el"
+;;;;;;  "bf37057c196e9749c32bf9c42a8d0e7b")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/tabbar-20160524.1401/tabbar.el
 
 (autoload 'tabbar-backward "tabbar" "\
 Select the previous available tab.
@@ -129,7 +130,8 @@ hidden, it is shown again.  Signal an error if Tabbar mode is off.
 
 (defvar tabbar-mode nil "\
 Non-nil if Tabbar mode is enabled.
-See the command `tabbar-mode' for a description of this minor mode.
+See the `tabbar-mode' command
+for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `tabbar-mode'.")
@@ -147,7 +149,8 @@ Returns non-nil if the new state is enabled.
 
 (defvar tabbar-mwheel-mode nil "\
 Non-nil if Tabbar-Mwheel mode is enabled.
-See the command `tabbar-mwheel-mode' for a description of this minor mode.
+See the `tabbar-mwheel-mode' command
+for a description of this minor mode.
 Setting this variable directly does not take effect;
 either customize it (see the info node `Easy Customization')
 or call the function `tabbar-mwheel-mode'.")
@@ -165,7 +168,10 @@ Returns non-nil if the new state is enabled.
 
 ;;;***
 
-;;;### (autoloads nil nil ("tabbar-pkg.el") (22801 46665 877069 481000))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/tabbar-20160524.1401/tabbar-autoloads.el"
+;;;;;;  "../../../../.emacs.d/elpa/tabbar-20160524.1401/tabbar-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/tabbar-20160524.1401/tabbar.el")
+;;;;;;  (23071 58106 299415 65000))
 
 ;;;***
 

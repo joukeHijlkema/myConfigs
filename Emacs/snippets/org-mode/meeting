@@ -3,6 +3,10 @@
 # key: meeting
 # --
 * ${1:Title}
+# StartSection
+:PROPERTIES:
+:EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=25337,english]
+:END:
 #+LATEX: \def \crNumber {${2:CR number (something like 1/2017)} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }

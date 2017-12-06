@@ -15,6 +15,7 @@
 	mouse-set-region
 	org-self-insert-command
 	scroll-bar-toolkit-scroll
+	wg-switch-to-workgroup-at-index-8
 	write-file
 	))
 
@@ -30,5 +31,6 @@
 	save-some-buffers
 	tabbar-select-tab-callback
 	toggle-comment-on-line
+	wg-switch-to-workgroup-at-index-2
 	yas-expand
 	))

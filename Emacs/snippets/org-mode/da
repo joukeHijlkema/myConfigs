@@ -1,0 +1,41 @@
+# -*- mode: snippet -*-
+# name: DA
+# key: DA
+# --
+
+# StartSection
+#+LATEX_CLASS: DA
+#+OPTIONS: title:0
+#+AUTHOR:Jouke Hijlkema
+
+#+LATEX: \etude
+
+#+LATEX: \vspace{1em}
+#+ATTR_LATEX: :environment tabu :align |l|X|
+|---------------+--|
+| N° devis      |  |
+| Justification |  |
+| Fourniseur    |  |
+|---------------+--|
+
+#+LATEX: \vspace{1em}
+#+ATTR_LATEX: :environment tabu :align |l|c|r|r|l|
+|-----------------+--+-------------+------------+------------|
+| Designation     | #| P.U. (H.T.) | Prix (H.T) | Délai      |
+|-----------------+--+-------------+------------+------------|
+|                 |  |             |            |            |
+|-----------------+--+-------------+------------+------------|
+| Total           |  |             |            |            |
+|-----------------+--+-------------+------------+------------|
+#+TBLFM: \$4=\$2*\$3::@>\$4=vsum(@2\$4..@-1\$4)
+
+#+LATEX: \vspace{1em}
+#+ATTR_LATEX: :environment tabu :align |p{0.33\textwidth}|p{0.33\textwidth}|p{0.33\textwidth}|
+|------------------------------------------------------------+---------------------------+--------------------------|
+| Bénéficiaire                                               | Responsable administratif | Directeur de Département |
+|------------------------------------------------------------+---------------------------+--------------------------|
+| Jouke Hijlkema                                             | Jérôme Anthoine           | Pierre Millan            |
+| Date: `(format-time-string "%d/%m/%Y")`                    | Date:                     | Date:                    |
+| Signature: [[~/Documents/Images/Signatures/Signature.pdf]] | Signature:                | Signature:               |
+|------------------------------------------------------------+---------------------------+--------------------------|
+

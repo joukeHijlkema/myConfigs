@@ -31,10 +31,14 @@
   (goto-char p0)
   )
 
+(defun mydate () (interactive)
+       (insert (shell-command-to-string "echo -n $(date +%d/%m/%Y) ")))
+
 (global-set-key (kbd "s-d") 'duplicate-line-or-region)
 (global-set-key (kbd "s-r") 'rectangle-mark-mode)
 (global-set-key (kbd "s-a") 'align-current)
 (global-set-key (kbd "s-z") 'ff-find-other-file)
+(global-set-key (kbd "s-t") 'mydate)
 
 ;; commenting
 (defun toggle-comment-on-line (beg end)
@@ -85,6 +89,8 @@
 (global-set-key (kbd "s-8") 'wg-switch-to-workgroup-at-index-8)
 (global-set-key (kbd "s-9") 'wg-switch-to-workgroup-at-index-9)
 (global-set-key (kbd "<s-kp-divide>") 'delete-other-windows)
+(global-set-key (kbd "<s-kp-multiply>") 'wg-revert-workgroup)
+(global-set-key (kbd "<s-kp-subtract>") 'wg-save-session)
 
 ;; window navigation
 (global-set-key (kbd "s-<right>") 'windmove-right)
@@ -93,8 +99,10 @@
 (global-set-key (kbd "s-<down>") 'windmove-down)
 
 ;; ORG mode
-(global-set-key (kbd "<s-f12>") 'jouke-make-pdf)
-(add-hook 'org-mode-hook 
-          (lambda ()
-            (local-set-key (kbd "s-a") 'org-mactions-new-numbered-action)
-           ))
+(define-key org-mode-map (kbd "s-i") 'org-clock-in)
+(define-key org-mode-map (kbd "s-o") 'org-clock-out)
+(define-key org-mode-map (kbd "s-a") 'org-mactions-new-numbered-action)
+(define-key org-mode-map  (kbd "<s-f11>") 'jouke-make-latex)
+(define-key org-mode-map  (kbd "<s-f12>") 'jouke-make-pdf)
+
+(global-set-key (kbd "<s-f10>") 'cfw:org-open-agenda-day)
