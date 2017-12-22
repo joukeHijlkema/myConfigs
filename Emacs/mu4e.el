@@ -69,6 +69,12 @@
 (mu4e-alert-set-default-style 'libnotify)
 (add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
 (add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+(setq mu4e-alert-interesting-mail-query
+      (concat
+       "flag:unread"
+       " AND NOT flag:trashed"
+       " AND NOT maildir:"
+       "\"/Spam\""))
 
 (setq mu4e-headers-visible-lines 15)
 
@@ -125,13 +131,13 @@
 (defun mark-message-as-spam (msg docid) 
   (interactive)
   (mark-message-as msg "-s")
-  (mu4e~proc-move docid "/Spam" "+S")
+  (mu4e~proc-move docid "/Spam" "+S-N")
   )
 
 (defun mark-message-as-ham  (msg docid) 
   (interactive) 
   (mark-message-as msg "-n")
-  (mu4e~proc-move docid "/Work/INBOX" "+S"))
+  (mu4e~proc-move docid "/Work/INBOX" "+S-N"))
 
 
 (defun muTest ()

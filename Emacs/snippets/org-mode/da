@@ -4,7 +4,9 @@
 # --
 
 # StartSection
-#+LATEX_CLASS: DA
+:PROPERTIES:
+:EXPORT_LATEX_CLASS_OPTIONS: [type=da,protection=SMP,aer=25337,english]
+:END:
 #+OPTIONS: title:0
 #+AUTHOR:Jouke Hijlkema
 
@@ -19,7 +21,7 @@
 |---------------+--|
 
 #+LATEX: \vspace{1em}
-#+ATTR_LATEX: :environment tabu :align |l|c|r|r|l|
+#+ATTR_LATEX: :environment tabu :align |X|c|r|r|l|
 |-----------------+--+-------------+------------+------------|
 | Designation     | #| P.U. (H.T.) | Prix (H.T) | Délai      |
 |-----------------+--+-------------+------------+------------|

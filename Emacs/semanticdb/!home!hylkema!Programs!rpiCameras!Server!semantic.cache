@@ -149,13 +149,14 @@
             ("com" code nil nil [635 666])
             ("nextPing" code nil nil [668 695])
             ("nextStatus" code nil nil [696 722])
-            ("myServer" variable nil nil [724 1130])
-            ("fid" variable nil nil [1166 1199])
-            ("fid" code nil nil [1200 1227])
-            ("fid" code nil nil [1228 1239])
-            ("while" code nil nil [1241 4984]))          
+            ("myServer" variable nil nil [724 1192])
+            ("fid" variable nil nil [1228 1261])
+            ("fid" code nil nil [1262 1289])
+            ("fid" code nil nil [1290 1301])
+            ("streamClients" variable nil nil [1303 1321])
+            ("while" code nil nil [1323 5406]))          
       :file "Server.py"
-      :pointmax 4999
+      :pointmax 5421
       :fsize 5420
       :lastmodtime '(22895 32130 102919 508000)
       :unmatched-syntax nil)

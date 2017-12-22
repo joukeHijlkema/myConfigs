@@ -20,9 +20,11 @@
    [default default default italic underline success warning error])
  '(cua-mode t nil (cua-base))
  '(custom-enabled-themes (quote (tango-dark)))
+ '(ede-project-directories (quote ("/home/hylkema/Programs/Tools/Cedre")))
  '(global-linum-mode t)
  '(inhibit-startup-screen t)
  '(initial-frame-alist (quote ((fullscreen . maximized))))
+ '(ispell-dictionary "fr")
  '(minimap-mode nil)
  '(minimap-window-location (quote left))
  '(mu4e-bookmarks
@@ -33,13 +35,23 @@
      ("date:7d..now AND NOT flag:trashed" "Last 7 days" 119)
      ("mime:image/* AND NOT flag:trashed" "Messages with images" 112))))
  '(mu4e-get-mail-command "offlineimap -o")
+ '(mu4e-headers-fields
+   (quote
+    ((:human-date . 12)
+     (:flags . 6)
+     (:mailing-list . 10)
+     (:from . 22)
+     (:to . 22)
+     (:subject))))
+ '(mu4e-headers-visible-lines 25)
  '(mu4e-maildir "/home/hylkema/Maildir")
- '(mu4e-update-interval 60)
+ '(mu4e-update-interval 300)
  '(mu4e-use-fancy-chars t)
  '(mu4e-user-mail-address-list (quote ("jouke.hijlkema@onera.fr")))
  '(mu4e-view-prefer-html nil)
- '(mu4e-view-show-images nil)
- '(org-agenda-file-regexp ".*\\.org$")
+ '(mu4e-view-show-addresses nil)
+ '(mu4e-view-show-images t)
+ '(org-agenda-file-regexp "^[^#]*\\.org$")
  '(org-agenda-files
    (quote
     ("/home/hylkema/Documents/Org/CNEST_RT.org" "/home/hylkema/Documents/Org/Divers.org" "/home/hylkema/Documents/Org/EsaTrp.org" "/home/hylkema/Documents/Org/Perseus.org" "/home/hylkema/Documents/Org/myPlanning.org" "/home/hylkema/org/lpReunions.org")))
@@ -51,9 +63,10 @@
      ("\\.x?html?\\'" . default)
      ("\\.pdf\\'" . "/usr/bin/qpdfview --unique"))))
  '(org-log-done (quote note))
+ '(org-support-shift-select t)
  '(package-selected-packages
    (quote
-    (calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
+    (langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
  '(show-paren-mode t)
  '(speedbar-sort-tags t)
  '(speedbar-tag-hierarchy-method

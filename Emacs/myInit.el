@@ -36,7 +36,7 @@
 (setq TeX-save-query nil)
 (setq TeX-PDF-mode t)
 (setq ispell-program-name "aspell")
-(setq ispell-dictionary "english") 
+(setq ispell-dictionary "fr") 
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-buffer)
@@ -110,3 +110,10 @@ LaTeX-section-label))
 
 ;; === chromium as browser ===
 (setq browse-url-browser-function 'browse-url-chromium)
+
+;; === langtool ===
+(require 'langtool)
+(setq langtool-language-tool-jar "/Software/LanguageTool-3.9/languagetool-commandline.jar")
+(setq langtool-default-language "fr")
+(global-set-key (kbd "s-g") 'langtool-check)
+(global-set-key (kbd "C-s-g") 'langtool-check-done)

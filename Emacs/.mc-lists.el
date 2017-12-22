@@ -28,6 +28,7 @@
 	eval-print-last-sexp
 	ignore
 	indent-for-tab-command
+	org-force-self-insert
 	save-some-buffers
 	tabbar-select-tab-callback
 	toggle-comment-on-line
