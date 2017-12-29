@@ -11,7 +11,6 @@
 (setq tramp-default-method "ssh")
 (setq speedbar-initial-expansion-list-name "buffers")
 
-(yas-global-mode t)
 (autoload 'cflow-mode "cflow-mode")
 (setq auto-mode-alist (append auto-mode-alist '(("\\.cflow$" . cflow-mode))))
 
@@ -37,7 +36,7 @@
 (setq TeX-save-query nil)
 (setq TeX-PDF-mode t)
 (setq ispell-program-name "aspell")
-(setq ispell-dictionary "english") 
+(setq ispell-dictionary "fr") 
 
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-buffer)
@@ -88,7 +87,7 @@ LaTeX-section-label))
 
 ;; Journal
 (require 'org-journal)
-(setq org-agenda-files '("~/Documents/Org"))
+(setq org-agenda-files '("~/Documents/Org" "~/org"))
 
 
 ;; Workgroups2
@@ -101,5 +100,20 @@ LaTeX-section-label))
 ;; =======================================
 ;; Orgmode
 ;; =======================================
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
 (load "~/.emacs.d/momMode.el")
+;; === mu4e ===
+(load "~/.emacs.d/mu4e.el")
+;; === keys ===
 (load "~/.emacs.d/keys.el")
+
+;; === chromium as browser ===
+(setq browse-url-browser-function 'browse-url-chromium)
+
+;; === langtool ===
+(require 'langtool)
+(setq langtool-language-tool-jar "/Software/LanguageTool-3.9/languagetool-commandline.jar")
+(setq langtool-default-language "fr")
+(global-set-key (kbd "s-g") 'langtool-check)
+(global-set-key (kbd "C-s-g") 'langtool-check-done)

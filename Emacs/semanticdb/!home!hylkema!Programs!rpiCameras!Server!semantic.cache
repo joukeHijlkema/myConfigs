@@ -1,10 +1,10 @@
-;; Object Server/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "Server/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "serverPipe.py"
-      :major-mode 'python-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
       :tags 
         '( ("gi" include nil nil [279 288])
             ("gi" code nil nil [289 321])
@@ -16,34 +16,35 @@
                (:members 
                   ( ("__init__" function
                        (:suite 
-                          ( ("\"docstring\"" code nil (reparse-symbol indented_block_body) [548 559])
-                            ("self" variable nil (reparse-symbol indented_block_body) [577 606])
-                            ("self" variable nil (reparse-symbol indented_block_body) [615 640])
-                            ("self" variable nil (reparse-symbol indented_block_body) [650 676])
-                            ("self" variable nil (reparse-symbol indented_block_body) [685 712])
-                            ("self" variable nil (reparse-symbol indented_block_body) [721 752])
-                            ("self" variable nil (reparse-symbol indented_block_body) [761 793])
-                            ("self" variable nil (reparse-symbol indented_block_body) [802 830])
-                            ("self" variable nil (reparse-symbol indented_block_body) [839 866])
-                            ("self" variable nil (reparse-symbol indented_block_body) [875 899])
-                            ("self" variable nil (reparse-symbol indented_block_body) [908 932])
-                            ("self" variable nil (reparse-symbol indented_block_body) [941 966])
-                            ("self" variable nil (reparse-symbol indented_block_body) [975 1000])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1010 1058])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1067 1124])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1133 1197])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1206 1257])
-                            ("self" code nil (reparse-symbol indented_block_body) [1267 1315])
-                            ("self" code nil (reparse-symbol indented_block_body) [1324 1456])
-                            ("self" code nil (reparse-symbol indented_block_body) [1466 1497])
-                            ("self" code nil (reparse-symbol indented_block_body) [1506 1540])
-                            ("self" code nil (reparse-symbol indented_block_body) [1550 1595])
-                            ("self" code nil (reparse-symbol indented_block_body) [1605 1630])
-                            ("self" code nil (reparse-symbol indented_block_body) [1639 1660])
-                            ("self" variable nil (reparse-symbol indented_block_body) [1696 1749])
-                            ("self" code nil (reparse-symbol indented_block_body) [1758 1790])
-                            ("self" code nil (reparse-symbol indented_block_body) [1799 1825])
-                            ("print" code nil (reparse-symbol indented_block_body) [1835 1913]))                          
+                          ( ("\"docstring\"" code nil (reparse-symbol indented_block_body) [559 570])
+                            ("self" variable nil (reparse-symbol indented_block_body) [588 618])
+                            ("self" variable nil (reparse-symbol indented_block_body) [627 653])
+                            ("self" variable nil (reparse-symbol indented_block_body) [663 690])
+                            ("self" variable nil (reparse-symbol indented_block_body) [699 727])
+                            ("self" variable nil (reparse-symbol indented_block_body) [736 768])
+                            ("self" variable nil (reparse-symbol indented_block_body) [777 810])
+                            ("self" variable nil (reparse-symbol indented_block_body) [819 848])
+                            ("self" variable nil (reparse-symbol indented_block_body) [857 885])
+                            ("self" variable nil (reparse-symbol indented_block_body) [894 925])
+                            ("self" variable nil (reparse-symbol indented_block_body) [934 959])
+                            ("self" variable nil (reparse-symbol indented_block_body) [968 993])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1002 1028])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1037 1063])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1073 1121])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1130 1187])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1196 1260])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1269 1320])
+                            ("self" code nil (reparse-symbol indented_block_body) [1330 1378])
+                            ("self" code nil (reparse-symbol indented_block_body) [1387 1519])
+                            ("self" code nil (reparse-symbol indented_block_body) [1529 1560])
+                            ("self" code nil (reparse-symbol indented_block_body) [1569 1603])
+                            ("self" code nil (reparse-symbol indented_block_body) [1613 1658])
+                            ("self" code nil (reparse-symbol indented_block_body) [1668 1693])
+                            ("self" code nil (reparse-symbol indented_block_body) [1702 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1759 1812])
+                            ("self" code nil (reparse-symbol indented_block_body) [1821 1853])
+                            ("self" code nil (reparse-symbol indented_block_body) [1862 1888])
+                            ("print" code nil (reparse-symbol indented_block_body) [1898 1976]))                          
                         :parent "dummy"
                         :arguments 
                           ( ("self" variable nil (reparse-symbol function_parameters) [471 475])
@@ -53,79 +54,86 @@
                             ("audioPortIn" variable nil (reparse-symbol function_parameters) [496 507])
                             ("audioPortOut" variable nil (reparse-symbol function_parameters) [508 520])
                             ("serverIp" variable nil (reparse-symbol function_parameters) [521 529])
-                            ("pilotIp" variable nil (reparse-symbol function_parameters) [530 537]))                          
+                            ("pilotIp" variable nil (reparse-symbol function_parameters) [530 537])
+                            ("streamPort" variable nil (reparse-symbol function_parameters) [538 548]))                          
                         :constructor-flag t)
-                        (reparse-symbol indented_block_body) [458 1914])
+                        (reparse-symbol indented_block_body) [458 1977])
                     ("shutDown" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2202 2206]))                          )
-                        (reparse-symbol indented_block_body) [2188 2621])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2265 2269]))                          )
+                        (reparse-symbol indented_block_body) [2251 2684])
                     ("streamLeg" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [2916 2920]))                          )
-                        (reparse-symbol indented_block_body) [2901 3844])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2979 2983]))                          )
+                        (reparse-symbol indented_block_body) [2964 4815])
                     ("pilotLeg" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [4127 4131])
-                            ("pilotIp" variable nil (reparse-symbol function_parameters) [4132 4139])
-                            ("portIn" variable nil (reparse-symbol function_parameters) [4140 4146])
-                            ("portOut" variable nil (reparse-symbol function_parameters) [4147 4154]))                          )
-                        (reparse-symbol indented_block_body) [4113 5056])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5098 5102])
+                            ("pilotIp" variable nil (reparse-symbol function_parameters) [5103 5110])
+                            ("portIn" variable nil (reparse-symbol function_parameters) [5111 5117])
+                            ("portOut" variable nil (reparse-symbol function_parameters) [5118 5125]))                          )
+                        (reparse-symbol indented_block_body) [5084 6027])
                     ("recLeg" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [5345 5349]))                          )
-                        (reparse-symbol indented_block_body) [5333 6342])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6316 6320]))                          )
+                        (reparse-symbol indented_block_body) [6304 7313])
                     ("audioLeg" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [6620 6624]))                          )
-                        (reparse-symbol indented_block_body) [6606 7627])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7591 7595]))                          )
+                        (reparse-symbol indented_block_body) [7577 8598])
                     ("closeFile" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [7911 7915])
-                            ("pad" variable nil (reparse-symbol function_parameters) [7916 7919])
-                            ("info" variable nil (reparse-symbol function_parameters) [7920 7924])
-                            ("ud" variable nil (reparse-symbol function_parameters) [7925 7927]))                          )
-                        (reparse-symbol indented_block_body) [7896 8590])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8882 8886])
+                            ("pad" variable nil (reparse-symbol function_parameters) [8887 8890])
+                            ("info" variable nil (reparse-symbol function_parameters) [8891 8895])
+                            ("ud" variable nil (reparse-symbol function_parameters) [8896 8898]))                          )
+                        (reparse-symbol indented_block_body) [8867 9561])
                     ("startRecording" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [8879 8883]))                          )
-                        (reparse-symbol indented_block_body) [8859 9545])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9850 9854]))                          )
+                        (reparse-symbol indented_block_body) [9830 10516])
                     ("stopRecording" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [9841 9845]))                          )
-                        (reparse-symbol indented_block_body) [9822 10324])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10812 10816]))                          )
+                        (reparse-symbol indented_block_body) [10793 11295])
                     ("fileName" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [10625 10629]))                          )
-                        (reparse-symbol indented_block_body) [10611 10727])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11596 11600]))                          )
+                        (reparse-symbol indented_block_body) [11582 11698])
                     ("startStreaming" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11017 11021]))                          )
-                        (reparse-symbol indented_block_body) [10997 11510])
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11988 11992]))                          )
+                        (reparse-symbol indented_block_body) [11968 12481])
                     ("stopStreaming" function
                        (:parent "dummy"
                         :arguments 
-                          ( ("self" variable nil (reparse-symbol function_parameters) [11798 11802]))                          )
-                        (reparse-symbol indented_block_body) [11779 11854]))                  
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12769 12773]))                          )
+                        (reparse-symbol indented_block_body) [12750 12825])
+                    ("addStreamClient" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13132 13136])
+                            ("ip" variable nil (reparse-symbol function_parameters) [13137 13139]))                          )
+                        (reparse-symbol indented_block_body) [13111 13618]))                  
                 :type "class")
-                nil [433 11854]))          
+                nil [433 13618]))          
       :file "serverPipe.py"
-      :pointmax 11864
-      :fsize 11863
-      :lastmodtime '(22748 51496 881744 410000)
+      :pointmax 13618
+      :fsize 13617
+      :lastmodtime '(22895 32130 102919 508000)
       :unmatched-syntax nil)
-    (semanticdb-table "Server.py"
-      :major-mode 'python-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
       :tags 
         '( ("os" include nil nil [275 284])
             ("sys" include nil nil [285 295])
@@ -141,35 +149,271 @@
             ("com" code nil nil [635 666])
             ("nextPing" code nil nil [668 695])
             ("nextStatus" code nil nil [696 722])
-            ("myServer" variable nil nil [724 1130])
-            ("fid" variable nil nil [1166 1199])
-            ("fid" code nil nil [1200 1227])
-            ("fid" code nil nil [1228 1239])
-            ("while" code nil nil [1241 4984]))          
+            ("myServer" variable nil nil [724 1192])
+            ("fid" variable nil nil [1228 1261])
+            ("fid" code nil nil [1262 1289])
+            ("fid" code nil nil [1290 1301])
+            ("streamClients" variable nil nil [1303 1321])
+            ("while" code nil nil [1323 5406]))          
       :file "Server.py"
-      :pointmax 4999
-      :fsize 4998
-      :lastmodtime '(22748 53019 169706 482000)
+      :pointmax 5421
+      :fsize 5420
+      :lastmodtime '(22895 32130 102919 508000)
       :unmatched-syntax nil)
-    (semanticdb-table "serverClass.py"
-      :file "serverClass.py"
-      :fsize 10732
-      :lastmodtime '(22745 1098 772794 972000))
-    (semanticdb-table "dataBase.py"
-      :major-mode 'python-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
       :tags 
-        '( ("MySQLdb" include nil nil [277 291])
-            ("db" variable nil nil [293 485])
-            ("cursor" variable nil nil [487 507])
-            ("add" function (:arguments 
-              ( ("resp" variable nil (reparse-symbol function_parameters) [749 753])
-                ("title" variable nil (reparse-symbol function_parameters) [754 759])
-                ("tags" variable nil (reparse-symbol function_parameters) [760 764])
-                ("path" variable nil (reparse-symbol function_parameters) [765 769]))              ) nil [740 967]))          
-      :file "dataBase.py"
-      :pointmax 967
-      :fsize 966
-      :lastmodtime '(22691 1935 726045 681000)
+        '( ("serverPipe" include nil nil [280 313])
+            ("sys" include nil nil [314 324])
+            ("os" include nil nil [325 334])
+            ("sys" code nil nil [335 365])
+            ("dataBase" include nil nil [366 395])
+            ("gi" include nil nil [397 406])
+            ("gi" code nil nil [407 439])
+            ("gi.repository" include nil nil [440 478])
+            ("GObject" code nil nil [480 502])
+            ("Gst" code nil nil [503 517])
+            ("Gst" code nil nil [518 544])
+            ("time" include nil nil [546 557])
+            ("os" include nil nil [558 567])
+            ("xml.etree.ElementTree" include nil nil [568 602])
+            ("xml.dom.minidom" include nil nil [603 625])
+            ("serverClass" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"docstring\"" code nil (reparse-symbol indented_block_body) [752 763])
+                            ("self" variable nil (reparse-symbol indented_block_body) [775 801])
+                            ("self" variable nil (reparse-symbol indented_block_body) [812 837])
+                            ("self" variable nil (reparse-symbol indented_block_body) [848 879])
+                            ("self" variable nil (reparse-symbol indented_block_body) [890 920])
+                            ("self" variable nil (reparse-symbol indented_block_body) [931 961])
+                            ("self" variable nil (reparse-symbol indented_block_body) [972 1001])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1012 1045])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1056 1090])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1101 1136])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1147 1174])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1186 1217])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1228 1262])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1273 1307])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1318 1352])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1363 1396])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1407 1441])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1452 1486])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1498 1540]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [663 667])
+                            ("com" variable nil (reparse-symbol function_parameters) [668 671])
+                            ("serverIp" variable nil (reparse-symbol function_parameters) [672 680])
+                            ("pilotIp" variable nil (reparse-symbol function_parameters) [681 688])
+                            ("inPort" variable nil (reparse-symbol function_parameters) [689 695])
+                            ("outPort" variable nil (reparse-symbol function_parameters) [696 703])
+                            ("audioPortIn" variable nil (reparse-symbol function_parameters) [704 715])
+                            ("audioPortOut" variable nil (reparse-symbol function_parameters) [716 728])
+                            ("streamPort" variable nil (reparse-symbol function_parameters) [729 739]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [650 1541])
+                    ("addCam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1818 1822])
+                            ("agent" variable nil (reparse-symbol function_parameters) [1823 1828])
+                            ("port" variable nil (reparse-symbol function_parameters) [1829 1833]))                          )
+                        (reparse-symbol indented_block_body) [1806 2764])
+                    ("setMic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3038 3042])
+                            ("agent" variable nil (reparse-symbol function_parameters) [3043 3048]))                          )
+                        (reparse-symbol indented_block_body) [3026 3166])
+                    ("removeCam" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3446 3450])
+                            ("agent" variable nil (reparse-symbol function_parameters) [3451 3456]))                          )
+                        (reparse-symbol indented_block_body) [3431 3683])
+                    ("removeAllCams" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3972 3976]))                          )
+                        (reparse-symbol indented_block_body) [3953 4111])
+                    ("addPilot" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4401 4405]))                          )
+                        (reparse-symbol indented_block_body) [4387 4620])
+                    ("startRecording" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4965 4969])
+                            ("cam" variable nil (reparse-symbol function_parameters) [4970 4973]))                          )
+                        (reparse-symbol indented_block_body) [4945 5162])
+                    ("stopRecording" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5462 5466])
+                            ("cam" variable nil (reparse-symbol function_parameters) [5467 5470]))                          )
+                        (reparse-symbol indented_block_body) [5443 5556])
+                    ("stopAllRecordings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5863 5867]))                          )
+                        (reparse-symbol indented_block_body) [5840 6003])
+                    ("setRootDir" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6309 6313])
+                            ("path" variable nil (reparse-symbol function_parameters) [6314 6318]))                          )
+                        (reparse-symbol indented_block_body) [6293 6393])
+                    ("arm" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6675 6679])
+                            ("resp" variable nil (reparse-symbol function_parameters) [6680 6684])
+                            ("title" variable nil (reparse-symbol function_parameters) [6685 6690])
+                            ("tags" variable nil (reparse-symbol function_parameters) [6691 6695])
+                            ("mont" variable nil (reparse-symbol function_parameters) [6696 6700])
+                            ("tir" variable nil (reparse-symbol function_parameters) [6701 6704]))                          )
+                        (reparse-symbol indented_block_body) [6666 8307])
+                    ("registerRecordings" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8626 8630]))                          )
+                        (reparse-symbol indented_block_body) [8602 9581])
+                    ("startStreaming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9877 9881])
+                            ("cam" variable nil (reparse-symbol function_parameters) [9882 9885]))                          )
+                        (reparse-symbol indented_block_body) [9857 9971])
+                    ("stopStreaming" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10266 10270])
+                            ("cam" variable nil (reparse-symbol function_parameters) [10271 10274]))                          )
+                        (reparse-symbol indented_block_body) [10247 10484])
+                    ("getStatus" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10774 10778]))                          )
+                        (reparse-symbol indented_block_body) [10759 10928])
+                    ("toggleTest" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11216 11220]))                          )
+                        (reparse-symbol indented_block_body) [11201 11315])
+                    ("addStreamClient" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11618 11622])
+                            ("ip" variable nil (reparse-symbol function_parameters) [11623 11625]))                          )
+                        (reparse-symbol indented_block_body) [11597 11819]))                  
+                :type "class")
+                nil [627 11819]))          
+      :file "serverClass.py"
+      :pointmax 11819
+      :fsize 11818
+      :lastmodtime '(22895 32130 102919 508000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("newServerCamPipe" include nil nil [280 325])
+            ("gi" include nil nil [327 336])
+            ("gi" code nil nil [337 369])
+            ("gi.repository" include nil nil [370 408])
+            ("GObject" code nil nil [410 432])
+            ("Gst" code nil nil [433 447])
+            ("Gst" code nil nil [448 474])
+            ("try" code nil nil [665 751])
+            ("try" code nil nil [755 839])
+            ("try" code nil nil [846 920]))          
+      :file "testServer.py"
+      :pointmax 920
+      :fsize 919
+      :lastmodtime '(23052 25351 274673 100000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("gi" include nil nil [263 272])
+            ("gi" code nil nil [273 305])
+            ("gi.repository" include nil nil [306 344])
+            ("newServerCamPipe" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("\"docstring\"" code nil (reparse-symbol indented_block_body) [447 458])
+                            ("self" variable nil (reparse-symbol indented_block_body) [467 497])
+                            ("self" variable nil (reparse-symbol indented_block_body) [506 532])
+                            ("self" variable nil (reparse-symbol indented_block_body) [542 569])
+                            ("self" variable nil (reparse-symbol indented_block_body) [578 606])
+                            ("self" variable nil (reparse-symbol indented_block_body) [615 647])
+                            ("self" variable nil (reparse-symbol indented_block_body) [656 689])
+                            ("self" variable nil (reparse-symbol indented_block_body) [699 756]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [387 391])
+                            ("name" variable nil (reparse-symbol function_parameters) [392 396])
+                            ("portIn" variable nil (reparse-symbol function_parameters) [397 403])
+                            ("portOut" variable nil (reparse-symbol function_parameters) [404 411])
+                            ("audioPortIn" variable nil (reparse-symbol function_parameters) [412 423])
+                            ("audioPortOut" variable nil (reparse-symbol function_parameters) [424 436]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [374 757])
+                    ("startRecording" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2136 2140]))                          )
+                        (reparse-symbol indented_block_body) [2116 2176])
+                    ("message" function (:arguments 
+                      ( ("bus" variable nil (reparse-symbol function_parameters) [2452 2455])
+                        ("message" variable nil (reparse-symbol function_parameters) [2457 2464]))                      ) (reparse-symbol indented_block_body) [2440 2660]))                  
+                :type "class")
+                nil [346 2660]))          
+      :file "newServerCamPipe.py"
+      :pointmax 2669
+      :fsize 2668
+      :lastmodtime '(23052 25430 701583 486000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [23 32])
+            ("gi" include nil nil [33 42])
+            ("gi" include nil nil [43 52])
+            ("gi" code nil nil [53 85])
+            ("gi.repository" include nil nil [86 124])
+            ("GObject" code nil nil [126 148])
+            ("Gst" code nil nil [149 163])
+            ("Gst" code nil nil [164 190])
+            ("time" include nil nil [191 202])
+            ("startVideo" function (:arguments 
+              ( ("binn" variable nil (reparse-symbol function_parameters) [219 223]))              ) nil [204 303])
+            ("stopVideo" function (:arguments 
+              ( ("binn" variable nil (reparse-symbol function_parameters) [322 326]))              ) nil [308 359])
+            ("stop" function (:arguments 
+              ( ("binn" variable nil (reparse-symbol function_parameters) [369 373]))              ) nil [360 433])
+            ("message" function (:arguments 
+              ( ("bus" variable nil (reparse-symbol function_parameters) [446 449])
+                ("message" variable nil (reparse-symbol function_parameters) [451 458]))              ) nil [434 687])
+            ("vbin" variable nil nil [701 748])
+            ("video" variable nil nil [878 929])
+            ("video" code nil nil [930 961])
+            ("video" code nil nil [962 1089])
+            ("vDepay" variable nil nil [1090 1148])
+            ("video" code nil nil [1172 1190])
+            ("vbinSrc" code nil nil [1251 1275])
+            ("vbin" code nil nil [1276 1297])
+            ("testBin" variable nil nil [1309 1360])
+            ("vbin" code nil nil [1361 1379])
+            ("print" code nil nil [1380 1450])
+            ("try" code nil nil [1526 1606]))          
+      :file "test2.py"
+      :pointmax 3013
+      :fsize 3012
+      :lastmodtime '(23052 35556 166531 348000)
       :unmatched-syntax nil))
   :file "!home!hylkema!Programs!rpiCameras!Server!semantic.cache"
   :semantic-tag-version "2.0"
