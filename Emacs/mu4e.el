@@ -88,6 +88,8 @@
                     (mark-message-as-spam msg docid)
 		    )
      )
+  )
+(add-to-list 'mu4e-marks
   '(ham
      :char       "h"
      :prompt     "ham"
@@ -148,5 +150,6 @@
 (add-hook 'mu4e-compose-mode-hook
   (defun my-do-compose-stuff ()
     "My settings for message composition."
-    (set-fill-column 72)
+    (set-fill-column 180)
     (flyspell-mode)))
+
