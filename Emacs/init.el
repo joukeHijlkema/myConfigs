@@ -50,7 +50,7 @@
  '(mu4e-user-mail-address-list (quote ("jouke.hijlkema@onera.fr")))
  '(mu4e-view-prefer-html nil)
  '(mu4e-view-show-addresses nil)
- '(mu4e-view-show-images t)
+ '(mu4e-view-show-images nil)
  '(org-agenda-file-regexp "^[^#]*\\.org$")
  '(org-agenda-files
    (quote
@@ -61,7 +61,7 @@
     ((auto-mode . emacs)
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . default)
-     ("\\.pdf\\'" . "/usr/bin/qpdfview --unique"))))
+     ("\\.pdf\\'" . "/usr/bin/evince"))))
  '(org-log-done (quote note))
  '(org-support-shift-select t)
  '(package-selected-packages

@@ -108,8 +108,8 @@ LaTeX-section-label))
 ;; === keys ===
 (load "~/.emacs.d/keys.el")
 
-;; === chromium as browser ===
-(setq browse-url-browser-function 'browse-url-chromium)
+;; === firefox as browser ===
+(setq browse-url-browser-function 'browse-url-firefox)
 
 ;; === langtool ===
 (require 'langtool)
