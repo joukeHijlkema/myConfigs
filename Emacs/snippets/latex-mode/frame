@@ -2,8 +2,13 @@
 # name: frame
 # key: frame
 # --
-\subsection[${1:titre}]{$1}
+% =====================
+% ${1:titre}
+\subsection[${1}]{$1}
 \label{$1}
 \frame{\frametitle{$1}
-$2
-}%%$1
+  \begin{overlayarea}{\textwidth}{0.8\textheight}
+    $2
+  \end{overlayarea}
+}
+% ====================
