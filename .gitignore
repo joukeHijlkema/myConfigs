@@ -3,6 +3,7 @@ rrEmacs/auto-save-list/**
 Emacs/semanticdb/**
 Emacs/elpa/**
 Emacs/workgroups
+Emacs/.emacs_workgroups
 *.cache
 **/*~
 **/*#

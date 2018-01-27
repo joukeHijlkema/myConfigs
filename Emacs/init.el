@@ -50,7 +50,7 @@
  '(mu4e-user-mail-address-list (quote ("jouke.hijlkema@onera.fr")))
  '(mu4e-view-prefer-html nil)
  '(mu4e-view-show-addresses nil)
- '(mu4e-view-show-images t)
+ '(mu4e-view-show-images nil)
  '(org-agenda-file-regexp "^[^#]*\\.org$")
  '(org-agenda-files
    (quote
@@ -61,12 +61,13 @@
     ((auto-mode . emacs)
      ("\\.mm\\'" . default)
      ("\\.x?html?\\'" . default)
-     ("\\.pdf\\'" . "/usr/bin/qpdfview --unique"))))
+     ("\\.pdf\\'" . "/usr/bin/evince"))))
  '(org-log-done (quote note))
  '(org-support-shift-select t)
  '(package-selected-packages
    (quote
-    (langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
+    (ac-math auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
+ '(reftex-toc-split-windows-horizontally t)
  '(show-paren-mode t)
  '(speedbar-sort-tags t)
  '(speedbar-tag-hierarchy-method

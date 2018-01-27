@@ -108,8 +108,8 @@ LaTeX-section-label))
 ;; === keys ===
 (load "~/.emacs.d/keys.el")
 
-;; === chromium as browser ===
-(setq browse-url-browser-function 'browse-url-chromium)
+;; === firefox as browser ===
+(setq browse-url-browser-function 'browse-url-firefox)
 
 ;; === langtool ===
 (require 'langtool)
@@ -117,3 +117,29 @@ LaTeX-section-label))
 (setq langtool-default-language "fr")
 (global-set-key (kbd "s-g") 'langtool-check)
 (global-set-key (kbd "C-s-g") 'langtool-check-done)
+
+
+;; === latex ===
+;;; RefTeX
+(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
+(setq reftex-plug-into-AUCTeX t)
+
+;;; auto-complete setup, sequence is important
+(require 'auto-complete)
+(add-to-list 'ac-modes 'latex-mode) ; beware of using 'LaTeX-mode instead
+(require 'ac-math) ; package should be installed first 
+(defun my-ac-latex-mode () ; add ac-sources for latex
+   (setq ac-sources
+         (append '(ac-source-math-unicode
+           ac-source-math-latex
+           ac-source-latex-commands)
+                 ac-sources)))
+(add-hook 'LaTeX-mode-hook 'my-ac-latex-mode)
+(setq ac-math-unicode-in-math-p t)
+(ac-flyspell-workaround)          ; fixes a known bug of delay due to flyspell (if it is there)
+(add-to-list 'ac-modes 'org-mode) ; auto-complete for org-mode (optional)
+(require 'auto-complete-config)   ; should be after add-to-list 'ac-modes and hooks
+(ac-config-default)
+(setq ac-auto-start nil)            ; if t starts ac at startup automatically
+(setq ac-auto-show-menu t)
+(global-auto-complete-mode t) 
