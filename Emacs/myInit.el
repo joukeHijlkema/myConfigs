@@ -104,7 +104,7 @@ LaTeX-section-label))
 (org-clock-persistence-insinuate)
 (load "~/.emacs.d/momMode.el")
 ;; === mu4e ===
-(load "~/.emacs.d/mu4e.el")
+;;(load "~/.emacs.d/mu4e.el")
 ;; === keys ===
 (load "~/.emacs.d/keys.el")
 
@@ -113,7 +113,7 @@ LaTeX-section-label))
 
 ;; === langtool ===
 (require 'langtool)
-(setq langtool-language-tool-jar "/Software/LanguageTool-3.9/languagetool-commandline.jar")
+(setq langtool-language-tool-jar "/Software/LanguageTool-4.0/languagetool-commandline.jar")
 (setq langtool-default-language "fr")
 (global-set-key (kbd "s-g") 'langtool-check)
 (global-set-key (kbd "C-s-g") 'langtool-check-done)
