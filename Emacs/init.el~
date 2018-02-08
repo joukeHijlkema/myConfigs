@@ -54,8 +54,9 @@
  '(org-agenda-file-regexp "^[^#]*\\.org$")
  '(org-agenda-files
    (quote
-    ("/home/hylkema/Documents/Org/CNEST_RT.org" "/home/hylkema/Documents/Org/Divers.org" "/home/hylkema/Documents/Org/EsaTrp.org" "/home/hylkema/Documents/Org/Perseus.org" "/home/hylkema/Documents/Org/myPlanning.org" "/home/hylkema/org/lpReunions.org")))
+    ("/home/hylkema/Documents/Org/CNEST_RT.org" "/home/hylkema/Documents/Org/Divers.org" "/home/hylkema/Documents/Org/EsaTrp.org" "/home/hylkema/Documents/Org/Perseus.org" "/home/hylkema/org/lpReunions.org")))
  '(org-agenda-skip-scheduled-if-done t)
+ '(org-agenda-todo-ignore-with-date nil)
  '(org-file-apps
    (quote
     ((auto-mode . emacs)
@@ -66,7 +67,7 @@
  '(org-support-shift-select t)
  '(package-selected-packages
    (quote
-    (auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
+    (yasnippet-snippets ac-math auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
  '(reftex-toc-split-windows-horizontally t)
  '(show-paren-mode t)
  '(speedbar-sort-tags t)

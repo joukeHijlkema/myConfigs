@@ -89,7 +89,7 @@
   "find the document number for this action"
   (save-excursion
     (save-match-data
-      (re-search-backward "\+LATEX_HEADER:[\\ ]+def[\\ ]+crNumber[ ]*{\\([ 0-9]+/[ 0-9]+\\)}" nil t)
+      (re-search-backward "\+LATEX:[\\ ]+def[\\ ]+crNumber[ ]*{\\([ 0-9]+/[ 0-9]+\\)}" nil t)
       (format "DMPE/CR-RA-%s" (match-string 1)))))
 
 (defun jouke-make-pdf ()
@@ -98,7 +98,7 @@
   (save-excursion
     (jouke-move-actions)
     (re-search-backward "# StartSection" nil t)
-    (org-open-file (org-latex-export-to-pdf nil 's ))))
+    (org-latex-export-to-pdf nil 's )))
 
 (defun jouke-make-latex ()
   "make the pdf of this meeting"
@@ -123,4 +123,43 @@
 (setq org-todo-keywords
            '((sequence "TODO" "|" "DONE")
              (sequence "ACTION" "|" "CLOSED")))
+
+;; === Agenda layout and stuff ===
+(setq org-columns-default-format "%70ITEM(Task)%16TIMESTAMP_IA(When)")
+(setq org-agenda-custom-commands
+      '(
+	(" " "Export Schedule" (
+				(agenda ""
+					(
+					 (org-agenda-overriding-header "Today's Schedule:")
+					 (org-agenda-ndays 1)
+					 (org-agenda-start-on-weekday nil)
+					 (org-agenda-start-day "+0d")
+					 )
+					)
+				(tags-todo "-DEADLINE-SCHEDULED=\"nil\""
+					   (
+					    (org-agenda-overriding-header "Task without date:")
+					    )
+					   )
+				(agenda "*"
+					(
+					 (org-agenda-overriding-header "Next 30 days:")
+					 (org-agenda-ndays 30)
+					 (org-agenda-start-day "+1d")
+					 (org-agenda-entry-types '(:timestamp :sexp :deadline))
+					 )
+					)
+				)
+	 )
+	("c" "Simple agenda view" agenda "")
+	)
+      )
+
+;; === Pointage (ça me gonfle !!) ===
+;; (defun jouke-pointe (h)
+;;   "do pointage for this week"
+;;   (interactive)
+;;   (save-excursion)
+;;   (
 

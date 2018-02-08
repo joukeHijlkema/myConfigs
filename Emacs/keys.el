@@ -49,16 +49,6 @@
   (comment-or-uncomment-region beg end))
 (global-set-key (kbd "s-e") 'toggle-comment-on-line)
 
-;; speedbar
-;; open a new speedbar frame if there isn't one already
-(global-ede-mode 1)
-(require 'semantic/sb)
-(semantic-mode 1)
-(require 'sr-speedbar)
-(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
-(global-set-key (kbd "s-b") (lambda() (interactive) (speedbar-change-initial-expansion-list "quick buffers")))
-(global-set-key (kbd "s-f") (lambda() (interactive) (speedbar-change-initial-expansion-list "files")))
-
 ;; uncrustify
 (require 'uncrustify-mode)
 (global-set-key (kbd "s-u") 'uncrustify-buffer)
@@ -102,7 +92,11 @@
 (define-key org-mode-map (kbd "s-i") 'org-clock-in)
 (define-key org-mode-map (kbd "s-o") 'org-clock-out)
 (define-key org-mode-map (kbd "s-a") 'org-mactions-new-numbered-action)
+(define-key org-mode-map  (kbd "<s-f10>") 'jouke-make-beamer-pdf)
 (define-key org-mode-map  (kbd "<s-f11>") 'jouke-make-latex)
 (define-key org-mode-map  (kbd "<s-f12>") 'jouke-make-pdf)
 
 (global-set-key (kbd "<s-f10>") 'cfw:org-open-agenda-day)
+
+;; === Spelling ===
+(global-set-key (kbd "s-s") 'ispell-change-dictionary)

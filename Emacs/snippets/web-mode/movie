@@ -2,6 +2,6 @@
 # name: movie
 # key: movie
 # --
-<video preload="auto" loop="loop" controls>
-  <source src="Videos/$2">
-</video>
+<video src="$1"
+       class="top right"
+       style="height:60%"/>

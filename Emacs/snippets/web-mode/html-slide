@@ -3,6 +3,7 @@
 # key: slide
 # --
 <!-- $1 -->
-<slide title="$2">
+<slide title="$1"
+       inPlan=$2>
   $6
 </slide>

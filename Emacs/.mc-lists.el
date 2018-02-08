@@ -30,6 +30,7 @@
 	ignore
 	indent-for-tab-command
 	org-force-self-insert
+	python-shell-send-buffer
 	save-some-buffers
 	tabbar-select-tab-callback
 	toggle-comment-on-line

@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: description list
+# key: dList
+# --
+<dList style="font-size:${1:100}%" >
+    <dt>$2</dt><dd>$3</dd>
+</dList>
