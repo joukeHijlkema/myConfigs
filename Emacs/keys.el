@@ -92,11 +92,18 @@
 (define-key org-mode-map (kbd "s-i") 'org-clock-in)
 (define-key org-mode-map (kbd "s-o") 'org-clock-out)
 (define-key org-mode-map (kbd "s-a") 'org-mactions-new-numbered-action)
+(define-key org-mode-map  (kbd "<s-f9>") (lambda () (interactive) (org-latex-export-to-pdf nil 's)))
 (define-key org-mode-map  (kbd "<s-f10>") 'jouke-make-beamer-pdf)
 (define-key org-mode-map  (kbd "<s-f11>") 'jouke-make-latex)
 (define-key org-mode-map  (kbd "<s-f12>") 'jouke-make-pdf)
 
-(global-set-key (kbd "<s-f10>") 'cfw:org-open-agenda-day)
+(global-set-key (kbd "<s-f8>") 'org-agenda)
+(global-set-key (kbd "<s-f7>") 'sunrise)
 
 ;; === Spelling ===
 (global-set-key (kbd "s-s") 'ispell-change-dictionary)
+
+;; === yasnippets (conflicts with completion) ===
+;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
+;; (define-key yas-minor-mode-map (kbd "TAB") nil)
+;; (define-key yas-minor-mode-map (kbd "<s-tab>") yas-maybe-expand)

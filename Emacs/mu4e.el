@@ -1,5 +1,6 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
+(add-to-list  'mm-inhibit-file-name-handlers 'openwith-file-handler)
 
 ;; === Keys ===
 (mu4e~headers-defun-mark-for spam)
@@ -21,6 +22,9 @@
 ;; use imagemagick, if available
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
+
+;; === disable threads ===
+(setq mu4e-headers-show-threads nil)
 
 ;; === Bookmarks ===
 (setq mu4e-bookmarks
@@ -113,7 +117,7 @@
 ========================================================================
 | Jouke Hijlkema
 | Ingénieur de recherche
-| DMPE/LP
+| DMPE/LPF
 | tel: +33 5 61 56 63 93 / +33 6 43 02 53 47
 | ONERA - The French Aerospace Lab - Centre du Fauga Mauzac
 | 31410 Mauzac

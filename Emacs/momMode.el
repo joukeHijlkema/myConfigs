@@ -1,3 +1,9 @@
+(require 'org-journal)
+(setq org-agenda-files '("~/Documents/Org" "~/org"))
+
+(setq org-clock-persist 'history)
+(org-clock-persistence-insinuate)
+
 (require 'subr-x)
 (with-eval-after-load 'org
   (setq org-startup-indented t)
@@ -8,6 +14,12 @@
 (if (boundp 'warning-suppress-types)
     (add-to-list 'warning-suppress-types' (yasnippet backquote-change))
   (setq warning-suppress-types '((yasnippet backquote-change))))
+
+;; === Find all org files  ===
+(load-library "find-lisp")
+(setq org-agenda-files
+   (find-lisp-find-files "/home/hylkema/Documents/Org" "\.org$"))
+
 
 (setq jouke-re-action-simple "\\*\\*\\* \\(ACTION\\|CLOSED\\)")
 (setq jouke-re-action-medium "\\*\\*\\* \\(CLOSED\\|ACTION\\).\\([0-9]*\\) *# *\\([^#]*\\) *# *resp *\\([^#]*\\) *# *\\([^#]*\\) *# *\\([^#]*\\)")
@@ -100,6 +112,14 @@
     (re-search-backward "# StartSection" nil t)
     (org-latex-export-to-pdf nil 's )))
 
+(defun jouke-make-beamer-pdf ()
+  "make the pdf of this meeting"
+  (interactive)
+  (save-excursion
+    (jouke-move-actions)
+    (re-search-backward "# StartSection" nil t)
+    (org-beamer-export-to-pdf nil 's )))
+
 (defun jouke-make-latex ()
   "make the pdf of this meeting"
   (interactive)
@@ -118,7 +138,20 @@
              ("\\subsection{%s}" . "\\subsection*{%s}")
              ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
              ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+	  )
+(add-to-list 'org-latex-classes
+          '("article"
+             "\\documentclass{article}
+             [NO-DEFAULT-PACKAGES]
+             [PACKAGES]
+             [EXTRA]"
+             ("\\section{%s}" . "\\section*{%s}")
+             ("\\subsection{%s}" . "\\subsection*{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+             ("\\paragraph{%s}" . "\\paragraph*{%s}")
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+	  )
 
 (setq org-todo-keywords
            '((sequence "TODO" "|" "DONE")
@@ -132,6 +165,7 @@
 				(agenda ""
 					(
 					 (org-agenda-overriding-header "Today's Schedule:")
+					 (org-agenda-tag-filter-preset (quote ("-noagenda")))
 					 (org-agenda-ndays 1)
 					 (org-agenda-start-on-weekday nil)
 					 (org-agenda-start-day "+0d")
@@ -140,26 +174,31 @@
 				(tags-todo "-DEADLINE-SCHEDULED=\"nil\""
 					   (
 					    (org-agenda-overriding-header "Task without date:")
+					    (org-agenda-tag-filter-preset (quote ("-noagenda")))
 					    )
 					   )
-				(agenda "*"
+				(agenda ""
 					(
 					 (org-agenda-overriding-header "Next 30 days:")
-					 (org-agenda-ndays 30)
+					 (org-agenda-tag-filter-preset (quote ("-noagenda")))
+					 (org-agenda-span 30)
 					 (org-agenda-start-day "+1d")
-					 (org-agenda-entry-types '(:timestamp :sexp :deadline))
 					 )
 					)
 				)
 	 )
-	("c" "Simple agenda view" agenda "")
-	)
       )
-
+)
 ;; === Pointage (ça me gonfle !!) ===
 ;; (defun jouke-pointe (h)
 ;;   "do pointage for this week"
 ;;   (interactive)
 ;;   (save-excursion)
 ;;   (
+
+;; === Slides ===
+(setq org-export-allow-bind-keywords t)
+
+;; === Gannt etc ===
+(load "~/.emacs.d/org-gantt/org-gantt.el")
 
