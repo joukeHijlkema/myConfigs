@@ -1,6 +1,10 @@
 ;; remove toolbar
 (tool-bar-mode -1)
 
+(ivy-mode 1)
+(setq ivy-use-virtual-buffers t)
+(setq ivy-count-format "(%d/%d) ")
+
 (add-to-list 'auto-mode-alist '("\\.hpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.FCMacro\\'" . python-mode))
@@ -82,4 +86,3 @@
 (setq ac-auto-start nil)            ; if t starts ac at startup automatically
 (setq ac-auto-show-menu t)
 (global-auto-complete-mode t) 
-
