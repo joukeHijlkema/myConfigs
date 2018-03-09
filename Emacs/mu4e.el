@@ -77,8 +77,8 @@
       (concat
        "flag:unread"
        " AND NOT flag:trashed"
-       " AND NOT maildir:"
-       "\"/Spam\""))
+       " AND maildir:\"/Work/INBOX\""
+       ))
 
 (setq mu4e-headers-visible-lines 15)
 
