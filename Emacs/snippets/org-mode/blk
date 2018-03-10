@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: blk
+# key: blk
+# --
+:BEAMER_env: block

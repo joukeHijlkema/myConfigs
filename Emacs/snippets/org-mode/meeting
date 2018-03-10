@@ -3,10 +3,10 @@
 # key: meeting
 # --
 * ${1:Title}
-# StartSection
 :PROPERTIES:
 :EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=25337,english]
 :END:
+# StartSection
 #+LATEX: \def \crNumber {${2:CR number (something like 1/2017)} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
@@ -83,7 +83,7 @@ $7
 ** Actions
 
 # ActionTable
-#+ATTR_LATEX: :environment tabu :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
+#+ATTR_LATEX: :environment longtable :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
 | Reference       | # | Description                                        | responsible | due date | state | Note    |
 |-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
 |                 |   | <50>                                               |             |          |       | <20>    |

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: col
+# key: c
+# --
+<col>$1</col>$0

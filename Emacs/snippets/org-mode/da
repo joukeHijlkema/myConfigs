@@ -17,7 +17,7 @@
 |---------------+--|
 | N° devis      |  |
 | Justification |  |
-| Fourniseur    |  |
+| Fournisseur   |  |
 |---------------+--|
 
 #+LATEX: \vspace{1em}
@@ -32,7 +32,7 @@
 #+TBLFM: \$4=\$2*\$3;%0.2f::@>\$4=vsum(@2\$4..@-1\$4);%0.2f
 
 #+LATEX: \vspace{1em}
-#+ATTR_LATEX: :environment tabu :align |p{0.33\textwidth}|p{0.33\textwidth}|p{0.33\textwidth}|
+#+ATTR_LATEX: :environment tabu :align |X|X|X|
 |------------------------------------------------------------+---------------------------+--------------------------|
 | Bénéficiaire                                               | Responsable administratif | Directeur de Département |
 |------------------------------------------------------------+---------------------------+--------------------------|

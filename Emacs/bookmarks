@@ -2,7 +2,27 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("org-capture-last-stored"
+(("home"
+ (filename . "Sunrise Checkpoint: ~/ | ~/")
+ (sr-directories #1="~/" #1#)
+ (handler . sr-checkpoint-handler))
+("lp-rpi-srv"
+ (filename . "Sunrise Checkpoint: ~/ | /ssh:hylkema@lp-rpi-srv:/home/hylkema/")
+ (sr-directories "~/" "/ssh:hylkema@lp-rpi-srv:/home/hylkema/")
+ (handler . sr-checkpoint-handler))
+("Vandales"
+ (filename . "Sunrise Checkpoint: ~/ | /ssh:hylkema@vandales-f:/home/hylkema/")
+ (sr-directories "~/" "/ssh:hylkema@vandales-f:/home/hylkema/")
+ (handler . sr-checkpoint-handler))
+("Portable"
+ (filename .
+	   #("Sunrise Checkpoint: ~/ | /ssh:hylkema@134.212.104.152:/home/hylkema/" 26 29
+	     (tramp-default t)))
+ (sr-directories "~/"
+		 #("/ssh:hylkema@134.212.104.152:/home/hylkema/" 1 4
+		   (tramp-default t)))
+ (handler . sr-checkpoint-handler))
+("org-capture-last-stored"
  (filename . "~/git/org/refile.org")
  (front-context-string . "* TODO faire un ")
  (rear-context-string)

@@ -11,6 +11,7 @@
 	cua-paste
 	electric-newline-and-maybe-indent
 	find-file
+	jouke-make-beamer-pdf
 	keyboard-escape-quit
 	mouse-save-then-kill
 	mouse-set-region
@@ -30,9 +31,11 @@
 	ignore
 	indent-for-tab-command
 	org-force-self-insert
+	python-shell-send-buffer
 	save-some-buffers
 	tabbar-select-tab-callback
 	toggle-comment-on-line
+	wg-switch-to-workgroup-at-index-1
 	wg-switch-to-workgroup-at-index-2
 	yas-expand
 	))
