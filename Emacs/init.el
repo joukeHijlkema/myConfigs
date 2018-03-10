@@ -56,6 +56,7 @@
    (quote
     ("/home/hylkema/Documents/Org/CNEST_RT.org" "/home/hylkema/Documents/Org/Divers.org" "/home/hylkema/Documents/Org/EsaTrp.org" "/home/hylkema/Documents/Org/Perseus.org" "/home/hylkema/Documents/Org/myPlanning.org" "/home/hylkema/org/lpReunions.org")))
  '(org-agenda-skip-scheduled-if-done t)
+ '(org-babel-load-languages (quote ((emacs-lisp . t) (shell . t))))
  '(org-file-apps
    (quote
     ((auto-mode . emacs)
