@@ -10,7 +10,8 @@
 (add-hook 'LaTeX-mode-hook 'flyspell-buffer)
 
 (defun turn-on-outline-minor-mode ()
-(outline-minor-mode 1))
+  (outline-minor-mode 1))
+(latex-preview-pane-enable)
 
 (add-hook 'LaTeX-mode-hook 'turn-on-outline-minor-mode)
 (add-hook 'latex-mode-hook 'turn-on-outline-minor-mode)

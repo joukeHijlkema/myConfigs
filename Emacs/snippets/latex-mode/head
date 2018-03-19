@@ -2,6 +2,14 @@
 # name: head
 # key: head
 # --
-%%%%%%%%%%%%%%%
-%% $1
-%%%%%%%%%%%%%%%
+\documentclass[a4paper,french,hyperref]{onera}
+\makeatother
+\begin{document}
+
+\title{${1:Title}}
+\author{Jouke Hijlkema}
+
+$0
+
+\end{document}
+
