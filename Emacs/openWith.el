@@ -4,3 +4,4 @@
 			      ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file))
 			      ("\\.mp3\\'" "xmms" (file))
 			      ("\\.\\(?:mpe?g\\|avi\\|wmv\\)\\'" "mpv" (file)) ))
+
