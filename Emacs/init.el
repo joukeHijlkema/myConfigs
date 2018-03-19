@@ -1,4 +1,5 @@
-(when (or (string= system-name "CFM-WDMAE007H") (string= system-name "batave-f"))
+(when (string-match-p "134\.212\.[[:digit:]]+\.[[:digit:]]+"
+		      (car (split-string (shell-command-to-string (format "/bin/hostname -I")))))
   (setq url-proxy-services
 	'(("no_proxy" . "^\\(localhost\\|10.*\\|vandales-f.onecert.fr\\)")
 	  ("http" . "minos.onecert.fr:80")
@@ -53,9 +54,7 @@
  '(mu4e-view-show-addresses nil)
  '(mu4e-view-show-images nil)
  '(org-agenda-file-regexp "^[^#]*\\.org$")
- '(org-agenda-files
-   (quote
-    ("/home/hylkema/Documents/Org/Divers.org" "/home/hylkema/Documents/Org/Perseus.org" "/home/hylkema/Documents/Org/Test.org" "/home/hylkema/Documents/Org/cheatSheet.org")))
+ '(org-agenda-files (quote ("/home/hylkema/Documents/Org/Test.org")))
  '(org-agenda-skip-scheduled-if-done t)
  '(org-babel-load-languages (quote ((emacs-lisp . t) (shell . t))))
  '(org-file-apps
@@ -68,7 +67,7 @@
  '(org-support-shift-select t)
  '(package-selected-packages
    (quote
-    (counsel swiper openwith sunrise-commander sunrise-x-buttons sunrise-x-checkpoints sunrise-x-loop sunrise-x-mirror sunrise-x-modeline sunrise-x-popviewer sunrise-x-tabs sunrise-x-tree org-plus-contrib yasnippet-snippets ac-math auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
+    (mc-extras latex-preview-pane latex-pretty-symbols counsel swiper openwith sunrise-commander sunrise-x-buttons sunrise-x-checkpoints sunrise-x-loop sunrise-x-mirror sunrise-x-modeline sunrise-x-popviewer sunrise-x-tabs sunrise-x-tree org-plus-contrib yasnippet-snippets ac-math auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
  '(reftex-toc-split-windows-horizontally t)
  '(show-paren-mode t)
  '(speedbar-sort-tags t)

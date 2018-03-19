@@ -199,6 +199,6 @@
 ;; === Slides ===
 (setq org-export-allow-bind-keywords t)
 
-;; === Gannt etc ===
-(load "~/.emacs.d/org-gantt/org-gantt.el")
+;; === Gantt etc ===
+;;(load "~/.emacs.d/org-gantt/org-gantt.el")
 
