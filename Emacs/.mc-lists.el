@@ -8,6 +8,7 @@
 	c-electric-paren
 	c-electric-semi&comma
 	cua--prefix-override-handler
+	cua-exchange-point-and-mark
 	cua-paste
 	electric-newline-and-maybe-indent
 	find-file

@@ -45,7 +45,7 @@
      (:subject))))
  '(mu4e-headers-visible-lines 25)
  '(mu4e-maildir "/home/hylkema/Maildir")
- '(mu4e-split-view nil)
+ '(mu4e-split-view (quote single-window))
  '(mu4e-update-interval 300)
  '(mu4e-use-fancy-chars t)
  '(mu4e-user-mail-address-list (quote ("jouke.hijlkema@onera.fr")))
