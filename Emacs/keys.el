@@ -99,6 +99,7 @@
 
 (global-set-key (kbd "<s-f8>") 'org-agenda)
 (global-set-key (kbd "<s-f7>") 'sunrise)
+(global-set-key (kbd "<s-f6>") 'mu4e)
 
 ;; === Spelling ===
 (global-set-key (kbd "s-s") 'ispell-change-dictionary)

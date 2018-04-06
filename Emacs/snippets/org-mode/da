@@ -3,13 +3,17 @@
 # key: DA
 # --
 
-# StartSection
 :PROPERTIES:
-:EXPORT_LATEX_CLASS_OPTIONS: [type=da,protection=SMP,aer=25337,english]
+:EXPORT_LATEX_CLASS_OPTIONS: [type=da,protection=SMP,aer=25337,lang=francais]
 :END:
+# StartSection
 #+OPTIONS: title:0
-#+AUTHOR:Jouke Hijlkema
+#+OPTIONS: toc:nil
 
+#+LATEX: \TPMargin{3mm}
+#+LATEX: \begin{textblock*}{100mm}(0mm,-60mm)
+#+LATEX: A l'attention de: Dominique Clausel DMPE/GMPE
+#+LATEX: \end{textblock*}
 #+LATEX: \etude
 
 #+LATEX: \vspace{1em}
@@ -22,14 +26,14 @@
 
 #+LATEX: \vspace{1em}
 #+ATTR_LATEX: :environment tabu :align |X|c|r|r|l|
-|-----------------+--+-------------+------------+------------|
-| Designation     | #| P.U. (H.T.) | Prix (H.T) | Délai      |
-|-----------------+--+-------------+------------+------------|
-|                 |  |             |            |            |
-|-----------------+--+-------------+------------+------------|
-| Total           |  |             |            |            |
-|-----------------+--+-------------+------------+------------|
-#+TBLFM: \$4=\$2*\$3;%0.2f::@>\$4=vsum(@2\$4..@-1\$4);%0.2f
+|---+-----------------+--+-------------+------------+------------|
+|   | Designation     | #| P.U. (H.T.) | Prix (H.T) | Délai      |
+|---+-----------------+--+-------------+------------+------------|
+| # |                 |  |             |            |            |
+|---+-----------------+--+-------------+------------+------------|
+|   | Total           |  |             |            |            |
+|---+-----------------+--+-------------+------------+------------|
+#+TBLFM: \$5=\$3*\$4;%0.2f::@>\$3=vsum(@2\$3..@-1\$3);%d::@>\$5=vsum(@2\$5..@-1\$5);%0.2f
 
 #+LATEX: \vspace{1em}
 #+ATTR_LATEX: :environment tabu :align |X|X|X|

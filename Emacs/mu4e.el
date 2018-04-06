@@ -1,6 +1,26 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
+(setq mu4e-installation-path "/usr/local/share/emacs/site-lisp/mu4e")
 (add-to-list  'mm-inhibit-file-name-handlers 'openwith-file-handler)
+
+(setq mu4e-get-mail-command "offlineimap -o")
+(setq mu4e-headers-fields
+      (quote
+       ((:human-date . 12)
+	(:flags . 6)
+	(:mailing-list . 10)
+	(:from . 22)
+	(:to . 22)
+	(:subject))))
+(setq mu4e-headers-visible-lines 25)
+(setq mu4e-maildir "/home/hylkema/Maildir")
+(setq mu4e-split-view (quote single-window))
+(setq mu4e-update-interval 300)
+(setq mu4e-use-fancy-chars t)
+(setq mu4e-user-mail-address-list (quote ("jouke.hijlkema@onera.fr")))
+(setq mu4e-view-prefer-html nil)
+(setq mu4e-view-show-addresses nil)
+(setq mu4e-view-show-images nil)
 
 ;; === Keys ===
 (mu4e~headers-defun-mark-for spam)
@@ -157,3 +177,31 @@
     (set-fill-column 180)
     (flyspell-mode)))
 
+(require 'gnus-dired)
+;; make the `gnus-dired-mail-buffers' function also work on
+;; message-mode derived modes, such as mu4e-compose-mode
+(defun gnus-dired-mail-buffers ()
+  "Return a list of active message buffers."
+  (let (buffers)
+    (save-current-buffer
+      (dolist (buffer (buffer-list t))
+        (set-buffer buffer)
+        (when (and (derived-mode-p 'message-mode)
+                (null message-sent-message-via))
+          (push (buffer-name buffer) buffers))))
+    (nreverse buffers)))
+
+(setq gnus-dired-mail-mode 'mu4e-user-agent)
+(add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
+
+(defun compose-attach-marked-files ()
+  "Compose mail and attach all the marked files from a dired buffer."
+  (interactive)
+  (let ((files (dired-get-marked-files)))
+    (compose-mail nil nil nil t)
+    (dolist (file files)
+          (if (file-regular-p file)
+              (mml-attach-file file
+                               (mm-default-file-encoding file)
+                               nil "attachment")
+            (message "skipping non-regular file %s" file)))))

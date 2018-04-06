@@ -17,6 +17,8 @@
 (autoload 'cflow-mode "cflow-mode")
 (setq auto-mode-alist (append auto-mode-alist '(("\\.cflow$" . cflow-mode))))
 
+(elpy-enable)
+
 (require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.phtml\\'"		.	web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'"	.	web-mode))
@@ -53,12 +55,14 @@
 (global-set-key (kbd "s-g") 'langtool-check)
 (global-set-key (kbd "C-s-g") 'langtool-check-done)
 
+;; === autoComplete ===
+(load "~/.emacs.d/autoComplete.el")
 ;; === Latex  ===
 (load "~/.emacs.d/Latex.el")
 ;; === Org mode ===
 (load "~/.emacs.d/momMode.el")
 ;; === mu4e ===
-;;(load "~/.emacs.d/mu4e.el")
+(load "~/.emacs.d/mu4e.el")
 ;; === keys ===
 (load "~/.emacs.d/keys.el")
 ;; === sunrine ===

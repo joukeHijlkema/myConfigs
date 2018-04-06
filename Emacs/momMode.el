@@ -1,3 +1,17 @@
+
+(setq org-agenda-file-regexp "^[^#]*\\.org$")
+(setq org-agenda-files (quote ("/home/hylkema/Documents/Org/Test.org")))
+(setq org-agenda-skip-scheduled-if-done t)
+(setq org-babel-load-languages (quote ((emacs-lisp . t) (shell . t))))
+(setq org-file-apps
+   (quote
+    ((auto-mode . emacs)
+     ("\\.mm\\'" . default)
+     ("\\.x?html?\\'" . default)
+     ("\\.pdf\\'" . "/usr/bin/masterpdfeditor4"))))
+(setq org-log-done (quote note))
+(setq org-support-shift-select t)
+
 (require 'org-journal)
 (setq org-agenda-files '("~/Documents/Org" "~/org"))
 
@@ -157,6 +171,23 @@
            '((sequence "TODO" "|" "DONE")
              (sequence "ACTION" "|" "CLOSED")))
 
+
+;; === Latex export ===
+(setq org-latex-default-packages-alist
+   (quote
+    (("AUTO" "inputenc" t ("pdflatex"))
+     ("T1" "fontenc" t ("pdflatex"))
+     ("" "graphicx" t nil)
+     ("" "grffile" t nil)
+     ("" "longtable" nil nil)
+     ("" "wrapfig" nil nil)
+     ("" "rotating" nil nil)
+     ("normalem" "ulem" t nil)
+     ("" "amsmath" t nil)
+     ("" "textcomp" t nil)
+     ("" "amssymb" t nil)
+     ("" "capt-of" nil nil)
+     ("" "hyperref" t nil))))
 ;; === Agenda layout and stuff ===
 (setq org-columns-default-format "%70ITEM(Task)%16TIMESTAMP_IA(When)")
 (setq org-agenda-custom-commands
@@ -202,3 +233,5 @@
 ;; === Gantt etc ===
 ;;(load "~/.emacs.d/org-gantt/org-gantt.el")
 
+;; === Org panes ===
+;; (load "~/.emacs.d/org-panes/org-panes.el")
