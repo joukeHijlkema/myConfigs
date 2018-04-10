@@ -8,3 +8,5 @@ Emacs/.emacs_workgroups
 **/*~
 **/*#
 **/.#*
+**/*.dat
+
