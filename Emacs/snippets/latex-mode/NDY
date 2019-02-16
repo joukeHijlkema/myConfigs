@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: not yet done
+# key: nyd
+# --
+\\todo[inline,caption=\{${1:caption}\},color=${2:orange}]\{${3:{not done yet}}\}

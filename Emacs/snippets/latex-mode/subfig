@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: subfig
+# key: subfig
+# --
+\subfloat[${1:caption}]\{
+      \includegraphics[width=0.5\textwidth,angle=0,origin=c]\{/home/hylkema/Documents/Images/$2\}
+      \label\{fig:${1:$(downcase (replace-regexp-in-string " " "_" yas-text))}\}
+    \}

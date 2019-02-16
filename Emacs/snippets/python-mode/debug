@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: debug
+# key: debug
+# --
+### begin debug ###
+ $0
+### end debug   ###
+
