@@ -1,8 +1,13 @@
-;;;; Emacs Bookmark Format Version 1 ;;;;
+;;;; Emacs Bookmark Format Version 1 ;;;; -*- coding: utf-8-emacs -*- 
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("home"
+(("Devis_trp_hydrazine"
+ (filename . "~/Documents/ESA/TRP_Hydrazine/Design/Devis/")
+ (front-context-string . "\n  -rw-rw-r--  1")
+ (rear-context-string . "swagelok-CIR.PDF")
+ (position . 2990))
+("home"
  (filename . "Sunrise Checkpoint: ~/ | ~/")
  (sr-directories #1="~/" #1#)
  (handler . sr-checkpoint-handler))
@@ -23,8 +28,8 @@
 		   (tramp-default t)))
  (handler . sr-checkpoint-handler))
 ("org-capture-last-stored"
- (filename . "~/git/org/refile.org")
- (front-context-string . "* TODO faire un ")
- (rear-context-string)
- (position . 1))
+ (filename . "~/Documents/Org/gtd.org")
+ (front-context-string . "** TODO Adapt li")
+ (rear-context-string . "ter%20tests}}]]\n")
+ (position . 4878))
 )

@@ -1,5 +1,5 @@
 (when (string-match-p "134\.212\.[[:digit:]]+\.[[:digit:]]+"
-		      (car (split-string (shell-command-to-string (format "/bin/hostname -I")))))
+		      (car (split-string (shell-command-to-string (format "ip:%s" "/bin/hostname -I")))))
   (setq url-proxy-services
 	'(("no_proxy" . "^\\(localhost\\|10.*\\|vandales-f.onecert.fr\\)")
 	  ("http" . "minos.onecert.fr:80")
@@ -8,8 +8,7 @@
 (setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
                          ("marmalade" . "https://marmalade-repo.org/packages/")
                          ("melpa" . "https://melpa.org/packages/")
-			 ("org" . "http://orgmode.org/elpa/")
-			 ("SC"   . "http://joseito.republika.pl/sunrise-commander/")
+			 ("org" . "https://orgmode.org/elpa/")
 			 )
       )
 (package-initialize)
@@ -19,9 +18,18 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (tango-dark)))
+ '(cua-mode t nil (cua-base))
+ '(custom-enabled-themes (quote (leuven)))
+ '(custom-safe-themes
+   (quote
+    ("392395ee6e6844aec5a76ca4f5c820b97119ddc5290f4e0f58b38c9748181e8d" "13d20048c12826c7ea636fbe513d6f24c0d43709a761052adbca052708798ce3" default)))
  '(dired-omit-files "^\\.+.+\\|^\\.?#\\|^\\.$\\|^\\.\\.$")
  '(doc-view-continuous t)
+ '(ecb-options-version "2.50")
+ '(ecb-source-path
+   (quote
+    (("/ssh:pi@lp-rpi-cam3:" "/ssh:pi@lp-rpi-cam3:")
+     ("/" "/"))))
  '(ede-project-directories
    (quote
     ("/home/hylkema/Programs/rpiCameras" "/home/hylkema/Programs/Tools/Cedre")))
@@ -31,13 +39,24 @@
  '(ispell-dictionary "fr")
  '(minimap-mode nil)
  '(minimap-window-location (quote left))
+ '(org-icalendar-combined-description "Org mode calendar")
+ '(org-icalendar-timezone nil)
+ '(org-icalendar-use-deadline (quote (event-if-not-todo event-if-todo todo-due)))
+ '(org-icalendar-with-timestamps t)
  '(package-selected-packages
    (quote
-    (elpy sunrise-x-w32-addons mc-extras latex-preview-pane latex-pretty-symbols counsel swiper openwith sunrise-commander sunrise-x-buttons sunrise-x-checkpoints sunrise-x-loop sunrise-x-mirror sunrise-x-modeline sunrise-x-popviewer sunrise-x-tabs sunrise-x-tree org-plus-contrib yasnippet-snippets ac-math auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar pyvenv python-environment plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
+    (treemacs imenu-list org-kanban magit-annex magit-filenotify magit-find-file magit-gerrit magit-gh-pulls magit-gitflow magit-imerge magit-lfs magit-org-todos magit-popup magithub calfw-cal counsel-org-capture-string spacemacs-theme flatui-theme moe-theme org jedi realgud flycheck-gradle gradle-mode elpy sunrise-x-w32-addons mc-extras latex-preview-pane latex-pretty-symbols counsel swiper openwith sunrise-commander sunrise-x-buttons sunrise-x-checkpoints sunrise-x-loop sunrise-x-mirror sunrise-x-modeline sunrise-x-popviewer sunrise-x-tabs sunrise-x-tree org-plus-contrib yasnippet-snippets ac-math auto-complete-auctex langtool calfw-org calfw-ical calfw use-package mu4e-alert mu4e-maildirs-extension mu4e-query-fragments w3m wanderlust org-journal markdown-preview-eww markdown-mode ibuffer-projectile ibuffer-vc projectile-codesearch projectile-git-autofetch projectile-speedbar zephir-mode projectile dh-elpa wsd-mode web-mode virtualenv uncru stify-mode tabbar-ruler sr-speedbar plantuml-mode php+-mode multiple-cursors minimap magit highlight-indentation gnuplot-mode gnuplot flycheck find-file-in-project epc egg ecb direx com pany-irony-c-headers company-irony clang-format auto-install auctex-lua auctex-latexmk)))
  '(quote (cua-mode t nil (cua-base)))
  '(reftex-toc-split-windows-horizontally t)
+ '(safe-local-variable-values
+   (quote
+    ((eval let nil
+	   (save-excursion
+	     (org-babel-goto-named-src-block "startblock")
+	     (org-babel-execute-src-block))))))
  '(show-paren-mode t)
  '(sr-speedbar-right-side nil)
+ '(sr-speedbar-skip-other-window-p t)
  '(tool-bar-mode nil)
  '(virtualenv-root "~hylkema/")
  '(wg-emacs-exit-save-behavior (quote nill))
@@ -47,10 +66,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Ubuntu Mono" :foundry "unknown" :slant normal :weight normal :height 101 :width normal))))
+ '(default ((((class color) (min-colors 4096)) (:foreground "#5f5f5f" :background "#fdfde7" :family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 90 :width normal)) (((class color) (min-colors 256)) (:foreground "#5f5f5f" :background "#fdfde7" :family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 90 :width normal)) (((class color) (min-colors 89)) (:foreground "#5f5f5f" :background "#fdfde7" :family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 90 :width normal))))
  '(ecb-tag-header-face ((t (:background "light salmon"))))
- '(org-agenda-date ((t (:foreground "#c4a06c" :weight bold :height 1.1))))
- '(org-agenda-date-weekend ((t (:foreground "#81a05b" :weight bold :height 1.1))))
+ '(org-agenda-date ((((class color) (min-colors 89)) (:foreground "#1f5bff" :background nil :underline nil))))
+ '(org-agenda-date-weekend ((((class color) (min-colors 89)) (:foreground "#b218b2" :background nil :slant italic :bold nil))))
  '(tabbar-default ((t (:background "#282c34" :foreground "gray" :height 1.0))))
  '(tabbar-selected ((t (:inherit tabbar-default :background "dark slate gray" :foreground "green yellow" :weight bold))))
  '(tabbar-unselected ((t (:inherit tabbar-default :foreground "medium aquamarine")))))

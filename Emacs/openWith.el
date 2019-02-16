@@ -1,7 +1,12 @@
 (require 'openwith)
-(setq openwith-associations '(
-			      ("\\.pdf\\'" "evince" (file))
-			      ("\\.\\(?:jp?g\\|png\\)\\'" "eog" (file))
-			      ("\\.mp3\\'" "xmms" (file))
-			      ("\\.\\(?:mpe?g\\|avi\\|wmv\\)\\'" "mpv" (file)) ))
+(openwith-mode t)
+(setq openwith-associations
+      (list (list (openwith-make-extension-regexp '("pdf")) "evince" '(file))
+            (list (openwith-make-extension-regexp '("flac" "mp3" "wav" "mp3")) "mpv" '(file))
+            ;; (list (openwith-make-extension-regexp '("bmp" "jpeg" "jpg" "png")) "ristretto" '(file))
+            (list (openwith-make-extension-regexp '("doc" "docx" "odt")) "libreoffice" '("--writer" file))
+            (list (openwith-make-extension-regexp '("ods" "xls" "xlsx")) "libreoffice" '("--calc" file))
+            (list (openwith-make-extension-regexp '("odp" "pps" "ppt" "pptx")) "libreoffice" '("--impress" file))
+            (list (openwith-make-extension-regexp '("vcs")) "/usr/bin/mousepad" '(file))
+            ))
 

@@ -4,11 +4,10 @@
 # --
 
 :PROPERTIES:
-:EXPORT_LATEX_CLASS_OPTIONS: [type=da,protection=SMP,aer=25337,lang=francais]
+:EXPORT_LATEX_CLASS_OPTIONS: [type=da,protection=SMP,aer=-AER-,lang=francais]
+:EXPORT_DATE: `(format-time-string "%d/%m/%Y")`
 :END:
 # StartSection
-#+OPTIONS: title:0
-#+OPTIONS: toc:nil
 
 #+LATEX: \TPMargin{3mm}
 #+LATEX: \begin{textblock*}{100mm}(0mm,-60mm)
@@ -19,9 +18,9 @@
 #+LATEX: \vspace{1em}
 #+ATTR_LATEX: :environment tabu :align |l|X|
 |---------------+--|
-| N° devis      |  |
-| Justification |  |
-| Fournisseur   |  |
+| N° devis      |$1|
+| Justification |$2|
+| Fournisseur   |$3|
 |---------------+--|
 
 #+LATEX: \vspace{1em}
@@ -29,7 +28,7 @@
 |---+-----------------+--+-------------+------------+------------|
 |   | Designation     | #| P.U. (H.T.) | Prix (H.T) | Délai      |
 |---+-----------------+--+-------------+------------+------------|
-| # |                 |  |             |            |            |
+| # | $0              |  |             |            |            |
 |---+-----------------+--+-------------+------------+------------|
 |   | Total           |  |             |            |            |
 |---+-----------------+--+-------------+------------+------------|

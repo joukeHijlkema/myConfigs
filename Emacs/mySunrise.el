@@ -8,3 +8,9 @@
 			      (require 'openwith)
 			      )
 		 )
+
+(defun jouke-switch-to-sunrise ()
+  (interactive)
+  (ignore-errors (wg-switch-to-workgroup-at-index-4))
+  (sunrise 1)
+  )

@@ -2,8 +2,8 @@
 # name: table
 # key: tab
 # --
-<table style="width:100%;font-size:35%">
+<table class="$(1:top left)" style="width:100%;font-size:35%">
    <row class="tableHead">
-      <col class="tableRow">$1</col>
+      <col>$0</col>
    </row>
 </table>

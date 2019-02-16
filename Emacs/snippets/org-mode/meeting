@@ -5,7 +5,8 @@
 * ${1:Title}
 :PROPERTIES:
 :EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=25337,lang=english]
-:EXPORT_OPTIONS: toc:nil 
+:EXPORT_OPTIONS: toc:nil
+:EXPORT_DATE:
 :END:
 # StartSection
 #+LATEX: \def \crNumber {${2:CR number (something like 1/2017)} }
