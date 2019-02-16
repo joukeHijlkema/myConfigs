@@ -12,6 +12,7 @@
 
 ;; Deletion etc
 (global-set-key (kbd "s-k") 'kill-whole-line)
+(global-set-key (kbd "s-b") 'ibuffer)
 
 (defun duplicate-line-or-region(p0 ps pe)
   "duplicate line or region"
@@ -36,10 +37,24 @@
 
 (global-set-key (kbd "s-d") 'duplicate-line-or-region)
 (global-set-key (kbd "s-r") 'rectangle-mark-mode)
-(global-set-key (kbd "s-a") 'align-current)
 (global-set-key (kbd "s-z") 'ff-find-other-file)
 (global-set-key (kbd "s-t") 'mydate)
 
+
+;; Align mode
+(global-set-key (kbd "s-a") 'align-current)
+(global-set-key (kbd "C-s-a") 'align-regexp)
+
+(add-hook
+ 'align-load-hook
+ (lambda ()
+   (add-to-list
+    'align-rules-list
+    '(python-assignment
+      (regexp . "[^=!<>]\\(\\s-*\\)[ +-/\*]=\\(\\s-*\\)\\([^>=]\\|$\\)")
+      (group . (1 2))
+      (modes . '(python-mode))
+      (repeat . nil)))))
 ;; commenting
 (defun toggle-comment-on-line (beg end)
   "comment or uncomment current line or region"
@@ -62,12 +77,12 @@
 (global-set-key (kbd "s-<kp-1>") 'wg-switch-to-workgroup-at-index-1)
 (global-set-key (kbd "s-<kp-2>") 'wg-switch-to-workgroup-at-index-2)
 (global-set-key (kbd "s-<kp-3>") 'wg-switch-to-workgroup-at-index-3)
-(global-set-key (kbd "s-<kp-4>") 'wg-switch-to-workgroup-at-index-4)
+(global-set-key (kbd "s-<kp-4>") 'jouke-switch-to-sunrise)
 (global-set-key (kbd "s-<kp-5>") 'wg-switch-to-workgroup-at-index-5)
 (global-set-key (kbd "s-<kp-6>") 'wg-switch-to-workgroup-at-index-6)
 (global-set-key (kbd "s-<kp-7>") 'wg-switch-to-workgroup-at-index-7)
 (global-set-key (kbd "s-<kp-8>") 'wg-switch-to-workgroup-at-index-8)
-(global-set-key (kbd "s-<kp-9>") 'wg-switch-to-workgroup-at-index-9)
+(global-set-key (kbd "s-<kp-9>") 'jouke-switch-to-cal)
 (global-set-key (kbd "s-0") 'wg-switch-to-workgroup-at-index-0)
 (global-set-key (kbd "s-1") 'wg-switch-to-workgroup-at-index-1)
 (global-set-key (kbd "s-2") 'wg-switch-to-workgroup-at-index-2)
@@ -88,7 +103,8 @@
 (global-set-key (kbd "s-<up>") 'windmove-up)
 (global-set-key (kbd "s-<down>") 'windmove-down)
 
-;; ORG mode
+;; === ORG mode ===
+
 (define-key org-mode-map (kbd "s-i") 'org-clock-in)
 (define-key org-mode-map (kbd "s-o") 'org-clock-out)
 (define-key org-mode-map (kbd "s-a") 'org-mactions-new-numbered-action)
@@ -99,11 +115,43 @@
 
 (global-set-key (kbd "<s-f8>") 'org-agenda)
 (global-set-key (kbd "<s-f7>") 'sunrise)
+(global-set-key (kbd "<s-f6>") 'mu4e)
+(when (string= system-name "LDMPE705H")
+  (global-set-key (kbd "<XF86Mail>") 'mu4e)
+  )
+
+;; kanban
+(define-key org-mode-map  (kbd "<s-prior>") 'org-kanban/next)
+(define-key org-mode-map  (kbd "<s-next>") 'org-kanban/prev)
+
 
 ;; === Spelling ===
-(global-set-key (kbd "s-s") 'ispell-change-dictionary)
+(defun toggleSpelling ()
+  (interactive)
+  (if (string-equal ispell-current-dictionary "british-ise")
+    (ispell-change-dictionary "francais")
+    (ispell-change-dictionary "british-ise"))
+  (flyspell-buffer)
+  )
+
+(global-set-key (kbd "s-s") 'toggleSpelling)
 
 ;; === yasnippets (conflicts with completion) ===
 ;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
 ;; (define-key yas-minor-mode-map (kbd "TAB") nil)
 ;; (define-key yas-minor-mode-map (kbd "<s-tab>") yas-maybe-expand)
+
+(global-set-key (kbd "s-i") (lambda () (interactive)
+			      (imenu-list-minor-mode)
+			      ))
+
+;; === File completion ===
+(fset 'my-complete-file-name
+        (make-hippie-expand-function '(try-complete-file-name-partially
+                                       try-complete-file-name)))
+
+(global-set-key (kbd "s-f") 'my-complete-file-name) 
+(global-set-key (kbd "s-v") 'magit-status)
+
+;; === Tramp ===
+(global-set-key (kbd "<s-backspace>") (lambda () (interactive) (tramp-cleanup-all-buffers) (tramp-cleanup-all-connections)))

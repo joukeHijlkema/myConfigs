@@ -1,0 +1,21 @@
+# -*- mode: snippet -*-
+# name: test
+# key: test
+# --
+a=${1:false$(when (and yas-modified-p
+	     	  yas-moving-away-p
+		  )
+	       (forward-line)	
+	       (dotimes (i 2)
+		 (kill-whole-line)
+	       )
+	       (yas-exit-snippet 'test)
+	       (goto-line 5)
+	     )}
+b=${2:two}
+c=${3:three}
+d=${4:four}
+
+======== this is where I want to end ======
+$0
+========

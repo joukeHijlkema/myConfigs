@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: snippet
+# key: snippet
+# --
+\input{/home/hylkema/Documents/TexPreambles/snippetEN.tex}
+\begin{document}
+
+%<*corps>
+$0
+%</corps>
+\end{document}

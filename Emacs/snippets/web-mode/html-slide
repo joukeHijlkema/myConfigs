@@ -4,6 +4,7 @@
 # --
 <!-- $1 -->
 <slide title="$1"
-       inPlan=$2>
-  $6
+       subtitle="$2"
+       inPlan="$1">
+  $0
 </slide>

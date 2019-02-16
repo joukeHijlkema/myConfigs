@@ -2,4 +2,8 @@
 # name: item
 # key: i
 # --
+<<<<<<< HEAD
 <i>$1</i>
+=======
+<i>$1</i>$0
+>>>>>>> df545d42a11bdec2d629cc9b3f43b0e9c6e6b02a

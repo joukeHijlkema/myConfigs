@@ -1,6 +1,26 @@
 (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
 (require 'mu4e)
+(setq mu4e-installation-path "/usr/local/share/emacs/site-lisp/mu4e")
 (add-to-list  'mm-inhibit-file-name-handlers 'openwith-file-handler)
+
+(setq mu4e-get-mail-command "offlineimap -o")
+(setq mu4e-headers-fields
+      (quote
+       ((:human-date . 12)
+	(:flags . 6)
+	(:mailing-list . 10)
+	(:from . 22)
+	(:to . 22)
+	(:subject))))
+(setq mu4e-headers-visible-lines 25)
+(setq mu4e-maildir "/home/hylkema/Maildir")
+(setq mu4e-split-view (quote single-window))
+(setq mu4e-update-interval 300)
+(setq mu4e-use-fancy-chars t)
+(setq mu4e-user-mail-address-list (quote ("jouke.hijlkema@onera.fr")))
+(setq mu4e-view-prefer-html nil)
+(setq mu4e-view-show-addresses nil)
+(setq mu4e-view-show-images nil)
 
 ;; === Keys ===
 (mu4e~headers-defun-mark-for spam)
@@ -11,6 +31,7 @@
 (mu4e~view-defun-mark-for ham)
 (define-key mu4e-view-mode-map (kbd "s-h") 'mu4e-view-mark-for-ham)
 (define-key mu4e-headers-mode-map (kbd "s-h") 'mu4e-headers-mark-for-ham)
+(define-key mu4e-compose-mode-map (kbd "<s-delete>") 'mu4e-message-kill-buffer)
 
 ;; enable inline images
 (setq mu4e-view-show-images t)
@@ -31,12 +52,12 @@
       (list
        (make-mu4e-bookmark
 	:name "Inbox"
-	:query "maildir:/Work/INBOX NOT flag:trashed"
+	:query "maildir:/Work/INBOX NOT flag:trashed "
 	:key ?i)))
 (add-to-list 'mu4e-bookmarks
       (make-mu4e-bookmark
        :name "Inbox unread"
-       :query "maildir:/Work/INBOX AND flag:unread"
+       :query "maildir:/Work/INBOX AND flag:unread OR maildir:/Gmail/INBOX AND flag:unread"
        :key ?u))
 (add-to-list 'mu4e-bookmarks
       (make-mu4e-bookmark
@@ -65,9 +86,9 @@
        :key ?z))
 (add-to-list 'mu4e-bookmarks
       (make-mu4e-bookmark
-       :name "Test"
-       :query "maildir:/Work/INBOX"
-       :key ?q))
+       :name "Gmail all"
+       :query "maildir:/Gmail/INBOX"
+       :key ?g))
 
 ;; === alerts ===
 (mu4e-alert-set-default-style 'libnotify)
@@ -104,8 +125,6 @@
      )
   )
 
-
-
 ;; === send mail ===
 ;; tell message-mode how to send mail
 (setq message-send-mail-function 'smtpmail-send-it)
@@ -118,7 +137,7 @@
 | Jouke Hijlkema
 | Ingénieur de recherche
 | DMPE/LPF
-| tel: +33 5 61 56 63 93 / +33 6 43 02 53 47
+| tel: +33 5 61 56 63 93 / +33 6 37 32 60 82
 | ONERA - The French Aerospace Lab - Centre du Fauga Mauzac
 | 31410 Mauzac
 | Nous suivre sur : http://www.onera.fr 
@@ -157,3 +176,81 @@
     (set-fill-column 180)
     (flyspell-mode)))
 
+(require 'gnus-dired)
+;; make the `gnus-dired-mail-buffers' function also work on
+;; message-mode derived modes, such as mu4e-compose-mode
+(defun gnus-dired-mail-buffers ()
+  "Return a list of active message buffers."
+  (let (buffers)
+    (save-current-buffer
+      (dolist (buffer (buffer-list t))
+        (set-buffer buffer)
+        (when (and (derived-mode-p 'message-mode)
+                (null message-sent-message-via))
+          (push (buffer-name buffer) buffers))))
+    (nreverse buffers)))
+
+(setq gnus-dired-mail-mode 'mu4e-user-agent)
+(add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
+
+(defun compose-attach-marked-files ()
+  "Compose mail and attach all the marked files from a dired buffer."
+  (interactive)
+  (let ((files (dired-get-marked-files)))
+    (compose-mail nil nil nil t)
+    (dolist (file files)
+          (if (file-regular-p file)
+              (mml-attach-file file
+                               (mm-default-file-encoding file)
+                               nil "attachment")
+            (message "skipping non-regular file %s" file)))))
+
+;; === Tagging ===
+(add-to-list 'mu4e-marks
+  '(tag
+     :char       "r"
+     :prompt     "rapportTag"
+     :ask-target (lambda () (read-string "What tag do you want to add?"))
+     :action      (lambda (docid msg target)
+                    (mu4e-action-retag-message msg (concat "+" target)))))
+
+(defun joukeAddTag ()
+  (interactive)
+  (let
+      (myTag (read-string "What tag do you want to add?"))
+    (mu4e-action-retag-message (mu4e-message-at-point) myTag)
+    )
+  )
+
+(define-key mu4e-headers-mode-map (kbd "f") 'joukeAddTag)
+(define-key mu4e-view-mode-map (kbd "f") 'joukeAddTag)
+
+;; === Filtering ===
+(add-hook 'mu4e-update-pre-hook 'etc/imapfilter)
+(defun etc/imapfilter ()
+  (message "Running imapfilter...")
+  (with-current-buffer (get-buffer-create " *imapfilter*")
+    (goto-char (point-max))
+    (insert "---\n")
+    (call-process "imapfilter" nil (current-buffer) nil "-v"))
+  (message "Running imapfilter...done"))
+
+;; === To work with Gmail ===
+(setq mu4e-contexts
+ `( ,(make-mu4e-context
+     :name "Gmail"
+     :match-func (lambda (msg) (when msg
+       (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
+     :vars '(
+       (mu4e-trash-folder . "/Gmail/[Gmail].Trash")
+       (mu4e-refile-folder . "/Gmail/[Gmail].Archive")
+       ))
+   ,(make-mu4e-context
+     :name "Work"
+     :match-func (lambda (msg) (when msg
+       (string-prefix-p "/Work" (mu4e-message-field msg :maildir))))
+     :vars '(
+       (mu4e-trash-folder . "/Work/INBOX.Trash")
+       (mu4e-refile-folder . exchange-mu4e-refile-folder)
+       ))
+   ))

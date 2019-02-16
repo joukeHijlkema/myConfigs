@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: depense
+# key: dep
+# --
+|${1:Title}|${2:Where}|${3:Numero}|$4|$5|${6:Montant}|[[./OM/$3.pdf]]|-|

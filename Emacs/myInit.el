@@ -9,7 +9,7 @@
 (add-to-list 'auto-mode-alist '("\\.cpp\\'" . c++-mode))
 (add-to-list 'auto-mode-alist '("\\.FCMacro\\'" . python-mode))
 
-(tabbar-mode t)
+;; (tabbar-mode t)
 (yas-global-mode t)
 (setq tramp-default-method "ssh")
 (setq speedbar-initial-expansion-list-name "buffers")
@@ -37,6 +37,7 @@
       (unless (eq ibuffer-sorting-mode 'alphabetic)
         (ibuffer-do-sort-by-alphabetic))))
 
+(require 'use-package)
 ;; Workgroups2
 (require 'workgroups2)
 (workgroups-mode 1)
@@ -46,26 +47,48 @@
 ;; === firefox as browser ===
 (setq browse-url-browser-function 'browse-url-firefox)
 
+;; === line numbers off for certain modes ===
+(load "~/.emacs.d/linum-off.el")
 ;; === langtool ===
+<<<<<<< HEAD
 (require 'langtool)
 (setq langtool-language-tool-jar "/Software/LanguageTool-4.0/languagetool-commandline.jar")
 (setq langtool-default-language "fr")
 (global-set-key (kbd "s-g") 'langtool-check)
 (global-set-key (kbd "C-s-g") 'langtool-check-done)
 
+=======
+(load "~/.emacs.d/langtool.el")
+;; === autoComplete ===
+(load "~/.emacs.d/autoComplete.el")
+>>>>>>> df545d42a11bdec2d629cc9b3f43b0e9c6e6b02a
 ;; === Latex  ===
 (load "~/.emacs.d/Latex.el")
 ;; === Org mode ===
 (load "~/.emacs.d/momMode.el")
+<<<<<<< HEAD
 ;; === mu4e ===
 (when (string= system-name "your.ubuntu.host") (load "~/.emacs.d/mu4e.el") )
+=======
+;; === mail ===
+(when (string= system-name "LDMPE705H") (load "~/.emacs.d/mu4e.el"))
+(when (string= system-name "LDMPE709H") (load "~/.emacs.d/mu4e.el"))
+;; (load "~/.emacs.d/nevermore.el")
+;;(load "~/.emacs.d/notmuch.el")
+>>>>>>> df545d42a11bdec2d629cc9b3f43b0e9c6e6b02a
 ;; === keys ===
 (load "~/.emacs.d/keys.el")
 ;; === sunrine ===
-(load "~/.emacs.d/mySunrise.el")
+;; (load "~/.emacs.d/mySunrise.el")
+;; === Dired ===
+(load "~/.emacs.d/Dired.el")
 ;; === Open with ===
 (load "~/.emacs.d/openWith.el")
 ;; (load "~/.emacs.d/myTheme.el")
+;; === java ===
+;; (load "~/.emacs.d/java.el")
+;; === python ===
+(load "~/.emacs.d/python.el")
 
 ;;; auto-complete setup, sequence is important
 (require 'auto-complete)
@@ -86,3 +109,11 @@
 (setq ac-auto-start nil)            ; if t starts ac at startup automatically
 (setq ac-auto-show-menu t)
 (global-auto-complete-mode t) 
+
+(setq set-language-environment "utf-8")
+(define-coding-system-alias 'UTF-8 'utf-8)
+(set-default-coding-systems 'utf-8)
+
+(setq ecb-tip-of-the-day nil)
+(custom-set-variables '(ecb-options-version "2.50")) 
+

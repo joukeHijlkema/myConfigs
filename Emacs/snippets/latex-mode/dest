@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: destinateur
+# key: dest
+# expand-env: ((inst '("ESTEC/ESA TEC-MPC" "OTHER")) (people '("M. De Rosa" "OTHER")) (format '("ex" "fiche" "pdf")) (inout '("ID" "IF" "ED" "EF")))
+# --
+\addDest{${1:$$(yas-choose-value inst)}}{${2:$$(yas-choose-value people)}}{${3:$$(yas-choose-value format)}}{${4:$$(yas-choose-value inout)}}

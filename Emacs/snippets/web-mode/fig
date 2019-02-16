@@ -2,7 +2,7 @@
 # name: fig
 # key: fig
 # --
-<figure src="#imageRoot#/${1:path}"
+<figure src="${1:path}"
 	cap="${2:caption}"
 	class="top left"
-	style="width:50%"/>
+	style="width:$3%"/>

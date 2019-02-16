@@ -8,28 +8,39 @@
 	c-electric-paren
 	c-electric-semi&comma
 	cua--prefix-override-handler
+	cua-exchange-point-and-mark
 	cua-paste
 	electric-newline-and-maybe-indent
+	elpy-nav-forward-indent
 	find-file
 	jouke-make-beamer-pdf
 	keyboard-escape-quit
+	mouse-drag-mode-line
 	mouse-save-then-kill
 	mouse-set-region
+	org-cycle
 	org-self-insert-command
+	org-shiftmetaup
 	scroll-bar-toolkit-scroll
+	wg-switch-to-workgroup-at-index-7
 	wg-switch-to-workgroup-at-index-8
 	write-file
 	))
 
 (setq mc/cmds-to-run-once
       '(
+	align-current
 	c-electric-colon
 	c-electric-star
 	duplicate-line-or-region
 	eval-buffer
 	eval-print-last-sexp
+	goto-line
 	ignore
 	indent-for-tab-command
+	mouse-delete-window
+	mouse-yank-primary
+	mu4e
 	org-force-self-insert
 	python-shell-send-buffer
 	save-some-buffers
@@ -37,5 +48,6 @@
 	toggle-comment-on-line
 	wg-switch-to-workgroup-at-index-1
 	wg-switch-to-workgroup-at-index-2
+	wg-switch-to-workgroup-at-index-3
 	yas-expand
 	))

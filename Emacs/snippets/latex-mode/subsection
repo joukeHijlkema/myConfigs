@@ -1,0 +1,10 @@
+# -*- mode: latex -*-
+# name: subsection
+# key: ssec
+# --
+%%%% === $1 ===
+\subsection\{${1:name}\}
+\label\{subsec:${1:$(downcase (replace-regexp-in-string " " "_" yas-text)) }\}
+\todo[inline,caption={$1},backgroundcolor=violet,textcolor=white]{not done yet}
+$0
+%%%% === END $1 ===

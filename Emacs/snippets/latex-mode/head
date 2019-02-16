@@ -2,6 +2,70 @@
 # name: head
 # key: head
 # --
-%%%%%%%%%%%%%%%
-%% $1
-%%%%%%%%%%%%%%%
+%% === PARAMETERS + Comments ===
+%% Numero CNES
+%% Cahier de charge   = RT-CF
+%% Rapport technique = PER-NT
+%% - \ExecuteMetaDataMake: sure to seprate paragraphs by \par in child documents
+%% 
+
+\RequirePackage{kvoptions-patch}
+\documentclass[
+   lang=${2:$$(yas-choose-value '("english" "french"))},
+   child=${3:false$(when (and yas-modified-p yas-moving-away-p)
+			(forward-line)	   
+	    	       	(dotimes (i 11)
+		       	  (kill-whole-line)
+		       	)
+	       	 )},
+   draft=true,
+   twoside=${4:false},	
+   AER=$5,
+   RT=$6,
+   client=$7,
+   nClient=$8,
+   keywords={$9},
+   lot=$10,
+   protectionTitre=${11:$$(yas-choose-value '("SMP" "DR" "CD" "SD" "CI" "DNO" "CO"))}
+   protectionFiche=$11,
+   protectionDoc=$11,
+   refContract=$12,
+   ficheProg=$13
+ ]{myOnera}
+
+\bibliography{/home/hylkema/Documents/biblio.bib,/home/hylkema/Documents/english.bib}
+\begin{document}
+
+\newcommand{\myResume}{afaire}
+
+\title{${1:Title}}
+\author{Jouke Hijlkema}
+
+\maketitle
+\begin{abstract}
+  \myResume
+\end{abstract}
+
+\addDest{Diffusion systématique}{DSP,DTP,DAI}{fiche}{IF}
+\addDest{DCT/CID}{Documentation}{ex}{ID}
+\addDest{DMPE/LPF}{J. Hijlkema, J. Anthoine }{ex}{ID}
+
+\destinataires{}
+
+\setcounter{page}{4}
+
+\tableofcontents{}
+
+\listoftodos[Unfinished parts]
+
+$0
+
+\printbibliography
+
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-command-extra-options: "-shell-escape"
+%%% End:
+

@@ -13,6 +13,6 @@
 
 ;; Enable custom neotree theme
 (doom-themes-neotree-config)  ; all-the-icons fonts must be installed!
-
+a
 ;; Corrects (and improves) org-mode's native fontification.
 (doom-themes-org-config)
