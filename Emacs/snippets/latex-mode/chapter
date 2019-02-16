@@ -1,0 +1,15 @@
+# -*- mode: snippet -*-
+# name: chapter
+# key: chap
+# --
+%%%% ${1:$(make-string 90 ?\=)}
+%%%% === $1 ${1:$(make-string (- 85 (string-width yas-text)) ?\=)}
+%%%% ${1:$(make-string 90 ?\=)}
+
+\chapter\{${1:name}\}
+\label\{sec:${1:$(downcase (replace-regexp-in-string " " "_" yas-text)) }\}
+\todo[inline,caption={$1},color=red]{not done yet}
+$0
+%%%% ${1:$(make-string 90 ?\=)}
+%%%% === END $1 ${1:$(make-string (- 81 (string-width yas-text)) ?\=)}
+%%%% ${1:$(make-string 90 ?\=)}

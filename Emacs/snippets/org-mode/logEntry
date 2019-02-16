@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: log-entry
+# key: log-entry
+# --
+*** ${1:Title} `(format-time-string "<%Y-%m-%d %a>" (current-time))`
+**** Objectives
+     $0
+**** Notes
+**** Results
+**** Conclusion

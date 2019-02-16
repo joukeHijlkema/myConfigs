@@ -1,0 +1,96 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Cameras/" . "Classes/")
+ ("/ssh:pi@lp-rpi-cam3:/home/pi/trpHydrazine/Heaters/" . "Classes/")
+ ("/ssh:pi@lp-rpi-cam3:trpHydrazine/" . "Heaters/")
+ ("/ssh:pi@lp-rpi-cam3:" . "trpHydrazine/")
+ ("/home/hylkema/Documents/" . "Perso/")
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/" . "Cameras/")
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Audio/" . "Classes/")
+ ("/ssh:pi@lp-rpi-cam10:trpHydrazine/" . "Audio/")
+ ("/ssh:pi@lp-rpi-cam10:" . "trpHydrazine/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/ssh:134.212.96.56:/home/hylkema/Programs/trpHydrazine/GUI/Elements/"
+ "/ssh:pi@lp-rpi-cam3:/home/pi/trpHydrazine/Heaters/Classes/"
+ "/ssh:pi@lp-rpi-cam3:/home/pi/trpHydrazine/Heaters/"
+ "/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Cameras/"
+ "/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Cameras/Classes/"
+ "/ssh:pi@lp-rpi-cam3:trpHydrazine/Heaters/"
+ "/home/hylkema/Documents/Perso/"
+ "/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Audio/"
+ "/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Valves/"
+ "/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Audio/Classes/"
+ "/ssh:pi@lp-rpi-cam10:trpHydrazine/Audio/"
+ "/ssh:"
+ "/ssh:pi@lp-rpi-cam10:rpiCameras/Audio/"
+ "/home/hylkema/Programs/trpHydrazine/Audio/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Heater.py"
+ "wallHeaters.py"
+ "testHeaters.py"
+ "cameraPilot.py"
+ "cameraClass.py"
+ "Lambda.py"
+ "Heaters.py"
+ "heaterPilot.py"
+ "CVfrancais.tex"
+ "audioPilot.service"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/ssh:134.212.96.56:/home/hylkema/Programs/trpHydrazine/GUI/Elements/" (ftp . 428897.11200616177) "monitorPlayer.pyc" "./" "simpleValve.py~" "Heater.py" "System.py~" "tempPlot.py~" "System.py" "Reservoir.py" "Clamp.py~" "audioFeed.py" "twoWayValve.py" "simpleValve.py" "Vessel.py~" "tempPlot.py" "twoWayValve.py~" "T.py~" "System.pyc" "Element.py~" "monitorPlayer.py" "Vessel.pyc" "__pycache__/" "T.py" "Heater.py~" "Pump.py" "Element.py" "Clamp.py" "#Clamp.py#" "Element.pyc" "Vessel.py" "../")
+
+ ("/ssh:pi@lp-rpi-cam3:/home/pi/trpHydrazine/Heaters/" (ftp . 428896.7564726919) "./" "heaterPilot.py" "testHeaters.py~" "testHeaters.py" "Classes/" "../")
+
+ ("/ssh:pi@lp-rpi-cam3:/home/pi/trpHydrazine/Heaters/Classes/" (ftp . 428896.7558909435) "Lambda.py" "wallHeaters.py" "__pycache__/" "./" "Heaters.py" "Lambda.py~" "wallHeaters.py~" "../")
+
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Cameras/Classes/" (ftp . 428895.4439280683) "__pycache__/" "./" "cameraClass.py" "audioClass.py" "../")
+
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Cameras/" (ftp . 428895.443456991) "./" "cameraPilot.py" "cameraPilot.service" "Classes/" "../")
+
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/" (ftp . 428895.4429369753) ".gitmodules" "GUI/" "Valves/" "./" "Cameras/" "Temperature/" "Manual/" ".gitignore" "rpi1_Pilot.service" "Sweep/" "zmqCommunications/" "Analyse/" "Kistler/" "runPilotRpi_1.py~" "Audio/" "runPilot.py" "DAQ/" "Logger/" "runPilot.sh" "config.ini" ".git/" "Gstream/" "runPilotRpi_1.py" "testGui.py" "Logs/" "Pump/" "runVideoPilot.py" "../" "Heaters/")
+
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Audio/" (ftp . 428895.4428530322) "./" "testAudio.sh" "audioOutPilot.py" "audioInPilot.py" "audioPilot.service" "audioPilot.service~" "Classes/" "../")
+
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Audio/Classes/" (ftp . 428895.44247707323) "__pycache__/" "./" "audioOutStream.py" "audioInStream.py" "../")
+
+ ("/ssh:pi@lp-rpi-cam5:/home/pi/trpHydrazine/" (ftp . 428895.43520661053) ".gitmodules" "GUI/" "Valves/" "./" "Cameras/" "Temperature/" "Manual/" ".gitignore" "rpi1_Pilot.service" "Sweep/" "zmqCommunications/" "Analyse/" "Kistler/" "runPilotRpi_1.py~" "Audio/" "runPilot.py" "DAQ/" "Logger/" "runPilot.sh" "config.ini" ".git/" "Gstream/" "runPilotRpi_1.py" "testGui.py" "Logs/" "Pump/" "runVideoPilot.py" "../" "Heaters/")
+
+ ("/ssh:pi@lp-rpi-cam3:trpHydrazine/Heaters/" (ftp . 428893.50830582157) "./" "heaterPilot.py" "testHeaters.py~" "testHeaters.py" "Classes/" "../")
+
+ ("/ssh:pi@lp-rpi-cam3:trpHydrazine/" (ftp . 428893.5072085999) ".gitmodules" "GUI/" "Valves/" "./" "Cameras/" "Temperature/" "Manual/" ".gitignore" "rpi1_Pilot.service" "Sweep/" "zmqCommunications/" "Analyse/" "Kistler/" "runPilotRpi_1.py~" "runPilot.py" "DAQ/" "Logger/" "runPilot.sh" "config.ini" ".git/" "Gstream/" "runPilotRpi_1.py" "testGui.py" "Logs/" "Pump/" "../" "Heaters/")
+
+ ("/home/hylkema/Documents/Perso/" (23542 26928 233281 344000) "CV.ods" "paspoortElisa2015.jpeg" "BforBank_RIB_CompteBancaire_12340100453325.pdf" "paspoort-000.ppm.xmp" "Factures/" "PaspoortGuus.jpg" "RouteBeschrijvingBousquet.abw" "STORM/" "Statement_Jun 2012.pdf" "Vlieland/" "Salaires/" "paspoort-000.ppm" "../" "Bouygues.lyx" "BIO.pdf" "StudieFinanciering2010.odt" "NieuwWerk.lyx" "Free/" "Signature.jpg" "Bousquet.bpn" "Passat/" "PaspoortJouke2018.jpg" "StudieFinanciering2011.odt" "PaspoortJouke.jpg" "WaterRocket/" "vw-beta.pdf" "90ans/" "fraudeCarteBancaire.odt" "CVfrancais.synctex.gz" "add.txt" "Impots/" "Kids/" "Loon.gnumeric" "PaspoortElisa.jpg" "GastenBousquet.tex" "CVfrancais.tex~" "GastenBousquet.lyx" "ConnexionVerte/" "CVfrancais.pdf" "Uitgaven.gnumeric" "PaspoortMargot.jpg" "CVfrancais.aux" "CVfrancais.tex" "VirementStudifinanciering2008.lyx" "Jeux/" "CVfrancais.blg" "StNico/" "CVfrancais.log" "Facture-SFR.pdf" "NickAndTric/" "RIB.pdf" "attestationLieuRisqueLocataire.pdf" "./" "CVfrancais.lyx" "auto/" "passport2.PDF" "passport3.PDF" "passport.PDF" "Loon.xls" "invoiceStratos2+2015-046 Jouke Hijlkema.pdf" "Statement_Jul 2012.pdf" "CVfrancais.bbl" "CVfrancais-lyxformat-474.lyx" "GastenBousquet.log" "Loon.ods" "virementSera2+.png" "panneaux/" "Bousquet2.PLN" "passeportJouke_2018.pdf" "CVfrancais.lyx~" "Ameland/" "CarteIdVero.jpg" "April/" "RouteBeschrijvingBousquet.pdf" "PaspoortVal.jpg")
+
+ ("/home/hylkema/Documents/" (23530 42674 909711 195000) "PLASMA2CEDRE/" "mydocuments/" "model/" "Theses/" "french.bib.bak" "MumbleAutomaticCertificateBackup.p12" "Pegase-9_10_2017.doc" ".config/" "Orphee/" "english.bib.bak" "2006/" "Factures/" "2003/" "www.feynmanlectures.caltech.edu/" "Articles/" "TexPreambles/" "PRF/" "Attachements/" "2002/" "CNES/" "EsaTrp.pdf" "Data/" "BOA/" ".luckybackup-snaphots/" "../" "Org/" "F95Doc/" "Perse 3D/" "ESA/" "PreX/" "ODP/" "CelHyo2d/" "Mendeley Desktop/" "onera/" "2009/" "biblio.bib.bak" "MCM-ITP/" "Kerc/" "BibTex/" "Solides/" "ESPSS_LIBS_3.0.3/" "journal/" "2011/" "Mendeley/" "french.bib" "LOGOS/" ".hg/" "english.bib" "Scratch Projects/" "test.bib/" "Verwarming/" "LEX/" "Rap21/" "2007/" "My Pictures/" "ANPA/" "Formulieren/" "MASTER_V2_INTERMEDIAIRE/" "Val/" "sciam/" "Manuals/" "THESE/" "JAXA/" "Michel/" "GoogleDocsPrive/" "Verhalen/" "Latex/" "Qualite/" "Mindmaps/" "HOMEPAGE/" "Cours/" "Base de donnees LP V8/" "Divers/" "Icons/" "presentationTools/" "Soutenances/" "Videos/" "Tmp/" "french.bib~" "FromTheWeb/" "Hybrides/" "OmegaT/" "LyxStyles/" "biblio.bib" "2001/" "Entretiens/" "ConvLaTex/" "Impress/" "Presentations des autres/" "./" "biblio.reflib" "CGNS/" "Shoppen/" "Stages/" "Images/" "Pointage/" "PIRs/" "Brieven/" "PTF/" "DLAS-RT/" "biblio.bib.bup" "Admin/" "Prive/" "Congresses/" "BaseDeDonnées/" "Perso/" "2004/" "Snippets/" "Perseus/" "Enchanting Projects/" "3DPrinter/" "OOfficeMacros/" "logo_onera.xcf" "2008/" "2005/" "Ecosim/" "2010/" "BlackmagicDesign/" "3Dprinter/" "My Music/" "My Videos/" "Dossiers/")
+
+ ("/home/hylkema/Documents/ESA/" (23521 21084 345664 749000) "ASCenSIon/" "GSTP_ONERA.doc" "../" "EXPRO+/" "TRP_Hydrazine/" "./")
+
+ ("/home/hylkema/Documents/ESA/TRP_Hydrazine/" (23367 11595 737605 986000) "~WRL0003.tmp" "PlanningMarco.xml" "Contracts/" "Design/" "../" "meetings/" "PlanningUntilOctober2017.gan" "TestCases/" "./" "technicalDocuments/" "Documents/" "questionsLyon.lyx" "Planning.gan")
+
+ ("/home/hylkema/Documents/ESA/TRP_Hydrazine/Documents/" (23473 51758 600492 673000) "Références MMH.rtf" "D4_design_report/" "D3_Test_plan/" "ProgressReports/" "Design/" "../" "Refs N2H4 ESA.docx" "IS/" "Propriétés N2H4 ESA anglais.xlsx" "Propriétés MMH ESA.xlsx" "Literature.zip" "SP2018/" "Literature/" "./" "TRR/" "Snippets/" "D1/" "D2_measurementBiblio/")
+
+ ("/home/hylkema/Documents/ESA/TRP_Hydrazine/Documents/TRR/" (23558 49856 533011 508000) "TRR_report.bbl" "TRR_report.bcf" "TRR_report.aux" "../" "TRR_report.tex" "TRR_report.log" "TRR_report-pics.pdf" "TRR_report.synctex.gz" "TRR_report.toc" "TRR_report.run.xml" "TRR_report.blg" "./" "auto/" "TRR_report-autopp.run.xml" "TRR_report.tex~" "TRR_report.pdf")
+
+ ("/ssh:pi@lp-rpi-cam10:/home/pi/trpHydrazine/Valves/" (ftp . 428891.25240664755) "./" "valvePilot.py" "Tools/" "valvePilot.service" "config.ini" "Classes/" "../")
+
+ ("/ssh:pi@lp-rpi-cam10:trpHydrazine/Audio/" (ftp . 428888.61534763314) "./" "testAudio.sh" "audioOutPilot.py" "audioInPilot.py" "Classes/" "../")
+
+ ("/ssh:pi@lp-rpi-cam10:trpHydrazine/" (ftp . 428888.61460599216) ".gitmodules" "GUI/" "Valves/" "./" "Cameras/" "Temperature/" "Manual/" ".gitignore" "rpi1_Pilot.service" "Sweep/" "zmqCommunications/" "Analyse/" "Kistler/" "runPilotRpi_1.py~" "Audio/" "runPilot.py" "DAQ/" "Logger/" "runPilot.sh" "config.ini" ".git/" "Gstream/" "runPilotRpi_1.py" "testGui.py" "Logs/" "Pump/" "runVideoPilot.py" "../" "Heaters/")
+
+ ("/ssh:pi@lp-rpi-cam10:rpiCameras/" (ftp . 428888.55163611134) "./" "Pilot/" ".gitignore" "cameras.ods" "Tools/" "Python/" "Schemas/" "Camera/" "config.ini" ".git/" "Monitor/" "Icons/" "Trigger/" "streamPlayer/" "Makefile" "Gui/" "Server/" "Procedure.txt" "Scripts/" "Common/" "../" "PythonDev/")
+
+ ("/home/hylkema/Programs/trpHydrazine/Audio/" (23559 36109 172207 882000) "audioOutPilot.py~" "audioOutPilot.py" "../" "Classes/" "testAudio.sh" "audioInPilot.py" "audioInPilot.py~" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

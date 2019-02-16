@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: test
+# key: test
+# --
+func ${1:$$(when (and yas-modified-p 
+                      yas-moving-away-p) 
+              (insert ")" )
+              (backward-char (+ 1 (length yas-text)))
+              (insert "("))} ${2:funcName} {
+    $0
+}
+
+
+

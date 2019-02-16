@@ -1,0 +1,84 @@
+# -*- mode: snippet -*-
+# name: reunion
+# key: reunion
+# --
+* ${1:Title}
+#+LATEX: \def \crNumber {${2:CR number (something like 1-2017)} }
+#+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
+#+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
+*Objet de la réunion: $1*
+#+ATTR_LATEX: :environment tabu :align XX :width \textwidth
+|*Date de la réunion: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
+
+** Participants
+:PROPERTIES:
+:UNNUMBERED: 1
+:END:
+
+#+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
+|------------------------+-------------------+---|
+| Jouke Hijlkema (ONERA) | ${6:Participants} |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+|                        |                   |   |
+|------------------------+-------------------+---|
+** Diffusion:  participants +
+#+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
+|-----------------------+-------------------------+-----------------------|
+| Pierre Millan (ONERA) | Jérôme Anthoine (ONERA) | Muriel Brunet (ONERA) |
+|-----------------------+-------------------------+-----------------------|
+|                       |                         |                       |
+|-----------------------+-------------------------+-----------------------|
+|                       |                         |                       |
+|-----------------------+-------------------------+-----------------------|
+** Conclusions principales
+
+#+ATTR_LATEX: :environment tabu :align |X| :width \textwidth
+|-----|
+|<100>|
+|     |
+|-----|
+** Approbation
+#+ATTR_LATEX: :environment tabu :align |X|X|X|X|X| :width \textwidth
+|--------------+----------------------------------------------+-----+---+---|
+| Organization | ONERA                                        |     |   |   |
+|--------------+----------------------------------------------+-----+---+---|
+| Position     | Report secretary                             |     |   |   |
+|--------------+----------------------------------------------+-----+---+---|
+| Name         | Jouke Hijlkema                               |     |   |   |
+|--------------+----------------------------------------------+-----+---+---|
+| Signature    | [[~/Documents/Images/Signatures/Signature.pdf]]||||
+|--------------+----------------------------------------------+-----+---+---|
+#+LATEX: \pagebreak
+#+LATEX: \titleformat{\section}
+#+LATEX:   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+** Entrées
+:PROPERTIES:
+:UNNUMBERED: 1
+:END: 
+${4:Input documents. start with - to make a list}
+
+** Ordre du jour
+${5:Agenda. start with - to make a list	}
+
+** Compte-rendu
+
+** Conclusions
+
+** Actions
+# ActionTable
+#+ATTR_LATEX: :environment tabu :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
+| Reference       | # | Description                                        | responsible | due date | state | Note    |
+|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
+|                 |   | <50>                                               |             |          |       | <20>    |
+`(jouke-move-actions)`

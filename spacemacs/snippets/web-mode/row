@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: row
+# key: row
+# --
+<row>
+  $0
+</row>

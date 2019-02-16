@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: sym
+# key: sym
+# --
+<symbol>
+   <title>$1</title>
+   <g>
+      $2
+   </g>
+</symbol>

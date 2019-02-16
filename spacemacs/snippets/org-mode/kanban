@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: kanban
+# key: kanban
+# --
+
+#+BEGIN: kanban :layout ("..." . 50) :scope nil
+#+END:

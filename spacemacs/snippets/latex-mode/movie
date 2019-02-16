@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: movie
+# key: movie
+# --
+\\fullFrameMovie{${1:size}}{${2:moviePath}}{${3:imgPath}}

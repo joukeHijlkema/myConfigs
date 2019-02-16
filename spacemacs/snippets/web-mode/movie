@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: movie
+# key: movie
+# --
+<video src="$1"
+       class="top right"
+       style="height:60%"/>

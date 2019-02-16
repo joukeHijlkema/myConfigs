@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: table
+# key: table
+# --
+\begin\{table\}[H]
+  \begin\{center\}
+    \begin\{tabular\}\{${2:ccc}\}
+      $0
+    \end\{tabular\}
+  \end\{center\}
+  \caption \{${1:caption}
+           \label\{tab:${1:$(downcase (replace-regexp-in-string " " "_" yas-text)) }\} \}
+\end\{table\}

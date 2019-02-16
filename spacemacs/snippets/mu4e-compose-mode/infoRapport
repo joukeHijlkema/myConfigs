@@ -1,0 +1,29 @@
+# -*- mode: snippet -*-
+# name: infoRapport
+# key: infoRapport
+# --
+
+Bonjour Valérie,
+
+Peut tu me sortir le rapport en PJ stp.
+
+AER: $1
+
+Thématique :
+$2 Ecoulements multiphasiques
+$3 Transferts thermiques 
+$4 Ecoulements réactifs 
+$5 Matériaux énergétiques, émissions et dispersion atmosphérique
+$6 Matériaux architecturés et multifonctionnels
+$7 Acoustique : sources, propagation et impact
+$8 Physique du givrage  
+$9 Dégradation thermique des matériaux 
+$10 Ecoulements hypersoniques 
+$11 Dynamique des écoulements pariétaux 
+$12 Méthodes numériques 
+$13 Exploitation de données expérimentales et numériques
+$14 Développement de techniques de mesure et montages expérimentaux
+
+Merci,
+
+Jouke
