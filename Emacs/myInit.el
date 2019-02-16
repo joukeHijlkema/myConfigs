@@ -58,7 +58,7 @@
 ;; === Org mode ===
 (load "~/.emacs.d/momMode.el")
 ;; === mu4e ===
-(load "~/.emacs.d/mu4e.el")
+(when (string= system-name "your.ubuntu.host") (load "~/.emacs.d/mu4e.el") )
 ;; === keys ===
 (load "~/.emacs.d/keys.el")
 ;; === sunrine ===
