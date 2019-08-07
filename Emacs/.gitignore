@@ -1,5 +1,7 @@
 tramp
+elpa
 org-clock-save.el
 network-security.data
 *.bup
+session.*
 
