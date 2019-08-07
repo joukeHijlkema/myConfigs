@@ -21,8 +21,8 @@
 ;; === Org mode ===
 (load "~/.emacs.d/myConfig/myOrg.el")
 ;; === mail ===
-(when (string= system-name "LDMPE705H") (load "~/.emacs.d/mu4e.el"))
-(when (string= system-name "LDMPE709H") (load "~/.emacs.d/mu4e.el"))
+(when (string= system-name "LDMPE705H") (load "~/.emacs.d/myConfig/myMu4e.el"))
+(when (string= system-name "LDMPE709H") (load "~/.emacs.d/myConfig/myMu4e.el"))
 ;; === keys ===
 (load "~/.emacs.d/myConfig/myKeys.el")
 ;; === Dired ===

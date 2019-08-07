@@ -5,10 +5,16 @@
 (setq cua-keep-region-after-copy t)   ;; Standard Windows
 
 ;; Multiple cursors
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
-(global-set-key (kbd "s->") 'mc/mark-next-like-this)
-(global-set-key (kbd "s-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-s-<") 'mc/mark-all-like-this)
+(use-package multiple-cursors
+  :ensure t
+  :init (message "=== my mc init ===")
+  :bind (
+         ("C-S-c C-S-c" . mc/edit-lines)
+         ("s->" . mc/mark-next-like-this)
+         ("s-<" . mc/mark-previous-like-this)
+         ("C-s-<" . mc/mark-all-like-this)
+         )
+  )
 
 ;; Deletion etc
 (global-set-key (kbd "s-k") 'kill-whole-line)
@@ -115,8 +121,8 @@
 ;; === Theme changing ===
 (use-package lab-themes
   :ensure t)
-(use-package spacemacs-theme
-  :ensure t)
+(use-package spacemacs-common
+  :ensure spacemacs-theme)
 (defun changeTheme (TH)
   (setq themes (list 'lab-dark 'lab-light 'spacemacs-dark 'spacemacs-light))
   (dolist (th themes nil) (disable-theme th))
