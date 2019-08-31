@@ -18,11 +18,11 @@
   			  (regexp . "\\(\\s-*\\)\\+=")
   			  (mode . '(python-mode))
   			  (repeat . nil)))))
-  (add-hook 'python-mode (lambda ()
+  (add-hook 'python-mode-hook (lambda ()
                            (message "== python hook for python")
                            (smartparens-mode)
                            (color-identifiers-mode)
-                           (linum-mode)
+                           (linum-mode t)
                            ))
 )
 

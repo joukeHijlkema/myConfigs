@@ -37,7 +37,7 @@
  '(ecb-options-version "2.50")
  '(package-selected-packages
    (quote
-    (mu4e magit spacemacs-themes company-mode auto-complete-config cua-mode t: android-env workgroups2 web-mode use-package uncrustify-mode tabbar sunrise-x-buttons sr-speedbar spacemacs-theme semi org-plus-contrib org-journal org-edit-latex org openwith multiple-cursors markdown-mode langtool lab-themes hydra elpy ecb dired-explorer calfw-org calfw arduino-mode ac-math)))
+    (color-identifiers-mode smartparens mu4e magit spacemacs-themes company-mode auto-complete-config cua-mode t: android-env workgroups2 web-mode use-package uncrustify-mode tabbar sunrise-x-buttons sr-speedbar spacemacs-theme semi org-plus-contrib org-journal org-edit-latex org openwith multiple-cursors markdown-mode langtool lab-themes hydra elpy ecb dired-explorer calfw-org calfw arduino-mode ac-math)))
  '(python-shell-interpreter "python3"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
