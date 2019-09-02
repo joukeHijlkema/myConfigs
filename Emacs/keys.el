@@ -45,16 +45,6 @@
 (global-set-key (kbd "s-a") 'align-current)
 (global-set-key (kbd "C-s-a") 'align-regexp)
 
-(add-hook
- 'align-load-hook
- (lambda ()
-   (add-to-list
-    'align-rules-list
-    '(python-assignment
-      (regexp . "[^=!<>]\\(\\s-*\\)[ +-/\*]=\\(\\s-*\\)\\([^>=]\\|$\\)")
-      (group . (1 2))
-      (modes . '(python-mode))
-      (repeat . nil)))))
 ;; commenting
 (defun toggle-comment-on-line (beg end)
   "comment or uncomment current line or region"
@@ -77,7 +67,7 @@
 (global-set-key (kbd "s-<kp-1>") 'wg-switch-to-workgroup-at-index-1)
 (global-set-key (kbd "s-<kp-2>") 'wg-switch-to-workgroup-at-index-2)
 (global-set-key (kbd "s-<kp-3>") 'wg-switch-to-workgroup-at-index-3)
-(global-set-key (kbd "s-<kp-4>") 'jouke-switch-to-sunrise)
+(global-set-key (kbd "s-<kp-4>") 'wg-switch-to-workgroup-at-index-4)
 (global-set-key (kbd "s-<kp-5>") 'wg-switch-to-workgroup-at-index-5)
 (global-set-key (kbd "s-<kp-6>") 'wg-switch-to-workgroup-at-index-6)
 (global-set-key (kbd "s-<kp-7>") 'wg-switch-to-workgroup-at-index-7)
@@ -103,27 +93,11 @@
 (global-set-key (kbd "s-<up>") 'windmove-up)
 (global-set-key (kbd "s-<down>") 'windmove-down)
 
-;; === ORG mode ===
-
-(define-key org-mode-map (kbd "s-i") 'org-clock-in)
-(define-key org-mode-map (kbd "s-o") 'org-clock-out)
-(define-key org-mode-map (kbd "s-a") 'org-mactions-new-numbered-action)
-(define-key org-mode-map  (kbd "<s-f9>") (lambda () (interactive) (org-latex-export-to-pdf nil 's)))
-(define-key org-mode-map  (kbd "<s-f10>") 'jouke-make-beamer-pdf)
-(define-key org-mode-map  (kbd "<s-f11>") 'jouke-make-latex)
-(define-key org-mode-map  (kbd "<s-f12>") 'jouke-make-pdf)
-
-(global-set-key (kbd "<s-f8>") 'org-agenda)
 (global-set-key (kbd "<s-f7>") 'sunrise)
 (global-set-key (kbd "<s-f6>") 'mu4e)
 (when (string= system-name "LDMPE705H")
   (global-set-key (kbd "<XF86Mail>") 'mu4e)
   )
-
-;; kanban
-(define-key org-mode-map  (kbd "<s-prior>") 'org-kanban/next)
-(define-key org-mode-map  (kbd "<s-next>") 'org-kanban/prev)
-
 
 ;; === Spelling ===
 (defun toggleSpelling ()
@@ -137,9 +111,7 @@
 (global-set-key (kbd "s-s") 'toggleSpelling)
 
 ;; === yasnippets (conflicts with completion) ===
-;; (define-key yas-minor-mode-map (kbd "<tab>") nil)
-;; (define-key yas-minor-mode-map (kbd "TAB") nil)
-;; (define-key yas-minor-mode-map (kbd "<s-tab>") yas-maybe-expand)
+(global-set-key (kbd "<backtab>") 'yas-expand)
 
 (global-set-key (kbd "s-i") (lambda () (interactive)
 			      (imenu-list-minor-mode)
@@ -155,3 +127,18 @@
 
 ;; === Tramp ===
 (global-set-key (kbd "<s-backspace>") (lambda () (interactive) (tramp-cleanup-all-buffers) (tramp-cleanup-all-connections)))
+
+;; === Bookmarks ===
+(global-set-key (kbd "C-s-m") 'bookmark-set)
+(global-set-key (kbd "s-m") 'list-bookmarks)
+
+;; === Theme changing ===
+(defun changeTheme (TH)
+  (setq themes (list 'lab-dark 'lab-light 'spacemacs-dark 'spacemacs-light))
+  (dolist (th themes nil) (disable-theme th))
+  (load-theme TH))
+(global-set-key (kbd "C-&") (lambda () (interactive) (changeTheme 'lab-dark)))
+(global-set-key (kbd "C-é") (lambda () (interactive) (changeTheme 'lab-light)))
+(global-set-key (kbd "C-\"") (lambda () (interactive) (changeTheme 'spacemacs-dark)))
+(global-set-key (kbd "C-'") (lambda () (interactive) (changeTheme 'spacemacs-light)))
+

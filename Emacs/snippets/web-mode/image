@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: image
-# key: img
+# key: image
 # --
-<figure src="${1:path}"
+<image src="${1:path}"
 	class="hcenter"
 	style="width:100%"/>

@@ -2,7 +2,7 @@
 # name: sslide
 # key: sslide
 # --
-<!-- -->
+<!-- $1 -->
 <slide subtitle="$1">
   $0
 </slide>

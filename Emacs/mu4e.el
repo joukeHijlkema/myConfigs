@@ -57,7 +57,7 @@
 (add-to-list 'mu4e-bookmarks
       (make-mu4e-bookmark
        :name "Inbox unread"
-       :query "maildir:/Work/INBOX AND flag:unread OR maildir:/Gmail/INBOX AND flag:unread"
+       :query "maildir:/Work/INBOX AND flag:unread"
        :key ?u))
 (add-to-list 'mu4e-bookmarks
       (make-mu4e-bookmark
@@ -84,11 +84,6 @@
        :name "Spam"
        :query "maildir:/Spam AND flag:unread"
        :key ?z))
-(add-to-list 'mu4e-bookmarks
-      (make-mu4e-bookmark
-       :name "Gmail all"
-       :query "maildir:/Gmail/INBOX"
-       :key ?g))
 
 ;; === alerts ===
 (mu4e-alert-set-default-style 'libnotify)
@@ -236,21 +231,21 @@
   (message "Running imapfilter...done"))
 
 ;; === To work with Gmail ===
-(setq mu4e-contexts
- `( ,(make-mu4e-context
-     :name "Gmail"
-     :match-func (lambda (msg) (when msg
-       (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
-     :vars '(
-       (mu4e-trash-folder . "/Gmail/[Gmail].Trash")
-       (mu4e-refile-folder . "/Gmail/[Gmail].Archive")
-       ))
-   ,(make-mu4e-context
-     :name "Work"
-     :match-func (lambda (msg) (when msg
-       (string-prefix-p "/Work" (mu4e-message-field msg :maildir))))
-     :vars '(
-       (mu4e-trash-folder . "/Work/INBOX.Trash")
-       (mu4e-refile-folder . exchange-mu4e-refile-folder)
-       ))
-   ))
+;; (setq mu4e-contexts
+;;  `( ,(make-mu4e-context
+;;      :name "Gmail"
+;;      :match-func (lambda (msg) (when msg
+;;        (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
+;;      :vars '(
+;;        (mu4e-trash-folder . "/Gmail/[Gmail].Trash")
+;;        (mu4e-refile-folder . "/Gmail/[Gmail].Archive")
+;;        ))
+;;    ,(make-mu4e-context
+;;      :name "Work"
+;;      :match-func (lambda (msg) (when msg
+;;        (string-prefix-p "/Work" (mu4e-message-field msg :maildir))))
+;;      :vars '(
+;;        (mu4e-trash-folder . "/Work/INBOX.Trash")
+;;        (mu4e-refile-folder . exchange-mu4e-refile-folder)
+;;        ))
+;;    ))

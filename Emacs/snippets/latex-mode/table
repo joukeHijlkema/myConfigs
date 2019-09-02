@@ -4,8 +4,10 @@
 # --
 \begin\{table\}[H]
   \begin\{center\}
-    \begin\{tabular\}\{${2:ccc}\}
+    \begin\{tabular\}\{${2:|c|c|c|}\}
+      \hline
       $0
+      \hline
     \end\{tabular\}
   \end\{center\}
   \caption \{${1:caption}

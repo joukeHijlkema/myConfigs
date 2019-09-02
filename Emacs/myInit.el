@@ -30,7 +30,6 @@
 (add-to-list 'auto-mode-alist '("\\.xml?\\'"		.	web-mode))
 (add-to-list 'auto-mode-alist '("\\.php\\'"		.	web-mode))
 
-
 (add-hook 'ibuffer-hook
     (lambda ()
       (ibuffer-vc-set-filter-groups-by-vc-root)
@@ -45,7 +44,7 @@
 (setq wg-workgroups-mode-exit-save-behavior 'save)      ; Options: 'save 'ask nil
 
 ;; === firefox as browser ===
-(setq browse-url-browser-function 'browse-url-firefox)
+(setq browse-url-browser-function 'browse-url-default-browser)
 
 ;; === line numbers off for certain modes ===
 (load "~/.emacs.d/linum-off.el")
@@ -56,7 +55,9 @@
 ;; === Latex  ===
 (load "~/.emacs.d/Latex.el")
 ;; === Org mode ===
-(load "~/.emacs.d/momMode.el")
+;; (load "~/.emacs.d/momMode.el")
+(load "~/.emacs.d/myOrg.el")
+;; (load "~/.emacs.d/test.el")
 ;; === mail ===
 (when (string= system-name "LDMPE705H") (load "~/.emacs.d/mu4e.el"))
 (when (string= system-name "LDMPE709H") (load "~/.emacs.d/mu4e.el"))
@@ -75,6 +76,10 @@
 ;; (load "~/.emacs.d/java.el")
 ;; === python ===
 (load "~/.emacs.d/python.el")
+;; === Java ===
+(load "~/.emacs.d/java.el")
+;; === XML ===
+(load "~/.emacs.d/XML.el")
 
 ;;; auto-complete setup, sequence is important
 (require 'auto-complete)
@@ -101,5 +106,8 @@
 (set-default-coding-systems 'utf-8)
 
 (setq ecb-tip-of-the-day nil)
-(custom-set-variables '(ecb-options-version "2.50")) 
+(custom-set-variables '(ecb-options-version "2.50"))
 
+(show-paren-mode 1)
+
+(server-start)

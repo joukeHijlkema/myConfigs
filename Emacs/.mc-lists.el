@@ -3,7 +3,9 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	LaTeX-insert-left-brace
 	TeX-insert-backslash
+	TeX-insert-sub-or-superscript
 	c-electric-lt-gt
 	c-electric-paren
 	c-electric-semi&comma
@@ -32,6 +34,8 @@
 	align-current
 	c-electric-colon
 	c-electric-star
+	dired-next-line
+	dired-previous-line
 	duplicate-line-or-region
 	eval-buffer
 	eval-print-last-sexp
