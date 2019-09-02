@@ -1,9 +1,0 @@
-# -*- mode: snippet -*-
-# name: table
-# key: tab
-# --
-<table class="$(1:top left)" style="width:100%;font-size:35%">
-   <row class="tableHead">
-      <col>$0</col>
-   </row>
-</table>

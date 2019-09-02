@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: debug
-# key: debug
-# --
-// ===== DEBUG START =====
-$1
-// ===== DEBUG END =======

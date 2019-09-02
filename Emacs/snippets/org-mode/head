@@ -4,8 +4,15 @@
 # --
 #+STARTUP: indent
 #+STARTUP: latexpreview
-#+LATEX_CLASS: myOrg
+#+LATEX_CLASS: MOM
+#+LATEX_CLASS_OPTIONS: [protection=SMP,aer=$1,${2:english/francais}]
+#+LATEX_HEADER: \\usepackage{hyperref}
+#+LATEX_HEADER: \\usepackage{tabu}
+#+LATEX_HEADER: \\renewcommand{\\arraystretch}{1.3}
+#+LATEX_HEADER: \\usepackage[utf8]{inputenc}
+#+LATEX_HEADER: \\usepackage{lmodern,textcomp}
+#+LATEX_HEADER: \\graphicspath{/home/hylkema/Documents/Images}
 #+OPTIONS: toc:nil
 #+OPTIONS: num:2
+#+OPTIONS: title:nil
 #+OPTIONS: tex:t 
-#+PROPERTY: AER $1

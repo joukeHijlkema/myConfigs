@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: blk
-# key: blk
-# --
-\begin{block}{${1:title}}
-  $2
-\end{block}

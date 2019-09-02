@@ -5,5 +5,4 @@
 <figure src="${1:path}"
 	cap="${2:caption}"
 	class="top left"
-        imgWidth="auto"
 	style="width:$3%"/>

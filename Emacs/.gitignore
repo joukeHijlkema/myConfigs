@@ -1,5 +1,9 @@
 tramp
+elpa
+oldConfigs
 org-clock-save.el
 network-security.data
 *.bup
-
+session.*
+recentf
+transient

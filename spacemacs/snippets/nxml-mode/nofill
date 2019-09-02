@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: nofill
-# key: nofill
-# --
-style="fill:none;stroke-width:1"

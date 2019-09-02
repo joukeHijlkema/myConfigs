@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: img
-# key: img
-# --
-#+CAPTION: $1
-#+NAME:   img:$2
-#+ATTR_LATEX: :placement [!p]
-[[`(read-file-name "find the file" "/home/hylkema/Documents/Images")`]]

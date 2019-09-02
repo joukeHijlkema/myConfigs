@@ -2,49 +2,14 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("EUCASS-2019"
- (filename . "~/Documents/Congresses/EUCASS/2019-Madrid/")
- (front-context-string . "articleEucass201")
- (rear-context-string . " juin  17 18:24 ")
- (position . 1237))
-("Home"
- (filename . "~/")
- (front-context-string . "Dessins\n  -rw-r-")
- (rear-context-string . " mai    6 08:35 ")
- (position . 2341))
-("Documents"
- (filename . "~/Documents/")
- (front-context-string . "CNES\n  drwxr-xr-")
- (rear-context-string . " avril 12  2018 ")
- (position . 2223))
-("Devis R&T CNES"
- (filename . "~/Documents/CNES/R&T/2019_hybride/Devis/")
- (front-context-string . "2019_01_18_Onera")
- (rear-context-string . " janv. 23 14:51 ")
- (position . 271))
-("Dessins"
- (filename . "~/Dessins/")
- (front-context-string . "3D_Printer\n  drw")
- (rear-context-string . " févr. 21 17:09 ")
- (position . 243))
-("Programs"
- (filename . "~/Programs/")
- (front-context-string . "erosionCol\n  drw")
- (rear-context-string . " avril 26 11:49 ")
- (position . 2128))
-("Kelvin_LP"
- (filename . "/smb:kelvin.onecert.fr:/:/LP/")
- (front-context-string)
- (rear-context-string . " 14 10:04 VALLY\n")
- (position . 1638))
-("Devis_trp_hydrazine"
+(("Devis_trp_hydrazine"
  (filename . "~/Documents/ESA/TRP_Hydrazine/Design/Devis/")
  (front-context-string . "\n  -rw-rw-r--  1")
  (rear-context-string . "swagelok-CIR.PDF")
  (position . 2990))
 ("org-capture-last-stored"
  (filename . "~/Documents/Org/gtd.org")
- (front-context-string . "** TODO Clean up")
- (rear-context-string . "essure sensor]]\n")
- (position . 6435))
+ (front-context-string . "** TODO Adapt li")
+ (rear-context-string . "ter%20tests}}]]\n")
+ (position . 4878))
 )

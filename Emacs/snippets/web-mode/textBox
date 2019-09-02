@@ -2,6 +2,6 @@
 # name: text box
 # key: tb
 # --
-<textBox class="justCenter transparent" style="width:${1:100}%;padding:10px;font-size:${3:100}%">
+<textBox class="justCenter transparent" style="width:${1:100}%;font-size:${3:100}%">
 $0
 </textBox>

@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: pp
-# key: pp
-# --
-print "$1 = {}".format($1)

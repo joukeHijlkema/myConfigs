@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: only
-# key: only
-# --
-\only<$1> {
-  $2
-}

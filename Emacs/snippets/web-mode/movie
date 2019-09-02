@@ -2,7 +2,6 @@
 # name: movie
 # key: movie
 # --
-<video base="$1"
-       exts="$2"
+<video src="$1"
        class="top right"
        style="height:60%"/>

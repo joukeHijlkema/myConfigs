@@ -2,14 +2,7 @@
 # name: prop
 # key: prop
 # --
-${1:$$(let ((type (yas-choose-value '("moveX" "moveY" "scale" "background" "subtitle" "src" "style" "id" "from" "to" "base" "exts" "class"))))
-           (concat ":" type ":  "
-           (if (equal type "moveX") (yas-choose-value '("left" "right"))
-           (if (equal type "moveY") (yas-choose-value '("up" "down"))
-           (if (equal type "scale") "1.0"
-           (if (equal type "background") "/home/hylkema/"
-           (if (equal type "src") "/home/hylkema/"
-           "-" ))))))
-           )}
+:PROPERTIES:
+$1
+:END:      
 $0
-

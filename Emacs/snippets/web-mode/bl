@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: bullet lis
+# key: bl
+# --
+ <bList>
+  <i>$1</i>
+ </bList>

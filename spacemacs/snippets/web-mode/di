@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: description item
-# key: di
-# --
- <dt>$1</dt><dd>$2</dd>$0
