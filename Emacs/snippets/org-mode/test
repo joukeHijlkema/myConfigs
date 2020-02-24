@@ -1,0 +1,11 @@
+# -*- mode: org-mode -*-
+# name: test
+# key: tst
+# --
+
+#+ATTR_LATEX: :environment longtable :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
+| Reference       | # | Description                                        | responsible | due date | state | Note    |
+|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
+|                 |   | <50>                                               |             |          |       | <20>    |
+|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
+`(jouke-actions-to-table)`

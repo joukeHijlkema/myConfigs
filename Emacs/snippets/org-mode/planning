@@ -2,19 +2,14 @@
 # name: planning
 # key: planning
 # --
-* ${1:Planning} :noagenda
+`(make-string (org-current-level) ?*)` ${1:Planning} :noagenda:taskjuggler_project:
 :PROPERTIES:
-:ID: $2
-:COLUMNS: %Id %ITEM(Description) %Parent %EFFORT(Duration) %Before %After %SCHEDULED(Start) %DEADLINE(End) %Type %Done
+:COLUMNS:  %ITEM %10task_id(ID) %effort %depends %complete{mean} %ORDERED
+:COMPLETE_ALL: 0 25 50 75 100
+:ORDERED_ALL: t nil
 :END:
 
 $0
 
-* ======== Gantt ========================================================================== :noagenda:
-#+BEGIN: columnview :hlines 2 :id "$2"
-#+name: planning
-#+END:
-#+begin_src sh :var tasks=planning tmpFile="/tmp/myGantt.txt" svgFile="./Images/$2.svg" format="w" :results value code
-   echo "$tasks" > /tmp/myGantt.txt
-   ~/Projects/myGantt/myGantt.py "$tmpFile" "$svgFile" "$format"
-#+end_src
+* ======== Gantt ========================= :noagenda:
+[[file+sys:./reports/Plan.html][Report]]

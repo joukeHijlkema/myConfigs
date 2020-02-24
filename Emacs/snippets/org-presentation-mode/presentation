@@ -1,0 +1,28 @@
+# -*- mode: snippet -*-
+# name: presentation
+# key: presentation
+# --
+* Parameters                                                     :Parameters:
+:PROPERTIES:
+:templates:   ~/Projects/org-presentation
+:root:        $1
+:slideWidth:  948
+:slideHeight: 720
+:xmargin:     474
+:ymargin:     360
+:logos:    (("oneraLogo"."#templates#/CSS/Logos/onera.png"))
+:backgrounds: (("bg1" . "#templates#/CSS/Backgrounds/Onera_1.png")
+:backgrounds+: ("bg2"."#templates#/CSS/Backgrounds/Onera_2.png")
+:backgrounds+: ("slideTop"."#templates#/CSS/Backgrounds/Onera_titleTop.png")
+:backgrounds+: ("slideBot"."#templates#/CSS/Backgrounds/Onera_titleBottom.png"))
+:footerTitle: $2
+:footerDate: $3
+:convertImages: True
+:makePdf:  False
+:keepOldImages: True
+:author:   Jouke Hijlkema
+:title:    $4
+:subtitle: $5
+:css:      
+:id:       item_1
+:END:

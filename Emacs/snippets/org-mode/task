@@ -3,15 +3,16 @@
 # name: task
 # key: task
 # --
-** ${1:title}
+## usage
+## :DEPENDS: previous-sibling or id -> dependency
+## :LIMITS: { dailymax 3h } -> 3h per day
+## :START: YYYY-MM-DD -> start date
+`(make-string (org-current-level) ?*)` ${1:title}
   :PROPERTIES:
-  :Id: $2
-  :Parent: $3
+  :TASK_ID: $2
   :EFFORT: $4
-  :Before: $5
-  :After: $6
-  :Type: $7
-  :Done: ${8:0%}
+  :DEPENDS: $5
+  :COMPLETE: ${8:0}
+  :LIMITS: \{ ${9:dailymax 8h} \}
   :END:
-   
 $0

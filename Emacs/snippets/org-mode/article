@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: article
+# key: article
+# --
+*** [[${1:path}][${2:title}${3:$$(insert "]")}
+    :PROPERTIES:
+    :ID:  ${4:`(shell-command "uuidgen" t)`}
+    :END:
+    **** Annotations
+    $0
+    **** Notes
+    **** Conclusion

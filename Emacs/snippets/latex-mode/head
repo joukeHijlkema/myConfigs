@@ -33,7 +33,12 @@
    ficheProg=$13
  ]{myOnera}
 
-\bibliography{/home/hylkema/Documents/biblio.bib,/home/hylkema/Documents/english.bib}
+%%% acronyms
+\setacronymstyle{long-short}
+\makeglossaries
+
+\bibliography{/home/hylkema/Documents/biblio.bib,/home/hylkema/Documents/$2.bib}
+
 \begin{document}
 
 \newcommand{\myResume}{afaire}

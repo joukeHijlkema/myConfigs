@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: box
+# key: box
+# expand-env: ((yas-indent-line nil))
+# --
+** $1 :box:
+:PROPERTIES:
+:title: ${1:title}
+:END:
+$0

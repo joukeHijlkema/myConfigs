@@ -1,20 +1,27 @@
-# -*- mode: snippet -*-
+# -*- mode: org-mode -*-
 # name: reunion
 # key: reunion
 # --
-* ${1:Title}
-#+LATEX: \def \crNumber {${2:CR number (something like 1-2017)} }
+`(make-string (- (org-current-level) 1) ?*)` ${1:Title}
+:PROPERTIES:
+:EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=`(insert (jouke-get-aer))`,lang=francais]
+:EXPORT_OPTIONS: toc:nil
+:EXPORT_DATE:
+:LANGUAGE: francais
+:YEAR: `(insert (format-time-string "%Y"))`
+:TYPE: CR
+:END:
+# StartSection
+#+LATEX: \def \crNumber {${2:`(insert (format "%s/%s" (jouke-count-cr) (format-time-string "%Y")))`} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
 *Objet de la réunion: $1*
 #+ATTR_LATEX: :environment tabu :align XX :width \textwidth
 |*Date de la réunion: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
-
-** Participants
+`(make-string (org-current-level) ?*)` Participants
 :PROPERTIES:
 :UNNUMBERED: 1
 :END:
-
 #+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
 |------------------------+-------------------+---|
 | Jouke Hijlkema (ONERA) | ${6:Participants} |   |
@@ -31,28 +38,25 @@
 |------------------------+-------------------+---|
 |                        |                   |   |
 |------------------------+-------------------+---|
-** Diffusion:  participants +
+`(make-string (org-current-level) ?*)` Diffusion:  participants +
 #+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
-|-----------------------+-------------------------+-----------------------|
-| Pierre Millan (ONERA) | Jérôme Anthoine (ONERA) | Muriel Brunet (ONERA) |
-|-----------------------+-------------------------+-----------------------|
-|                       |                         |                       |
-|-----------------------+-------------------------+-----------------------|
-|                       |                         |                       |
-|-----------------------+-------------------------+-----------------------|
-** Conclusions principales
-
-#+ATTR_LATEX: :environment tabu :align |X| :width \textwidth
-|-----|
-|<100>|
-|     |
-|-----|
-** Approbation
+|-------------------------+---------------------------+-----------------------|
+| Jérôme Anthoine (ONERA) | Nicolas Pelletier (ONERA) | Muriel Brunet (ONERA) |
+|-------------------------+---------------------------+-----------------------|
+|                         |                           |                       |
+|-------------------------+---------------------------+-----------------------|
+|                         |                           |                       |
+|-------------------------+---------------------------+-----------------------|
+`(make-string (org-current-level) ?*)` Conclusions principales
+#+BEGIN_SRC latex :noweb yes :export none :var txt=`(insert (format "Conclusion_%s/%s" (jouke-count-cr) (format-time-string "%Y")))`
+\framebox[\textwidth]{\parbox{0.99\textwidth}{txt}}
+#+END_SRC
+`(make-string (org-current-level) ?*)` Approbation
 #+ATTR_LATEX: :environment tabu :align |X|X|X|X|X| :width \textwidth
 |--------------+----------------------------------------------+-----+---+---|
 | Organization | ONERA                                        |     |   |   |
 |--------------+----------------------------------------------+-----+---+---|
-| Position     | Report secretary                             |     |   |   |
+| Position     | Auteur                                       |     |   |   |
 |--------------+----------------------------------------------+-----+---+---|
 | Name         | Jouke Hijlkema                               |     |   |   |
 |--------------+----------------------------------------------+-----+---+---|
@@ -60,25 +64,22 @@
 |--------------+----------------------------------------------+-----+---+---|
 #+LATEX: \pagebreak
 #+LATEX: \titleformat{\section}
-#+LATEX:   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-
-** Entrées
+#+LATEX: {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+`(make-string (org-current-level) ?*)` Entrées
 :PROPERTIES:
 :UNNUMBERED: 1
 :END: 
-${4:Input documents. start with - to make a list}
-
-** Ordre du jour
-${5:Agenda. start with - to make a list	}
-
-** Compte-rendu
-
-** Conclusions
-
-** Actions
+`(insert (jouke-get-cr))`
+`(make-string (org-current-level) ?*)` Ordre du jour
+${4:Agenda. start with - to make a list	}
+`(make-string (org-current-level) ?*)` Compte-rendu
+$0
+`(make-string (org-current-level) ?*)`Conclusions
+#+NAME: `(insert (format "Conclusion_%s/%s" (jouke-count-cr) (format-time-string "%Y")))`
+#+BEGIN_SRC latex :noweb yes :export none
+La conclusion c'est ici
+#+END_SRC
+`(make-string (org-current-level) ?*)` -actions- :noexport:
+`(make-string (org-current-level) ?*)` Actions
 # ActionTable
-#+ATTR_LATEX: :environment tabu :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
-| Reference       | # | Description                                        | responsible | due date | state | Note    |
-|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
-|                 |   | <50>                                               |             |          |       | <20>    |
-`(jouke-move-actions)`
+# execute jouke-actions-to-table to see the table 

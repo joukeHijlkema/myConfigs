@@ -1,0 +1,14 @@
+# -*- mode: org-presentation-mode -*-
+# name: slide
+# key: slide
+# expand-env: ((yas-indent-line nil))
+# --
+* ${6:title}                                                :Slide:
+:PROPERTIES:
+:moveX:      ${1:$$(yas-choose-value '("Left" "Right" "None"))}
+:moveY:      ${2:$$(yas-choose-value '("Up" "Down" "None"))}
+:scale:      ${3:scale}
+:background: ${4:/home/hylkema/Documents/Images/}
+:subtitle:   ${5:subtitle}
+:END:
+$0

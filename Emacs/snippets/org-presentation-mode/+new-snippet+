@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: list
+# key: list
+# --
+** List :blist:
+:PROPERTIES:
+:style: color:white
+:END:
+$0

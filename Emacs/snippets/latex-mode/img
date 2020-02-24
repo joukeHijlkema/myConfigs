@@ -2,7 +2,9 @@
 # name: img
 # key: img
 # --
-\begin{figure}
-\includegraphics[width=${1:width}\textwidth]{${2:path}}
-\caption{${3:caption}}
-\end{figure}
+\begin\{figure\}[ht]
+ \centering
+ \includegraphics[width=${1:width}\textwidth]\{/home/hylkema/Documents/Images/${3:path}\}
+ \caption\{${2:caption}\}
+ \label\{fig:${2:$(downcase (replace-regexp-in-string " " "_" yas-text))}\}
+\end\{figure\}

@@ -1,0 +1,14 @@
+# -*- mode: snippet -*-
+# name: arrow
+# key: arrow
+# expand-env: ((yas-indent-line nil))
+# --
+* $0 :arrow:
+:PROPERTIES:
+:from:     $1
+:to:       $2
+:width:    30
+:label:    $3
+:color:    #0052AB
+:fsize:    80%
+:END:

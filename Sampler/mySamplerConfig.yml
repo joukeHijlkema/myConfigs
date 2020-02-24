@@ -1,41 +1,25 @@
 runcharts:
-  - title: Search engine response time
+  - title: CPU & Memory
     position: [[0, 0], [45, 19]]
     rate-ms: 500
-    triggers:
-      - title: Latency threshold exceeded
-        condition: echo "$prev < 0.8 && $cur > 0.8" |bc -l
-        actions:
-            terminal-bell: true
-            sound: true
-            visual: true
-            script: 'say alert: ${label} latency exceeded ${cur} second'
     legend:
         enabled: true
         details: false
-    scale: 2
+    scale: 1
     items:
-      - label: GOOGLE
+      - label: CPU
         color: 178
-        sample: curl -o /dev/null -s -w '%{time_total}'  https://www.google.com
-      - label: YAHOO
-        sample: curl -o /dev/null -s -w '%{time_total}'  https://search.yahoo.com
-      - label: BING
-        sample: curl -o /dev/null -s -w '%{time_total}'  https://www.bing.com
-barcharts:
-  - title: Local network activity
-    position: [[45, 20], [35, 8]]
-    rate-ms: 500
-    scale: 0
-    items:
-      - label: UDP bytes in
-        sample: nettop -J bytes_in -l 1 -m udp | awk '{sum += $4} END {print sum}'
-      - label: UDP bytes out
-        sample: nettop -J bytes_out -l 1 -m udp | awk '{sum += $4} END {print sum}'
-      - label: TCP bytes in
-        sample: nettop -J bytes_in -l 1 -m tcp | awk '{sum += $4} END {print sum}'
-      - label: TCP bytes out
-        sample: nettop -J bytes_out -l 1 -m tcp | awk '{sum += $4} END {print sum}'
+        sample: ps -A -o %cpu | awk '{s+=$1} END {print s}'
+      - label: Memory
+        sample:  ps -A -o %mem | awk '{s+=$1} END {print s}'
+      - label: min
+        color: 0
+        sample: echo 0
+      - label: max
+        color: 0
+        sample: echo 100
+    
+      
 gauges:
   - title: YEAR PROGRESS
     position: [[45, 0], [35, 2]]
@@ -81,31 +65,11 @@ sparklines:
     rate-ms: 200
     scale: 0
     sample: ps -A -o %cpu | awk '{s+=$1} END {print s}'
-  - title: Free memory pages
-    position: [[22, 20], [23, 8]]
-    rate-ms: 200
-    scale: 0
-    sample: memory_pressure | grep 'Pages free' | awk '{print $3}'
 textboxes:
-  - title: Docker containers stats
-    position: [[0, 29], [45, 10]]
-    rate-ms: 500
-    sample: docker stats --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.PIDs}}"
   - title: Local weather
-    position: [[69, 31], [13, 7]]
+    position: [[0, 28], [13, 7]]
     rate-ms: 10000
     sample: curl wttr.in?0ATQF
-    border: false
-  - title: New York weather
-    position: [[45, 31], [13, 7]]
-    rate-ms: 10000
-    sample: curl wttr.in/newyork?0ATQF
-    transform: echo 1
-    border: false
-  - title: San Francisco weather
-    position: [[56, 31], [13, 7]]
-    rate-ms: 10000
-    sample: curl wttr.in/sanfrancisco?0ATQF
     border: false
 asciiboxes:
   - title: UTC time
@@ -113,5 +77,4 @@ asciiboxes:
     rate-ms: 500
     sample: env TZ=UTC date +%r
     border: false
-    font: 3d
-    
+    font: 2d

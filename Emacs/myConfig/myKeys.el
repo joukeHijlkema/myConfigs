@@ -94,7 +94,7 @@
 (global-set-key (kbd "s-s") 'toggleSpelling)
 
 ;; === yasnippets (conflicts with completion) ===
-(global-set-key (kbd "<backtab>") 'yas-expand)
+(global-set-key (kbd "s-y") 'yas-expand)
 
 (global-set-key (kbd "s-i") (lambda () (interactive)
 			      (imenu-list-minor-mode)
@@ -133,3 +133,5 @@
 (global-set-key (kbd "C-\"") (lambda () (interactive) (changeTheme 'spacemacs-dark)))
 (global-set-key (kbd "C-'") (lambda () (interactive) (changeTheme 'spacemacs-light)))
 
+;; === Lisp  ===
+(global-set-key (kbd "s-*") 'eval-buffer)
