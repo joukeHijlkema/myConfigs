@@ -1,10 +1,10 @@
-# -*- mode: snippet -*-
+# -*- mode: latex -*-
 # name: subsubsection
 # key: sssec
 # --
-%------- $1 ---
+%%% --- $1 ---
 \subsubsection\{${1:name}\}
 \label\{subsubsec:${1:$(downcase (replace-regexp-in-string " " "_" yas-text)) }\}
-\todo[inline,caption={$1},color=green]{not done yet}
+\todo[inline,caption={$1},backgroundcolor=violet,textcolor=white]{not done yet}
 $0
-%------- END $1 ---
+%%% --- END $1 ---

@@ -1,6 +1,8 @@
+(use-package gnus-dired)
 (use-package mu4e
   :load-path "/usr/local/share/emacs/site-lisp/mu4e"
   :commands mu4e
+  :after (gnus-dired)
   :init (message "=== my mu4e init ===")
   (defun etc/imapfilter ()
     (message "Running imapfilter...")
@@ -62,8 +64,9 @@
                      (null message-sent-message-via))
             (push (buffer-name buffer) buffers))))
       (nreverse buffers)))
-
-  :config
+  
+  :config (message "=== my mu4e config ===")
+  (require 'org-mu4e)
   (setq mu4e-installation-path "/usr/local/share/emacs/site-lisp/mu4e")
   (add-to-list  'mm-inhibit-file-name-handlers 'openwith-file-handler)
   (setq mu4e-get-mail-command "offlineimap -o")
@@ -88,6 +91,7 @@
   (mu4e~view-defun-mark-for spam)
   (mu4e~headers-defun-mark-for ham)
   (mu4e~view-defun-mark-for ham)
+  (setq mail-personal-alias-file (expand-file-name "~/.emacs.d/myConfig/mailAliases"))
   ;; enable inline images
   (setq mu4e-view-show-images t)
   ;; use imagemagick, if available
@@ -189,32 +193,12 @@
   ;; message-mode derived modes, such as mu4e-compose-mode
   (setq gnus-dired-mail-mode 'mu4e-user-agent)
   (add-hook 'dired-mode-hook 'turn-on-gnus-dired-mode)
-
+  (setq mu4e-view-use-gnus nil)
+  
   ;; === Filtering ===
   (add-hook 'mu4e-update-pre-hook 'etc/imapfilter)
 
-  ;; === To work with Gmail ===
-  (setq mu4e-contexts
-        `( ,(make-mu4e-context
-             :name "Gmail"
-             :match-func (lambda (msg) (when msg
-                                         (string-prefix-p "/Gmail" (mu4e-message-field msg :maildir))))
-             :vars '(
-                     (mu4e-trash-folder . "/Gmail/[Gmail].Trash")
-                     (mu4e-refile-folder . "/Gmail/[Gmail].Archive")
-                     ))
-           ,(make-mu4e-context
-             :name "Work"
-             :match-func (lambda (msg) (when msg
-                                         (string-prefix-p "/Work" (mu4e-message-field msg :maildir))))
-             :vars '(
-                     (mu4e-trash-folder . "/Work/INBOX.Trash")
-                     (mu4e-refile-folder . exchange-mu4e-refile-folder)
-                     ))
-           ))
-
   ;; === signatuere ===
-
   (setq mu4e-compose-signature "
 ========================================================================
 | Jouke Hijlkema
@@ -235,7 +219,7 @@
   (:map mu4e-view-mode-map ("s-h" . mu4e-view-mark-for-ham))
   (:map mu4e-view-mode-map ("f" . joukeAddTag))
   (:map mu4e-headers-mode-map ("s-s" . mu4e-headers-mark-for-spam))
-  (:map mu4e-headers-mode-map ("s-h" . u4e-headers-mark-for-ham))
+  (:map mu4e-headers-mode-map ("s-h" . mu4e-headers-mark-for-ham))
   (:map mu4e-headers-mode-map ("f" . joukeAddTag))
   (:map mu4e-compose-mode-map ("<s-delete>" . mu4e-message-kill-buffer))
   )

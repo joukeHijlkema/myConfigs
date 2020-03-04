@@ -1,22 +1,25 @@
-# -*- mode: snippet -*-
+# -*- mode: org-mode -*-
 # name: meeting
 # key: meeting
 # --
-* ${1:Title}
+`(make-string (- (org-current-level) 1) ?*)` ${1:Title}
 :PROPERTIES:
-:EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=25337,lang=english]
+:EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=`(insert (jouke-get-aer))`,lang=english]
 :EXPORT_OPTIONS: toc:nil
 :EXPORT_DATE:
+:LANGUAGE: english
+:YEAR: `(insert (format-time-string "%Y"))`
+:TYPE: CR
 :END:
 # StartSection
-#+LATEX: \def \crNumber {${2:CR number (something like 1/2017)} }
+#+LATEX: \def \crNumber {${2:`(insert (format "%s/%s" (jouke-count-cr) (format-time-string "%Y")))`} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
 *Object of meeting: $1*
 #+ATTR_LATEX: :environment tabu :align XX :width \textwidth
 |*Date of meeting: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
 
-** Attendees
+`(make-string (org-current-level) ?*)` Attendees
 :PROPERTIES:
 :UNNUMBERED: 1
 :END:
@@ -37,23 +40,20 @@
 |------------------------+-------------------+---|
 |                        |                   |   |
 |------------------------+-------------------+---|
-** Distribution:  attendees +
+`(make-string (org-current-level) ?*)` Distribution:  attendees +
 #+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
-|-----------------------+-------------------------+-----------------------|
-| Pierre Millan (ONERA) | Jérôme Anthoine (ONERA) | Muriel Brunet (ONERA) |
-|-----------------------+-------------------------+-----------------------|
-|                       |                         |                       |
-|-----------------------+-------------------------+-----------------------|
-|                       |                         |                       |
-|-----------------------+-------------------------+-----------------------|
-** Main conclusion
-
-#+ATTR_LATEX: :environment tabu :align |X| :width \textwidth
-|-----|
-|<100>|
-|     |
-|-----|
-** Approval
+|-------------------------+---------------------------+-----------------------|
+| Jérôme Anthoine (ONERA) | Nicolas Pelletier (ONERA) | Muriel Brunet (ONERA) |
+|-------------------------+---------------------------+-----------------------|
+|                         |                           |                       |
+|-------------------------+---------------------------+-----------------------|
+|                         |                           |                       |
+|-------------------------+---------------------------+-----------------------|
+`(make-string (org-current-level) ?*)` Main conclusion
+#+BEGIN_SRC latex :noweb yes :export none :var txt=`(insert (format "Conclusion_%s/%s" (jouke-count-cr) (format-time-string "%Y")))`
+\framebox[\textwidth]{\parbox{0.99\textwidth}{txt}}
+#+END_SRC
+`(make-string (org-current-level) ?*)` Approval
 #+ATTR_LATEX: :environment tabu :align |X|X|X|X|X| :width \textwidth
 |--------------+----------------------------------------------+-----+---+---|
 | Organization | ONERA                                        |     |   |   |
@@ -66,28 +66,22 @@
 |--------------+----------------------------------------------+-----+---+---|
 #+LATEX: \pagebreak
 #+LATEX: \titleformat{\section}
-#+LATEX:   {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-
-** Input
+#+LATEX: {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+`(make-string (org-current-level) ?*)` Input
 :PROPERTIES:
 :UNNUMBERED: 1
-:END: 
-${4:Input documents. start with - to make a list}
-
-** Agenda
-${5:Agenda. start with - to make a list	}
-
-** Minutes
-$7
-
-** Conclusions
-
-** Actions
-
+:END:
+`(insert (jouke-get-cr))`
+`(make-string (org-current-level) ?*)` Agenda
+${4:Agenda. start with - to make a list	}
+`(make-string (org-current-level) ?*)` Minutes
+$0
+`(make-string (org-current-level) ?*)` Conclusions
+#+NAME: `(insert (format "Conclusion_%s/%s" (jouke-count-cr) (format-time-string "%Y")))`
+#+BEGIN_SRC latex :noweb yes :export none
+Conclusions go here
+#+END_SRC
+`(make-string (org-current-level) ?*)` -actions- :noexport:
+`(make-string (org-current-level) ?*)` Actions
 # ActionTable
-#+ATTR_LATEX: :environment longtable :align c|c|p{0.35\textwidth}|c|c|c|p{0.1\textwidth}
-| Reference       | # | Description                                        | responsible | due date | state | Note    |
-|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
-|                 |   | <50>                                               |             |          |       | <20>    |
-|-----------------+---+----------------------------------------------------+-------------+----------+-------+---------|
-`(jouke-move-actions)`
+# execute jouke-actions-to-table to see the table 

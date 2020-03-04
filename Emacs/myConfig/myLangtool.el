@@ -11,8 +11,8 @@
         (popup-tip msg)))))
  
   :config
-  (setq langtool-language-tool-jar "/Software/LanguageTool-4.6/languagetool-commandline.jar")
-  (setq langtool-language-tool-server-jar "/Software/LanguageTool-4.6/languagetool-server.jar")
+  (setq langtool-language-tool-jar "/Software/LanguageTool-4.7/languagetool-commandline.jar")
+  (setq langtool-language-tool-server-jar "/Software/LanguageTool-4.7/languagetool-server.jar")
   (setq langtool-default-language "fr")
   (setq langtool-autoshow-message-function 'langtool-autoshow-detail-popup)
 

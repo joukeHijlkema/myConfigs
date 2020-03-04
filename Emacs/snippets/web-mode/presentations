@@ -9,8 +9,8 @@
     root="/home/hylkema/Documents/"$1 
     imageRoot="/home/hylkema/Documents/Images"
     videoRoot="/home/hylkema/Documents/Videos"
-    slideWidth="1000"
-    slideHeight="700"
+    slideWidth="948"
+    slideHeight="720"
     margin="500"
     logos="{'oneraLogo':'#templates#/CSS/Logos/onera.svg'}"
     backgrounds="{

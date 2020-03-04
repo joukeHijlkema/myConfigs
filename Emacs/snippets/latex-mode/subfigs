@@ -5,14 +5,14 @@
 \begin\{figure\}[ht]
   \begin\{center\}	
     \subfloat[${1:caption}]\{
-      \includegraphics[width=0.5\textwidth,angle=0,origin=c]\{/home/hylkema/Documents/Images/$2\}
+      \includegraphics[width=0.5\textwidth,angle=0,origin=c]\{/home/hylkema/Documents/Images/$4\}
       \label\{fig:${1:$(downcase (replace-regexp-in-string " " "_" yas-text))}\}
     \}
     \subfloat[${2:caption}]\{
-      \includegraphics[width=0.5\textwidth,angle=0,origin=c]\{/home/hylkema/Documents/Images/$3\}
+      \includegraphics[width=0.5\textwidth,angle=0,origin=c]\{/home/hylkema/Documents/Images/$5\}
       \label\{fig:${2:$(downcase (replace-regexp-in-string " " "_" yas-text))}\}
     \}
   \end\{center\}
-  \caption{$4}
-  \label{fig:${4:$(downcase (replace-regexp-in-string " " "_" yas-text))}
+  \caption{$3}
+  \label\{fig:${3:$(downcase (replace-regexp-in-string " " "_" yas-text))}\}
 \end{figure}

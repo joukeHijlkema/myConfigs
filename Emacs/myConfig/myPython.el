@@ -3,21 +3,25 @@
   :mode
   ("\\.py\\'" . python-mode)
   :init
-  (message "== start init python")
+  (message "== my init python")
   (setq-default indent-tabs-mode nil)
   
   :config
   (message "== start config python")
   (setq python-indent-offset 4)
   (add-hook
-   'align-load-hook (lambda ()
-		       (message "== align hook for python")
-  		       (add-to-list
-  			'align-rules-list
-  			'(python-assignment
-  			  (regexp . "\\(\\s-*\\)\\+=")
-  			  (mode . '(python-mode))
-  			  (repeat . nil)))))
+   'align-load-hook
+   (lambda ()
+     (message "== align hook for python")
+     (mapcar
+      (lambda (i)
+        (if (equal (car i) 'python-assignment)
+            (setcdr i '((regexp . "\\(\\s-*\\)[\\+-\\*\\\\]?=")
+                      (mode . python-mode)
+                      (justify . t))
+                    )
+          )
+        ) align-rules-list)))
   (add-hook 'python-mode-hook (lambda ()
                            (message "== python hook for python")
                            (smartparens-mode)
@@ -30,6 +34,12 @@
   :ensure t
   :commands elpy-enable
   :init (with-eval-after-load 'python (elpy-enable))
+  (setq elpy-default-minor-modes '(elpy-module-sane-defaults
+                                   elpy-module-company
+                                   elpy-module-eldoc
+                                   elpy-module-pyvenv
+                                   elpy-module-yasnippet
+                                   elpy-module-django))
   :custom (python-shell-interpreter "python3")
   :config
   (electric-indent-local-mode -1)

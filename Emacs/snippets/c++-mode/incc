@@ -2,4 +2,4 @@
 # name: incc
 # key: incc
 # --
-#include<$1>
+#include <$1>
