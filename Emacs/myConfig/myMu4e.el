@@ -4,6 +4,37 @@
   :commands mu4e
   :after (gnus-dired)
   :init (message "=== my mu4e init ===")
+  ;;|--------------------------------------------------------------
+  ;;|Description : send a standard message
+  ;;|NOTE : 
+  ;;|-
+  ;;|Author : jouke hylkema
+  ;;|date   : 27-16-2020 12:16:21
+  ;;|--------------------------------------------------------------
+  (defun jouke-send-email ()
+    "send a standard message"
+    (interactive)
+    (let* ((choices '("Phone"))
+           (act (ido-completing-read "Type: " choices ))
+           (heure (read-string "heure: "))
+           (qui (read-string "qui: "))
+           (delay (read-string "pb après s :"))
+           )
+      (cond ((equal act "Phone")
+             (mu4e-compose-new)
+             (message-goto-to)
+             (insert "Mathieu.Carrere@onera.fr")
+             (message-goto-subject)
+             (insert "Problème téléphone")
+             (message-goto-body)
+             (insert "Salut Mathieu,\n\n")
+             (insert "\J'ai décidé de t'envoyer un mail a chaque fois que le téléphone déconne comme ça tu a une trace de cette situation qui commence a être vraiment pénible.\n")
+             (insert (format "%s: Coup de fil a %s, grésillements après %ss, %s m'a rappelé(e) sans problèmes.\n"
+                             heure qui delay qui))
+             (insert "\nJouke"))
+            )
+      )
+    )
   (defun etc/imapfilter ()
     (message "Running imapfilter...")
     (with-current-buffer (get-buffer-create " *imapfilter*")
@@ -221,7 +252,9 @@
   (:map mu4e-headers-mode-map ("s-s" . mu4e-headers-mark-for-spam))
   (:map mu4e-headers-mode-map ("s-h" . mu4e-headers-mark-for-ham))
   (:map mu4e-headers-mode-map ("f" . joukeAddTag))
+  (:map mu4e-headers-mode-map ("p" . jouke-send-email))
   (:map mu4e-compose-mode-map ("<s-delete>" . mu4e-message-kill-buffer))
+  
   )
 
   :hook (

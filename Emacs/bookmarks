@@ -54,7 +54,7 @@
  (position . 2990))
 ("org-capture-last-stored"
  (filename . "~/Documents/GTD/inbox.org")
- (front-context-string . "** TODO finish M")
+ (front-context-string . "** TODO Répond a")
  (rear-context-string . "ESA Hydrazine]]\n")
- (position . 917))
+ (position . 491))
 )
