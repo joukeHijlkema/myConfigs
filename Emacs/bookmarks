@@ -2,12 +2,16 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
+<<<<<<< HEAD
 (("Programs"
  (filename . "~/Programs/")
  (front-context-string . "agendaItems.org\n")
  (rear-context-string . " avril 12  2018 ")
  (position . 256))
 ("Vandales"
+=======
+(("Vandales"
+>>>>>>> 7eaad48d3548c622e806a58129cb779f4d360901
  (filename . "/ssh:vandales-f.onecert.fr:/home/hylkema/")
  (front-context-string . ".bash_history\n  ")
  (rear-context-string . "25 Nov  5 10:10 ")
@@ -59,7 +63,13 @@
  (position . 2990))
 ("org-capture-last-stored"
  (filename . "~/Documents/GTD/inbox.org")
+<<<<<<< HEAD
  (front-context-string . "** TODO Make a d")
  (rear-context-string . "s publication]]\n")
  (position . 744))
+=======
+ (front-context-string . "** TODO Répond a")
+ (rear-context-string . "ESA Hydrazine]]\n")
+ (position . 491))
+>>>>>>> 7eaad48d3548c622e806a58129cb779f4d360901
 )

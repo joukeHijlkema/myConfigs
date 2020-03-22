@@ -803,7 +803,7 @@
       <position force="yes">
         <x>0</x>
         <y>0</y>
-        <monitor>2</monitor>
+        <monitor>1</monitor>
       </position>
       <maximized>true</maximized>
     </application>

@@ -10,9 +10,13 @@ Emacs/image-dired
 Emacs/games
 Emacs/oauth2.plstore
 Emacs/org-caldav**
+Emacs/org-clock-save.el
+Emacs/emacs-custom.el
+Emacs/bookmarks
+Emacs/.org-id-locations
 *.cache
 **/*~
 **/*#
 **/.#*
 **/*.dat
-
+openbox/**

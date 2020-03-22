@@ -1,6 +1,10 @@
 # my autostart file
+<<<<<<< HEAD
 ## xrandr --auto --output DP-0 --mode 1920x1080 --left-of DP-2 && xrandr --auto --output DP-2 --mode 1920x1080 --right-of DP-0 &
 ~/bin/myRandr.sh &
+=======
+xrandr --auto --output DP-0 --mode 1920x1080 --left-of DP-2 && xrandr --auto --output DP-2 --mode 1920x1080 --right-of DP-0 &
+>>>>>>> 7eaad48d3548c622e806a58129cb779f4d360901
 emacs &
 /usr/bin/brave-browser --proxy-pac-url=http://proxyconf.onecert.fr/proxy/onera.pac %U&
 gnome-calendar &
