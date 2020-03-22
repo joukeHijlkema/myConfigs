@@ -5,6 +5,7 @@
 (setq custom-safe-themes
    (quote
     ("d14d421ff49120d2c2e0188bcef76008407b3ceff2cfb1d4bdf3684cf3190172" "5e515425f8a5ce00097d707742eb5eee09b27cebc693b8998c734305cbdce1f5" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "980f0adf3421c25edf7b789a046d542e3b45d001735c87057bccb7a411712d09" "a2afb83e8da1d92f83543967fb75a490674a755440d0ce405cf9d9ae008d0018" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" default)))
+(setq enable-local-variables :safe)
 (setq safe-local-variable-values
       (quote (
               (TeX-command-extra-options . "-shell-escape -synctex=1")
@@ -13,6 +14,10 @@
                     (save-excursion
                       (org-babel-goto-named-src-block "startblock")
                       (org-babel-execute-src-block)))
+              (eval progn
+                    (org-babel-goto-named-src-block "startblock")
+                    (org-babel-execute-src-block)
+                    (outline-hide-sublevels 1))
               )
              )
       )
@@ -56,6 +61,10 @@
 (load "~/.emacs.d/myConfig/myTaskjuggler.el")
 ;; === Workgroups ===
 (load "~/.emacs.d/myConfig/myWg.el")
+;; === Treemacs ===
+;; (load "~/.emacs.d/myConfig/myTreemacs.el")
+(load "~/.emacs.d/myConfig/myLSP.el")
+
 
 ;; some global stuff
 (tool-bar-mode -1)
@@ -86,3 +95,4 @@
 
 (show-paren-mode 1)
 (server-start)
+(changeTheme 'spacemacs-dark)

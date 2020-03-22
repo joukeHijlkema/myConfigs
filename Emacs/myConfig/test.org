@@ -1,0 +1,18 @@
+* candidates
+** this is a candidate
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::(goto-line%20-1)]]
+* test
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::)]]
+** error
+
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::)]]
+** this is a candidate
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::)]]
+* head2
+** candidate
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::(message%20(format%20"%25s"%20heads))]]
+** candidate
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::)]]
+** truc bidul
+  [[file:~/myConfigs/Emacs/myConfig/myOrg.el::)]]
+* head 3

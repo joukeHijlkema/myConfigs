@@ -2,12 +2,48 @@
 # name: meeting
 # key: meeting
 # --
-`(make-string (- (org-current-level) 1) ?*)` ${1:Title}
+
+`(let ((l (yas-x-prompt "language" '("english" "francais"))))
+ (cond ((equal l "english")
+       (setq LAN "english")
+       (setq OOM "Object of meeting")
+       (setq DOM "Date of meeting")
+       (setq LOC "Location")
+       (setq ATT "Attendees")
+       (setq DIS "Distribution")
+       (setq MAC "Main conclusion")
+       (setq APP "Approval")
+       (setq ORG "Organization")
+       (setq NAM "Name")
+       (setq POS "AuteurReport secretary")
+       (setq INP "Input")
+       (setq AGE "Agenda")
+       (setq MIN "Minutes")
+       "")
+      ((equal l "francais")
+       (setq LAN "francais")
+       (setq OOM "Objet de la réunion")
+       (setq DOM "Date de la réunion")
+       (setq LOC "Lieu")
+       (setq ATT "Participants")
+       (setq DIS "Diffusion")
+       (setq MAC "Conclusions principales")
+       (setq APP "Approbation")
+       (setq ORG "Organisation")
+       (setq NAM "Nom")
+       (setq POS "Auteur")
+       (setq INP "Entrées")
+       (setq AGE "Ordre du jour")
+       (setq MIN "Compte-rendu")
+       "")
+     ))`
+
+`(myOrg-get-current-level ?*)`${1:Title}
 :PROPERTIES:
-:EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=`(insert (jouke-get-aer))`,lang=english]
+:EXPORT_LATEX_CLASS_OPTIONS: [type=mom,protection=SMP,aer=`(insert (jouke-get-aer))`,lang=`LAN`]
 :EXPORT_OPTIONS: toc:nil
 :EXPORT_DATE:
-:LANGUAGE: english
+:LANGUAGE: `LAN`
 :YEAR: `(insert (format-time-string "%Y"))`
 :TYPE: CR
 :END:
@@ -15,15 +51,14 @@
 #+LATEX: \def \crNumber {${2:`(insert (format "%s/%s" (jouke-count-cr) (format-time-string "%Y")))`} }
 #+LATEX: \\def \\crDate { `(format-time-string "%d/%m/%Y")` }
 #+LATEX: \\def \\crRelease { `(format-time-string "%d/%m/%Y")` }
-*Object of meeting: $1*
+*`OOM`: $1*
 #+ATTR_LATEX: :environment tabu :align XX :width \textwidth
-|*Date of meeting: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
+|*`DOM`: `(format-time-string "%d/%m/%Y")`*|*`LOC`: ${3:location}*|
 
-`(make-string (org-current-level) ?*)` Attendees
+`(myOrg-get-current-level ?*)` `ATT`
 :PROPERTIES:
 :UNNUMBERED: 1
 :END:
-
 #+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
 |------------------------+-------------------+---|
 | Jouke Hijlkema (ONERA) | ${6:Participants} |   |
@@ -40,7 +75,7 @@
 |------------------------+-------------------+---|
 |                        |                   |   |
 |------------------------+-------------------+---|
-`(make-string (org-current-level) ?*)` Distribution:  attendees +
+`(myOrg-get-current-level ?*)``DIS`:  attendees +
 #+ATTR_LATEX: :environment tabu :align |X|X|X| :width \textwidth
 |-------------------------+---------------------------+-----------------------|
 | Jérôme Anthoine (ONERA) | Nicolas Pelletier (ONERA) | Muriel Brunet (ONERA) |
@@ -49,39 +84,39 @@
 |-------------------------+---------------------------+-----------------------|
 |                         |                           |                       |
 |-------------------------+---------------------------+-----------------------|
-`(make-string (org-current-level) ?*)` Main conclusion
+`(myOrg-get-current-level ?*)` `MAC`
 #+BEGIN_SRC latex :noweb yes :export none :var txt=`(insert (format "Conclusion_%s/%s" (jouke-count-cr) (format-time-string "%Y")))`
 \framebox[\textwidth]{\parbox{0.99\textwidth}{txt}}
 #+END_SRC
-`(make-string (org-current-level) ?*)` Approval
+`(myOrg-get-current-level ?*)` `APP`
 #+ATTR_LATEX: :environment tabu :align |X|X|X|X|X| :width \textwidth
 |--------------+----------------------------------------------+-----+---+---|
-| Organization | ONERA                                        |     |   |   |
+| `ORG`        | ONERA                                        |     |   |   |
 |--------------+----------------------------------------------+-----+---+---|
-| Position     | Report secretary                             |     |   |   |
+| Position     | `POS`                                        |     |   |   |
 |--------------+----------------------------------------------+-----+---+---|
-| Name         | Jouke Hijlkema                               |     |   |   |
+| `NAM`        | Jouke Hijlkema                               |     |   |   |
 |--------------+----------------------------------------------+-----+---+---|
 | Signature    | [[~/Documents/Images/Signatures/Signature.pdf]]||||
 |--------------+----------------------------------------------+-----+---+---|
 #+LATEX: \pagebreak
 #+LATEX: \titleformat{\section}
 #+LATEX: {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
-`(make-string (org-current-level) ?*)` Input
+`(myOrg-get-current-level ?*)` Input
 :PROPERTIES:
 :UNNUMBERED: 1
 :END:
 `(insert (jouke-get-cr))`
-`(make-string (org-current-level) ?*)` Agenda
+`(myOrg-get-current-level ?*)` Agenda
 ${4:Agenda. start with - to make a list	}
-`(make-string (org-current-level) ?*)` Minutes
+`(myOrg-get-current-level ?*)` Minutes
 $0
-`(make-string (org-current-level) ?*)` Conclusions
+`(myOrg-get-current-level ?*)` Conclusions
 #+NAME: `(insert (format "Conclusion_%s/%s" (jouke-count-cr) (format-time-string "%Y")))`
 #+BEGIN_SRC latex :noweb yes :export none
 Conclusions go here
 #+END_SRC
-`(make-string (org-current-level) ?*)` -actions- :noexport:
-`(make-string (org-current-level) ?*)` Actions
+`(myOrg-get-current-level ?*)` -actions- :noexport:
+`(myOrg-get-current-level ?*)` Actions
 # ActionTable
 # execute jouke-actions-to-table to see the table 

@@ -2,8 +2,14 @@ session.*
 rrEmacs/auto-save-list/**
 Emacs/semanticdb/**
 Emacs/elpa/**
+Emacs/elpy
 Emacs/workgroups
 Emacs/.emacs_workgroups
+Emacs/history
+Emacs/image-dired
+Emacs/games
+Emacs/oauth2.plstore
+Emacs/org-caldav**
 *.cache
 **/*~
 **/*#

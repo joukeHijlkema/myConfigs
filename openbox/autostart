@@ -1,0 +1,11 @@
+# my autostart file
+## xrandr --auto --output DP-0 --mode 1920x1080 --left-of DP-2 && xrandr --auto --output DP-2 --mode 1920x1080 --right-of DP-0 &
+~/bin/myRandr.sh &
+emacs &
+/usr/bin/brave-browser --proxy-pac-url=http://proxyconf.onecert.fr/proxy/onera.pac %U&
+gnome-calendar &
+terminator &
+nitrogen --head=0 --random --set-zoom ~/Pictures/Backgrounds & 
+nitrogen --head=1 --random --set-zoom ~/Pictures/Backgrounds & 
+xfce4-panel &
+xscreensaver -no-splash &

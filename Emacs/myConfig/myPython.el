@@ -27,8 +27,10 @@
                            (smartparens-mode)
                            (color-identifiers-mode)
                            (linum-mode t)
+                           (lsp)
+                           (lsp-treemacs-symbols)
                            ))
-)
+  )
 
 (use-package elpy
   :ensure t

@@ -1,0 +1,43 @@
+# -*- mode: org-mode -*-
+# name: test
+# key: tst
+# --
+`(let ((l (yas-x-prompt "language" '("english" "francais"))))
+ (cond ((equal l "english")
+       (setq LAN "english")
+       (setq OOM "Object of meeting")
+       (setq DOM "Date of meeting")
+       (setq LOC "Location")
+       (setq ATT "Attendees")
+       (setq DIS "Distribution")
+       (setq MAC "Main conclusion")
+       (setq APP "Approval")
+       (setq ORG "Organization")
+       (setq NAM "Name")
+       (setq POS "AuteurReport secretary")
+       (setq INP "Input")
+       (setq AGE "Agenda")
+       (setq MIN "Minutes")
+       "")
+      ((equal l "francais")
+       (setq LAN "francais")
+       (setq OOM "Objet de la réunion")
+       (setq DOM "Date de la réunion")
+       (setq LOC "Lieu")
+       (setq ATT "Participants")
+       (setq DIS "Diffusion")
+       (setq MAC "Conclusions principales")
+       (setq APP "Approbation")
+       (setq ORG "Organizsation")
+       (setq NAM "Nom")
+       (setq POS "Auteur")
+       (setq INP "Entrées")
+       (setq AGE "Ordre du jour")
+       (setq MIN "Compte-rendu")
+       "")
+     ))`
+
+dom=`DOM`
+loc=`LOC`
+att=`ATT`
+min=`MIN`

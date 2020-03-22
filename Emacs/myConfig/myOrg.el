@@ -213,13 +213,13 @@
   (defun jouke-get-aer ()
     "get the AER of this document"
     (interactive)
-    (org-entry-get nil "AER" t)
+    (if (org-entry-get nil "AER" t) (org-entry-get nil "AER" t) "00000")
     )
   (defun jouke-sub-aer ()
     "substitute -AER- with the content of variable AER"
     (interactive)
     (let ((opt (org-entry-get nil "EXPORT_LATEX_CLASS_OPTIONS" t))
-  	  (aer (org-entry-get nil "AER" t))
+  	  (aer (jouke-get-aer))
   	  )
       (message "aer = %s " aer)
       (message (replace-regexp-in-string "-AER-" aer opt))
@@ -556,6 +556,17 @@
                ))
             )
       )
+    )
+  ;;|--------------------------------------------------------------
+  ;;|Description : get current org level number of symbols
+  ;;|NOTE : 
+  ;;|-
+  ;;|Author : jouke hylkema
+  ;;|date   : 18-35-2020 17:35:50
+  ;;|--------------------------------------------------------------
+  (defun myOrg-get-current-level (symbol)
+    "get current org level or empty"
+    (make-string (- (if (org-current-level) (org-current-level) 1) 1) symbol)
     )
   ;; === Custom ===
 

@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: phone
+# key: phone
+# --
+Salut Mathieu,
+
+J'ai décidé de t'envoyer un mail a chaque fois que le téléphone déconne comme ça tu a une trace de cette situation qui commence a être vraiment pénible.
+
+${1:heure}: Coup de fil a ${2:a qui}, grésillements après ${3:10s}, $2 m'a rappelé(e) sans problèmes.
+
+Jouke
+

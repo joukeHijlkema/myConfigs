@@ -18,6 +18,7 @@
 *Objet de la réunion: $1*
 #+ATTR_LATEX: :environment tabu :align XX :width \textwidth
 |*Date de la réunion: `(format-time-string "%d/%m/%Y")`*|*Location: ${3:location}*|
+
 `(make-string (org-current-level) ?*)` Participants
 :PROPERTIES:
 :UNNUMBERED: 1

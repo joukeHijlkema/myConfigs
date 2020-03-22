@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: class
+# key: class
+# --
+#include "$1.hpp"
+
+// ==============================================================
+// Description : $1 class
+// initial version : 1.0
+// Author : hylkema (jouke.hijlkema@onera.fr)
+// date   : `(insert (format-time-string "%a %d %b %H:%M:%S %Y"))`
+// ==============================================================
+$1::$1($2) {
+}
+$1::~$1() {
+}

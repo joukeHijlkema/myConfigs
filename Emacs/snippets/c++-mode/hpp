@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: hpp
+# key: hpp
+# --
+#ifndef $1_JOUKE
+#define $1_JOUKE
+
+using namespace std;
+
+class $1 {
+public:
+
+  $1($2);
+  ~$1();
+
+protected:
+
+private:
+
+};
+#endif
+
